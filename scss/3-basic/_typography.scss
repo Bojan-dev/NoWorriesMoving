@@ -1,0 +1,164 @@
+html,
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: $color-text;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: calc(1rem * 0.001 * 24);
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: $color-white;
+}
+
+.hero-big-text {
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: white;
+  text-transform: uppercase;
+
+  .green-header {
+    color: green;
+    font-weight: 600;
+  }
+}
+
+h2 {
+  font-size: 2.222rem;
+  font-weight: 600;
+  letter-spacing: calc(1rem * 0.001 * 15);
+}
+
+h3 {
+  font-size: 1.555rem;
+  font-weight: 600;
+  letter-spacing: calc(1rem * 0.001 * 18);
+}
+
+h4 {
+  font-size: 1.444rem;
+  font-weight: 600;
+  letter-spacing: calc(1rem * 0.001 * 15);
+}
+
+h5 {
+  font-size: 1.333rem;
+  font-weight: 600;
+  letter-spacing: calc(1rem * 0.001 * 15);
+}
+
+h6 {
+  font-size: 1.111rem;
+  font-weight: 600;
+  letter-spacing: calc(1rem * 0.001 * 15);
+  text-transform: uppercase;
+}
+
+.placeholder {
+  font-size: 0.777rem;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: calc(1rem * 0.001 * 30);
+}
+
+.for-btns {
+  font-size: 1.111rem;
+  font-weight: 600;
+  letter-spacing: calc(1rem * 0.001 * 15);
+  color: $color-white;
+}
+
+.calculate-text {
+  margin: 1.111em 0 1.388em 0;
+}
+
+@media only screen and (max-width: 1366px) {
+  html,
+  body {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  h1 {
+    font-size: 2.325rem;
+  }
+
+  .hero-big-text {
+    font-size: 2.325rem;
+  }
+
+  h2 {
+    font-size: 1.825rem;
+  }
+
+  h3 {
+    font-size: 1.3em;
+  }
+
+  h4 {
+    font-size: 1.25em;
+  }
+
+  h5 {
+    font-size: 1.125rem;
+  }
+
+  h6 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: calc(1rem * 0.001 * 15);
+    text-transform: uppercase;
+  }
+
+  .for-btns {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.825rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-big-text {
+    font-size: 1.825rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.375em;
+  }
+
+  h4 {
+    font-size: 1.25em;
+  }
+
+  h5 {
+    font-size: 1.125rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
+
+  .for-btns {
+    font-size: 0.825rem;
+    font-weight: 300;
+  }
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1334.7 1203.8" style="enable-background:new 0 0 1334.7 1203.8;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.2;fill:url(#Icon_material-today_1_);enable-background:new    ;}
+	.st1{opacity:0.15;fill:url(#Icon_material-today-2_1_);enable-background:new    ;}
+	.st2{opacity:0.1;fill:url(#Icon_material-today-3_1_);enable-background:new    ;}
+</style>
+<g id="third_step_icon" transform="translate(-1482.168 -4755)">
+	
+		<linearGradient id="Icon_material-today_1_" gradientUnits="userSpaceOnUse" x1="3725.0608" y1="3985.3149" x2="3725.0608" y2="3979.8904" gradientTransform="matrix(106.132 0 0 -117.924 -392819.3438 475001.125)">
+		<stop  offset="0" style="stop-color:#0F6BC7"/>
+		<stop  offset="1" style="stop-color:#41BA03"/>
+	</linearGradient>
+	<path id="Icon_material-today" class="st0" d="M2753.3,5100.9h-32v-64.1h-64.1v64.1h-256.3v-64.1h-64.1v64.1h-32
+		c-35.3,0-63.6,28.8-63.6,63.6l0,0l-0.5,448c0,35.3,28.8,64.1,64.1,64.1l0,0h448c35.3,0,64.1-28.8,64.1-64.1v-448
+		C2817.3,5129.6,2788.6,5100.9,2753.3,5100.9z M2753.3,5612.9h-448v-352.4h448V5612.9L2753.3,5612.9z M2369.4,5325.1h160.2v160.2
+		h-160.2V5325.1z"/>
+	
+		<linearGradient id="Icon_material-today-2_1_" gradientUnits="userSpaceOnUse" x1="3725.0947" y1="3987.5581" x2="3725.0947" y2="3982.1294" gradientTransform="matrix(57.532 0 0 -63.924 -212673.8594 259655.6563)">
+		<stop  offset="0" style="stop-color:#0F6BC7"/>
+		<stop  offset="1" style="stop-color:#41BA03"/>
+	</linearGradient>
+	<path id="Icon_material-today-2" class="st1" d="M1760.2,4789.8h-17.4V4755h-34.8v34.8h-139V4755h-34.8v34.8h-17.4
+		c-19,0-34.8,15.8-34.8,34.8l0,0v242.7c0,19,15.8,34.8,34.8,34.8l0,0h242.7c19,0,34.8-15.8,34.8-34.8v-242.7
+		C1794.9,4805.5,1779.2,4789.8,1760.2,4789.8z M1760.2,5067.3h-242.7v-191.1h242.7V5067.3L1760.2,5067.3z M1552.2,4911.4h86.9v86.9
+		h-86.9V4911.4z"/>
+	
+		<linearGradient id="Icon_material-today-3_1_" gradientUnits="userSpaceOnUse" x1="3725.0947" y1="3977.6279" x2="3725.0947" y2="3972.1995" gradientTransform="matrix(57.532 0 0 -63.924 -212673.8594 259877.6563)">
+		<stop  offset="0" style="stop-color:#0F6BC7"/>
+		<stop  offset="1" style="stop-color:#41BA03"/>
+	</linearGradient>
+	<path id="Icon_material-today-3" class="st2" d="M1760.2,5646.5h-17.4v-34.8h-34.8v34.8h-139v-34.8h-34.8v34.8h-17.4
+		c-19,0-34.8,15.8-34.8,34.8l0,0V5924c0,19,15.8,34.8,34.8,34.8l0,0h242.7c19,0,34.8-15.8,34.8-34.8v-242.7
+		C1794.9,5662.3,1779.2,5646.5,1760.2,5646.5z M1760.2,5924h-242.7v-191.1h242.7V5924L1760.2,5924z M1552.2,5768.2h86.9v86.9h-86.9
+		V5768.2z"/>
+</g>
+</svg>

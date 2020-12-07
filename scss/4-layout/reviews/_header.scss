@@ -1,0 +1,55 @@
+.left-clients-text {
+  position: absolute;
+  left: 2.5%;
+  top: 200px;
+  height: 100%;
+}
+
+.reviews-header {
+  background: none;
+  background: #0f6bc7;
+  padding: 0;
+}
+
+.reviews-hero {
+  background: url('/img/reviews\ background.svg') no-repeat center center;
+  background-size: cover;
+  padding: 12.5em 0;
+  @include displayFlex(column, flex-start);
+}
+
+.reviews-hero-text {
+  margin: 2em 0 4em 0;
+  width: 40%;
+}
+
+.review-btn {
+  margin: 0;
+  border: 2px solid transparent;
+
+  &:hover,
+  &:active {
+    border: 2px solid $color-green;
+  }
+}
+
+@media only screen and(max-width:992px) {
+  .reviews-hero {
+    background: url('/img/reviews\ background\ responsive.svg') no-repeat;
+    background-size: contain;
+    background-position: center;
+    @include displayFlex(column, center);
+    text-align: center;
+    padding: 3em 0 35em 0;
+  }
+  .reviews-hero-text {
+    margin: 2em 0 4em 0;
+    width: 100%;
+  }
+}
+
+@media only screen and(max-width:600px) {
+  .left-clients-text {
+    display: none;
+  }
+}

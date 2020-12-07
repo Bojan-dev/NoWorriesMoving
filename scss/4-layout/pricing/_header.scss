@@ -1,0 +1,573 @@
+.pricing-header {
+  background: url('/img/pricing\ background.webp') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.pricing-hero-text {
+  margin: 12em 0 18em 0;
+}
+
+.calculator-wrapper {
+  padding: 2.777em 0;
+  margin-top: -12em;
+  background: $color-white;
+  border-radius: 15px;
+  box-shadow: 0px 3px 9px 5px rgba(0, 0, 0, 0.27);
+}
+
+.pricing-calculator-form {
+  @include displayFlex(column, center);
+  align-items: center;
+}
+
+.zip-code {
+  width: 35%;
+  padding: 1.5em 0;
+  margin: 1em 0 0 0;
+  border: 2px solid $color-green;
+  text-align: center;
+
+  &::placeholder {
+    @extend .placeholder;
+  }
+}
+
+.calculator-miles {
+  @include displayFlex(row, flex-start);
+  width: 100%;
+  margin: 3.5em 0;
+}
+
+.miles-field {
+  width: 33.33%;
+  padding: 1.25em 0;
+  background: $color-green;
+  color: $color-white;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:hover,
+  &:active {
+    background: #3ba502;
+  }
+}
+
+.miles-field1 {
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+.miles-field2 {
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+.miles-field3 {
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.house-apartment {
+  @include displayFlex(row, center);
+  align-items: center;
+  margin-bottom: 3.5em;
+}
+
+.house,
+.apartment {
+  padding: 1.25em 4.5em;
+  background: $color-green;
+  color: $color-white;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+
+  &:hover,
+  &:active {
+    background: #3ba502;
+  }
+}
+
+.house {
+  padding: 1.25em 5.65em;
+}
+
+.fa-home,
+.fa-building {
+  margin-left: 1.15em;
+}
+
+.house-apartment-or {
+  margin: 0 4.444em;
+  font-weight: 600;
+}
+
+.bedrooms-number {
+  @include displayFlex(row, center);
+  margin-bottom: 3.5em;
+}
+
+.bedroom-number {
+  background: $color-green;
+  color: $color-white;
+  text-transform: uppercase;
+  padding: 1.25em 3.9em;
+  margin: 0 1em;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    background: #3ba502;
+  }
+}
+
+.zip-code2 {
+  width: 30%;
+  margin-bottom: 3.5em;
+}
+
+.approximately-price {
+  margin-bottom: 0.44em;
+}
+
+.pricing-calculator-form {
+  .green-section-line {
+    margin-bottom: 2.5em;
+  }
+}
+
+.once-installments {
+  @include displayFlex(row, flex-start);
+  width: 100%;
+}
+
+.once-installments-offer {
+  @include displayFlex(column, flex-start);
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.paying-title {
+  font-size: 1.111rem;
+  text-transform: uppercase;
+  margin-bottom: 0.8333em;
+}
+
+.in-once-btn,
+.via-installments-btn {
+  background: $color-green;
+  padding: 0.825em 0;
+  color: $color-white;
+  text-align: center;
+  width: 103%;
+  font-size: 1.33em;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    background: #3ba502;
+  }
+}
+
+.in-once-btn {
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+  margin-left: 3%;
+}
+
+.via-installments-btn {
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+  margin-right: 3%;
+}
+
+.in-once-illustration,
+.via-installments-illustration {
+  position: absolute;
+}
+
+.in-once-illustration {
+  left: -3em;
+}
+
+.via-installments-illustration {
+  right: -3em;
+}
+
+.house-apartment-or2 {
+  margin: 1.95em 0 1.5em 0;
+}
+
+.pricing-special-offer {
+  @include displayFlex(row, center);
+  align-items: center;
+}
+
+.pricing-special-offer-title {
+  margin: 0 1.67em 0 1.67em;
+  text-transform: uppercase;
+}
+
+.pricing-special-offer-icon {
+  @include displayFlex(column, center);
+  align-items: flex-end;
+
+  &:last-of-type {
+    align-items: flex-start;
+  }
+}
+
+.special-offer-line {
+  background: $color-green;
+  height: 2px;
+  width: 2.777em;
+  margin-bottom: 0.222em;
+}
+
+.special-offer-line2 {
+  width: 4.33em;
+  margin-right: 1.111em;
+}
+
+.special-offer-line-2 {
+  margin-left: 1.111em;
+  width: 4.33em;
+}
+
+.special-offer-line3 {
+  margin-right: 0.67em;
+}
+
+.special-offer-line-3 {
+  margin-left: 0.67em;
+}
+
+.green-section-line-pricing {
+  margin-top: 0.444em;
+}
+
+.pricing-special-offer-price {
+  @include displayFlex(row, center);
+  position: relative;
+  align-items: center;
+  background: #0f6bc7;
+  clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+  width: 60%;
+  color: $color-white;
+  padding: 1.6em 0;
+  cursor: pointer;
+
+  h3 {
+    font-weight: 300;
+    margin: 0 1em;
+  }
+
+  .special-offer-price-hole {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: absolute;
+    background: $color-white;
+    right: 10%;
+
+    &:first-of-type {
+      left: 10%;
+    }
+  }
+
+  &:hover {
+    background: #0b539a;
+  }
+
+  &:hover .special-offer-price-hole {
+    background: #0b539a;
+  }
+}
+
+.pricing-lockdown-offer {
+  @include displayFlex(column, center);
+  margin: 2.5em 0 1.5em 0;
+  width: 40%;
+}
+
+.lockdown-offer {
+  text-transform: uppercase;
+  position: relative;
+  background: $color-green;
+  border: none;
+  color: $color-white;
+  font-size: 1.333em;
+  outline: none;
+  cursor: pointer;
+  padding: 1em 0;
+  width: 100%;
+  letter-spacing: calc(1rem * 0.001 * 15);
+
+  &:hover,
+  &:active {
+    background: #3ba502;
+  }
+}
+
+.lockdown-input {
+  width: 100%;
+  border: 2px solid $color-green;
+  padding: 2em 0;
+  text-align: center;
+
+  &::placeholder {
+    @extend .placeholder;
+  }
+}
+
+.offer-expire-timer {
+  color: $color-green;
+  font-weight: 600;
+}
+
+.pricing-offer-final {
+  @include displayFlex(column, center);
+  align-items: center;
+  margin-top: 2em;
+
+  li {
+    color: $color-green;
+  }
+
+  span {
+    color: $color-text;
+  }
+
+  :nth-child(2) {
+    margin: 1em 0;
+  }
+}
+
+.approximately-miles,
+.pricing-moving-a,
+.with-bedrooms,
+.zip-code-title-responsive,
+.pricing-special-offer-price-responsive,
+.special-offer-margin-responsive {
+  display: none;
+}
+
+@media only screen and(max-width:992px) {
+  .calculator-wrapper {
+    padding: 2.5em 2.5em;
+    text-align: center;
+
+    h6 {
+      text-transform: none;
+    }
+
+    .approximately-price {
+      text-transform: uppercase;
+    }
+  }
+
+  .zip-code-title {
+    display: none;
+  }
+
+  .miles-field,
+  .zip-code,
+  .house,
+  .apartment,
+  .bedroom-number,
+  .pricing-lockdown-offer,
+  .once-installments {
+    width: 80%;
+  }
+
+  .calculator-miles,
+  .house-apartment,
+  .bedrooms-number,
+  .once-installments-offer,
+  .once-installments {
+    @include displayFlex(column, center);
+    align-items: center;
+  }
+
+  .calculator-miles {
+    margin: 3em 0;
+  }
+
+  .miles-field,
+  .in-once-btn,
+  .via-installments-btn {
+    clip-path: none;
+
+    &:nth-child(3) {
+      margin: 1em 0;
+    }
+  }
+
+  .house-apartment-bedroom {
+    width: 100%;
+  }
+
+  .house-apartment {
+    margin-bottom: 3em;
+  }
+
+  .pricing-moving-a,
+  .with-bedrooms,
+  .approximately-miles {
+    display: initial;
+    margin-bottom: 1.5em;
+  }
+
+  .zip-code-title-responsive {
+    display: initial;
+  }
+
+  .house,
+  .apartment {
+    padding: 1.25em 0;
+  }
+
+  .house-apartment-or {
+    margin: 1em 0;
+  }
+
+  .bedroom-number {
+    &:nth-of-type(2) {
+      margin: 1em 0;
+    }
+  }
+
+  .in-once-btn,
+  .via-installments-btn {
+    margin: 0;
+  }
+
+  .in-once-btn {
+    margin-bottom: 2em;
+  }
+
+  .in-once-illustration,
+  .via-installments-illustration {
+    max-width: 45%;
+  }
+
+  .via-installments-illustration {
+    top: -5%;
+  }
+
+  .house-apartment-or2 {
+    margin: 2.5em 0 2em 0;
+  }
+
+  .pricing-special-offer-price {
+    width: 100%;
+    padding: 1.6em 0;
+
+    h3 {
+      margin: 0 0.5em;
+    }
+
+    .special-offer-price-hole {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .pricing-lockdown-offer {
+    margin: 2.5em 0 1.5em 0;
+  }
+}
+
+@media only screen and(max-width:750px) {
+  .via-installments-illustration {
+    top: 10%;
+  }
+}
+
+@media only screen and(max-width:600px) {
+  .calculator-wrapper {
+    padding: 1.5em 1.5em;
+    text-align: center;
+  }
+
+  .miles-field,
+  .zip-code,
+  .house,
+  .apartment,
+  .bedroom-number,
+  .pricing-lockdown-offer,
+  .once-installments {
+    width: 100%;
+  }
+
+  .bedroom-number {
+    display: flex;
+    justify-content: center;
+  }
+
+  .once-installments {
+    margin-top: -0.25em;
+  }
+
+  .in-once-illustration {
+    left: -15%;
+  }
+
+  .via-installments-illustration {
+    right: -15%;
+  }
+
+  .special-offer-line {
+    width: 1.5em;
+  }
+
+  .special-offer-line2 {
+    width: 2em;
+    margin-right: 0.75em;
+  }
+
+  .special-offer-line-2 {
+    width: 2em;
+    margin-left: 0.75em;
+  }
+
+  .special-offer-line3 {
+    margin-right: 0.5em;
+  }
+
+  .special-offer-line-3 {
+    margin-left: 0.5em;
+  }
+
+  .pricing-special-offer-title {
+    margin: 0 1em;
+  }
+
+  .pricing-special-offer-price {
+    h3:nth-child(2) {
+      display: none;
+    }
+    .special-offer-margin {
+      display: none;
+    }
+  }
+
+  .special-offer-margin-responsive {
+    display: initial;
+    margin: 0.75em 0;
+  }
+
+  .pricing-special-offer-price-responsive {
+    display: inherit;
+  }
+}
+
+@media only screen and(max-width:400px) {
+  .via-installments-illustration {
+    top: 30%;
+  }
+}
+
+@media only screen and(max-width:300px) {
+  .via-installments-illustration {
+    top: 40%;
+  }
+}

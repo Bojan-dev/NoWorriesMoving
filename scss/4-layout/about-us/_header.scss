@@ -1,0 +1,149 @@
+.about-us-header {
+  background: url('/img/about-us\ background.svg') no-repeat center center;
+  background-size: cover;
+}
+
+.about-us-social-icons {
+  flex-direction: row;
+  justify-content: space-between;
+
+  .social-icon:nth-child(2) {
+    margin: 0 0.5em;
+  }
+}
+
+.about-us-header-wrapper {
+  @include displayFlex(row, space-between);
+  align-items: center;
+
+  .services-hero-title {
+    text-align: left;
+    width: 135%;
+  }
+}
+
+.pricing-hero-text-about-us {
+  @include displayFlex(column, flex-start);
+  align-items: flex-start;
+  color: $color-white;
+  width: 40%;
+}
+
+.about-us-header-text {
+  margin: 3em 0 2em 0;
+}
+
+.about-us-header-pics {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.about-us-header-pic {
+  position: absolute;
+  right: 0;
+  width: 30vw;
+}
+
+.about-us-header-pic1 {
+  transform: translateX(-20%);
+}
+
+.about-us-header-pic2 {
+  transform: translate(-10%, -10%);
+}
+
+.about-us-header-pic3 {
+  transform: translate(0, -20%);
+}
+
+.about-us-arrow {
+  position: absolute;
+  top: 110px;
+  right: -50px;
+  height: 100px;
+}
+
+@media only screen and(max-width:1366px) {
+  .about-us-header-pic {
+    position: absolute;
+    right: 0;
+    width: 35vw;
+  }
+
+  .about-us-arrow {
+    top: 90px;
+  }
+}
+
+@media only screen and(min-width:2000px) {
+  .about-us-arrow {
+    top: 150px;
+  }
+}
+
+@media only screen and(min-width:2500px) {
+  .about-us-arrow {
+    top: 200px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .pricing-hero-text-about-us {
+    margin: 2em 0;
+    padding-bottom: 22.5em;
+  }
+
+  .about-us-header-wrapper {
+    flex-direction: column;
+    text-align: center;
+
+    .services-hero-title {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  .about-us-social-icons {
+    display: none;
+  }
+
+  .pricing-hero-text-about-us {
+    @include displayFlex(column, center);
+    align-items: center;
+    width: 100%;
+  }
+
+  .about-us-header-pics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: -21em;
+  }
+
+  .about-us-header-pic {
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 50vw;
+  }
+
+  .about-us-header-pic2 {
+    margin: 1em 0;
+  }
+
+  .about-us-arrow {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .about-us-header-pics {
+    margin-top: -22.5em;
+  }
+
+  .about-us-header-pic {
+    width: 100%;
+  }
+}

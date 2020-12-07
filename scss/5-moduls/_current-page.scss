@@ -1,0 +1,11 @@
+.current-page {
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    border-top: 2px solid $color-green;
+    margin-right: 3em;
+  }
+}

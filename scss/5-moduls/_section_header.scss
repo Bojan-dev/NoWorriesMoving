@@ -1,0 +1,19 @@
+.section-header {
+  @include displayFlex(column, space-between);
+  align-items: center;
+
+  .section-short-text {
+    margin-top: -0.2777em;
+    margin-bottom: 0.555em;
+    text-align: center;
+  }
+}
+
+@media only screen and(max-width:992px) {
+  .section-header {
+    h2 {
+      text-align: center;
+      margin-bottom: 0.25em;
+    }
+  }
+}

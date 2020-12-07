@@ -1,0 +1,873 @@
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url('/img/hero\ picture.webp');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-bottom: 3em;
+}
+
+.header-container {
+  @include displayFlex(row, space-between);
+  width: 100%;
+  align-items: center;
+  height: 125px;
+}
+
+.website-logo {
+  width: 85%;
+}
+
+nav {
+  flex: 4;
+}
+
+.navigation-list {
+  @include displayFlex(row, flex-end);
+  list-style: none;
+}
+
+.list-page {
+  color: $color-white;
+  position: relative;
+  margin-right: 3em;
+
+  &:hover::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    border-top: 2px solid $color-green;
+    margin-right: 3em;
+  }
+}
+
+.number-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 2;
+}
+
+.nav-bar-ham {
+  display: none;
+}
+
+.nav-line {
+  display: none;
+}
+
+.phone-number {
+  margin-right: 1.5em;
+  color: $color-white;
+}
+
+//////////////////////////////
+////// HERO PART ////////////
+/////////////////////////////
+
+.hero-area {
+  margin-top: 1em;
+}
+
+//////////////////////////////
+////// MAIN HEADER ////////////
+/////////////////////////////
+
+.main-header-container {
+  @include displayFlex(row, center);
+  align-items: baseline;
+  position: relative;
+}
+
+.header-moving-effect {
+  margin-right: 2px;
+  @include displayFlex(column-reverse, baseline);
+}
+
+.header-lines {
+  @include displayFlex(row-reverse, flex-start);
+  margin-bottom: 4.25px;
+}
+
+.header-line {
+  height: 1px;
+  background: $color-white;
+  opacity: 0.5;
+  &:last-of-type {
+    opacity: 0.3;
+  }
+  &:nth-child(2) {
+    opacity: 0.4;
+  }
+}
+
+.header-line-1 {
+  width: 3px;
+}
+.header-line-2 {
+  width: 5px;
+}
+.header-line-3 {
+  width: 7px;
+}
+.header-line-4 {
+  width: 9px;
+}
+.header-line-5 {
+  width: 11px;
+}
+.header-line-6 {
+  width: 13px;
+}
+.header-line-7 {
+  width: 15px;
+}
+.header-line-8 {
+  width: 17px;
+}
+.header-line-9 {
+  width: 19px;
+}
+
+.main-header {
+  position: relative;
+  z-index: 4;
+  &::before {
+    position: absolute;
+    content: attr(data-letters);
+    opacity: 0.35;
+    left: -3.5px;
+    z-index: 3;
+  }
+  &::after {
+    content: attr(data-letters);
+    position: absolute;
+    opacity: 0.25;
+    z-index: 3;
+    left: -7px;
+    top: 0;
+  }
+}
+
+//////////////////////////////
+////// LINES FROM HEADER ////////////
+/////////////////////////////
+
+.heading-text-lines {
+  position: absolute;
+  width: 45%;
+  height: 86.5px;
+  z-index: 5;
+}
+.line-from-header {
+  position: absolute;
+  margin: auto;
+
+  &.line-from-header-right {
+    bottom: 0;
+    left: 35px;
+    transform: rotate(180deg);
+  }
+
+  &.line-from-header-left {
+    right: 75px;
+    top: 17.5px;
+  }
+
+  .elipse {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: $color-white;
+    border-radius: 50%;
+    border: 2px solid $color-green;
+    z-index: 2;
+  }
+  .angle-line {
+    width: 60px;
+    height: 2px;
+    background: $color-white;
+    transform: rotate(135deg);
+    z-index: 1;
+    position: absolute;
+    bottom: 7.5px;
+  }
+  .text-line {
+    width: 25vw;
+    height: 2px;
+    background: $color-white;
+    position: absolute;
+    left: 51px;
+    bottom: 28.5px;
+  }
+}
+
+//////////////////////////////
+////// LINES FROM HEADER TEXT ////////////
+/////////////////////////////
+
+.header-line-text {
+  color: $color-white;
+  font-size: 1rem;
+  font-weight: 600;
+  position: absolute;
+  line-height: 2em;
+
+  &.header-left-line-text {
+    left: 0;
+    top: 80px;
+  }
+
+  &.header-right-line-text {
+    right: 0;
+    bottom: 70px;
+    text-align: right;
+  }
+}
+
+//////////////////////////////
+////// SOCIAL ICONS, ILLUSTRATION, SECTION SELECTOR ////////////
+/////////////////////////////
+
+.hero-layout-container {
+  @include displayFlex(row, space-between);
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+//////////////////////////////
+////// SOCIAL ICONS ////////////
+/////////////////////////////
+
+.hero-social-icons {
+  @include displayFlex(column, flex-end);
+  .social-icon {
+    @include displayFlex(column, center);
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    background: $color-green;
+    border-radius: 50%;
+    margin-bottom: 0.75em;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &:hover,
+    &:active {
+      background: $color-white;
+      color: $color-green;
+    }
+  }
+}
+
+//////////////////////////////
+////// HERO ILLUSTRATION, BTNS, SLIDER ////////////
+/////////////////////////////
+
+.illustration-btns-slider {
+  @include displayFlex(column, space-between);
+  flex: 90%;
+}
+
+.hero-illustration-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .hero-illustration {
+    margin-top: -2.5em;
+    width: 39vw;
+  }
+}
+
+.hero-btns {
+  @include displayFlex(row, center);
+  width: 100%;
+}
+
+.hero-slider {
+  @include displayFlex(row, center);
+  width: 100%;
+  margin-top: 4em;
+
+  .slider-page {
+    cursor: pointer;
+    width: 90px;
+    height: 4px;
+    border-radius: 10px;
+    margin: 0 1em;
+    background: $color-white;
+
+    &.slider-active-page {
+      background-color: $color-green;
+    }
+
+    &:hover,
+    &:active {
+      background: $color-green;
+    }
+  }
+}
+
+//////////////////////////////
+////// SECTIONS SELECTOR ////////////
+/////////////////////////////
+
+.hero-current-area-container {
+  transform: translateX(2vw);
+  .current-area-line {
+    height: 45vh;
+    width: 2px;
+    background: $color-white;
+    border-radius: 5px;
+
+    .one-area-container {
+      @include displayFlex(row, space-between);
+    }
+
+    .current-area {
+      @include displayFlex(row, right);
+      align-items: center;
+      margin-left: -4.5px;
+      width: 10px;
+      height: 10px;
+      background: $color-white;
+      margin-bottom: 2em;
+      white-space: nowrap;
+      cursor: pointer;
+
+      &:hover {
+        @extend .active-area;
+      }
+    }
+    .current-area-title {
+      color: $color-white;
+      opacity: 0;
+      margin-left: 2em;
+    }
+
+    .active-title {
+      opacity: 1;
+    }
+
+    .active-area {
+      @extend .current-area;
+      width: 20px;
+      height: 20px;
+      margin-left: -9px;
+      position: relative;
+
+      ::before {
+        content: '';
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        transform: translateX(-50%);
+        left: 50%;
+        width: 30px;
+        height: 30px;
+        border: 2px solid $color-green;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 2200px) {
+  .hero-illustration-container {
+    .hero-illustration {
+      margin-top: -2.5em;
+      width: 27.5vw;
+    }
+  }
+}
+
+@media only screen and (max-width: 1675px) {
+  .line-from-header {
+    &.line-from-header-right {
+      left: 0;
+    }
+
+    &.line-from-header-left {
+      right: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  nav {
+    flex: 2.25;
+  }
+
+  .list-page {
+    margin-right: 2em;
+
+    &:hover::before {
+      margin-right: 2em;
+    }
+  }
+
+  .number-btn-container {
+    flex: 1.25;
+  }
+
+  .phone-number {
+    margin-right: 0.5em;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .header-lines {
+    &:first-of-type {
+      display: none;
+    }
+  }
+
+  .heading-text-lines {
+    height: 75px;
+  }
+  .line-from-header {
+    &.line-from-header-right {
+      bottom: 0;
+      left: 0;
+    }
+
+    &.line-from-header-left {
+      right: 0;
+      top: 17.5px;
+    }
+  }
+
+  .header-line-text {
+    &.header-left-line-text {
+      top: 72.5px;
+    }
+
+    &.header-right-line-text {
+      bottom: 62.5px;
+    }
+  }
+
+  .hero-current-area-container {
+    display: none;
+  }
+
+  .hero-illustration-container {
+    .hero-illustration {
+      width: 50vw;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .website-logo {
+    width: 75%;
+  }
+
+  .hero-area {
+    margin-top: 2em;
+  }
+
+  .number-btn-container {
+    flex-direction: column;
+    align-items: flex-end;
+    flex: 0.75;
+    padding-top: 2.5em;
+  }
+
+  .phone-number {
+    margin-right: 0;
+    padding-top: 0;
+    order: 2;
+  }
+
+  .heading-text-lines {
+    height: 75px;
+  }
+  .line-from-header {
+    &.line-from-header-right {
+      bottom: 0;
+      left: -15px;
+    }
+
+    &.line-from-header-left {
+      right: -15px;
+      top: 15px;
+    }
+  }
+
+  .header-line-text {
+    &.header-left-line-text {
+      left: -55px;
+      top: 72.5px;
+    }
+
+    &.header-right-line-text {
+      right: -55px;
+      bottom: 65px;
+    }
+  }
+
+  .hero-illustration-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .hero-illustration {
+      margin-top: -2.5em;
+      width: 55vw;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  nav {
+    display: none;
+  }
+
+  .website-logo {
+    width: 80%;
+  }
+
+  .number-btn-container {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 0;
+  }
+
+  .nav-bar-ham {
+    display: initial;
+    @include displayFlex(column, center);
+    order: 3;
+    margin-left: 2em;
+    cursor: pointer;
+  }
+
+  .nav-bar-ham:hover .nav-line {
+    background-color: $color-green;
+    @include transitionEase;
+    width: 55px;
+  }
+
+  .nav-line {
+    display: initial;
+    width: 40px;
+    height: 4px;
+    background: $color-white;
+    align-self: flex-end;
+    border-radius: 10px;
+    margin-bottom: 0.625em;
+    cursor: pointer;
+    @include transitionEase;
+
+    &:first-of-type {
+      width: 55px;
+    }
+
+    &:last-of-type {
+      width: 30px;
+      margin-bottom: 0;
+    }
+  }
+
+  .hero-area {
+    margin-top: 7.5em;
+  }
+
+  .hero-illustration-container {
+    margin-top: 3em;
+    .hero-illustration {
+      width: 60vw;
+    }
+  }
+
+  .header-line-1 {
+    display: none;
+  }
+  .header-line-2 {
+    display: none;
+  }
+  .header-line-3 {
+    width: 2px;
+  }
+  .header-line-4 {
+    width: 3.5px;
+  }
+  .header-line-5 {
+    width: 5px;
+  }
+  .header-line-6 {
+    width: 6.5px;
+  }
+  .header-line-7 {
+    width: 8px;
+  }
+  .header-line-8 {
+    width: 9.5px;
+  }
+  .header-line-9 {
+    width: 11px;
+  }
+
+  .main-header {
+    &::before {
+      left: -2px;
+    }
+    &::after {
+      left: -5px;
+    }
+  }
+
+  .hero-layout-container {
+    margin: 4em auto 2em auto;
+  }
+
+  //////////////////////////////
+  ////// LINES FROM HEADER ////////////
+  /////////////////////////////
+
+  .heading-text-lines {
+    width: 40%;
+    height: 90px;
+  }
+  .line-from-header {
+    &.line-from-header-right {
+      bottom: 0;
+      left: 40px;
+    }
+
+    &.line-from-header-left {
+      right: 37.5px;
+      top: -85px;
+    }
+
+    .elipse {
+      width: 17.5px;
+      height: 17.5px;
+    }
+    .angle-line {
+      width: 40px;
+      height: 2px;
+      bottom: 2.5px;
+    }
+    .text-line {
+      width: 35vw;
+      left: 34px;
+      bottom: 16px;
+    }
+  }
+
+  //////////////////////////////
+  ////// LINES FROM HEADER TEXT ////////////
+  /////////////////////////////
+
+  .header-line-text {
+    font-size: 0.825rem;
+
+    &.header-left-line-text {
+      left: -2em;
+      top: 82px;
+    }
+
+    &.header-right-line-text {
+      right: -2em;
+      bottom: 130px;
+      text-align: right;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    padding-bottom: 3em;
+  }
+
+  .website-logo {
+    width: 60%;
+    flex: 0.5;
+  }
+
+  .number-btn-container {
+    flex: 6;
+  }
+
+  .nav-bar-ham {
+    margin-left: 1em;
+  }
+
+  .nav-bar-ham:hover .nav-line {
+    background-color: $color-green;
+    @include transitionEase;
+    width: 45px;
+  }
+
+  .nav-line {
+    width: 32px;
+    height: 4px;
+    margin-bottom: 0.625em;
+
+    &:first-of-type {
+      width: 45px;
+    }
+
+    &:last-of-type {
+      width: 22px;
+      margin-bottom: 0;
+    }
+  }
+
+  .main-header-container {
+    margin-top: 1em;
+  }
+
+  //////////////////////////////
+  ////// LINES FROM HEADER ////////////
+  /////////////////////////////
+
+  .heading-text-lines {
+    width: 0;
+  }
+  .line-from-header {
+    &.line-from-header-right {
+      bottom: -20px;
+      left: 60px;
+    }
+
+    &.line-from-header-left {
+      right: 60px;
+      top: -120px;
+    }
+
+    .elipse {
+      width: 15px;
+      height: 15px;
+      background: $color-green;
+      border: 2px solid $color-white;
+    }
+    .angle-line {
+      width: 45px;
+      bottom: 7.5px;
+    }
+    .text-line {
+      width: 60vw;
+      height: 2px;
+      left: 38px;
+      bottom: 23px;
+    }
+  }
+
+  //////////////////////////////
+  ////// LINES FROM HEADER TEXT ////////////
+  /////////////////////////////
+
+  .header-line-text {
+    font-size: 0.75rem;
+
+    &.header-left-line-text {
+      left: 0;
+      top: 110px;
+    }
+
+    &.header-right-line-text {
+      right: 0;
+      bottom: 163px;
+    }
+  }
+
+  .hero-illustration-container {
+    display: none;
+  }
+
+  .hero-social-icons {
+    display: none;
+  }
+  .hero-btns {
+    @include displayFlex(column, center);
+    width: 100%;
+    margin-top: 10em;
+  }
+
+  .header-moving-effect {
+    display: none;
+  }
+
+  .main-header {
+    text-align: center;
+
+    &::before {
+      display: none;
+    }
+    &::after {
+      display: none;
+    }
+  }
+
+  .hero-slider {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .line-from-header {
+    &.line-from-header-left {
+      right: 60px;
+      top: -160px;
+    }
+  }
+
+  .header-line-text {
+    &.header-right-line-text {
+      right: 0;
+      bottom: 202.5px;
+    }
+  }
+}
+
+@media only screen and (max-width: 437px) {
+  //////////////////////////////
+  ////// LINES FROM HEADER ////////////
+  /////////////////////////////
+
+  .heading-text-lines {
+    width: 0;
+    height: 86.5px;
+  }
+  .line-from-header {
+    &.line-from-header-right {
+      bottom: -50px;
+      left: 60px;
+    }
+
+    &.line-from-header-left {
+      right: 60px;
+      top: -150px;
+    }
+  }
+
+  //////////////////////////////
+  ////// LINES FROM HEADER TEXT ////////////
+  /////////////////////////////
+
+  .header-line-text {
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 2em;
+
+    &.header-left-line-text {
+      left: -10px;
+      top: 137px;
+    }
+
+    &.header-right-line-text {
+      right: -10px;
+      bottom: 235px;
+    }
+  }
+}

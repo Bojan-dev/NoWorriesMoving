@@ -1,0 +1,158 @@
+.contact-container {
+  background: url('/img/contact\ background.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  padding-top: 3.5em;
+  padding-bottom: 14em;
+}
+
+.contact-wrapper {
+  background: url('/img/touch\ background.svg');
+  background-size: cover;
+  background-position: center;
+  padding: 2.77em;
+  box-shadow: 3px 3px 9px 3px rgba(0, 0, 0, 0.21);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 3em;
+}
+
+.get-in-touch {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.green-section-line-contact {
+  width: 40px;
+  height: 2px;
+  background: $color-green;
+  margin: 0.55em 0 1.38em 0;
+}
+
+.get-in-touch-form {
+  margin: 1.38em 0;
+}
+
+.input-name-mail {
+  @include displayFlex(row, space-between);
+  align-items: center;
+}
+
+.get-in-touch-input {
+  background: #f8f8f8;
+  border: 1px solid #dfdfdf;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 1.38em;
+
+  &::placeholder {
+    @extend .placeholder;
+    padding-top: 1em;
+  }
+
+  &:hover,
+  &:active {
+    border: 1px solid #adadad;
+  }
+}
+
+.input-name-mail {
+  .get-in-touch-input {
+    padding: 1em;
+    width: 47.5%;
+  }
+}
+
+.get-in-touch-textarea {
+  width: 100%;
+}
+
+.get-in-touch-btn {
+  background: $color-green;
+  font-size: 1em;
+  padding: 0.777em 0;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  color: $color-white;
+  border: none;
+  outline: none;
+  letter-spacing: calc(1rem * 0.001 * 15);
+
+  &:active,
+  &:hover {
+    background: #3ba502;
+  }
+}
+
+.contact-illustrations {
+  position: relative;
+}
+
+.main-contact-illustration {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and(max-width:992px) {
+  .contact-container {
+    height: fit-content;
+    padding-bottom: 0;
+  }
+
+  .contact-wrapper {
+    background: $color-white;
+    padding: 2em;
+    @include displayFlex(column, center);
+    align-items: center;
+  }
+
+  .contact-illustrations {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5em;
+  }
+
+  .main-contact-illustration {
+    width: 75%;
+    height: 20%;
+    position: initial;
+    transform: none;
+  }
+
+  .input-name-mail {
+    @include displayFlex(column, center);
+  }
+  .input-name-mail {
+    .get-in-touch-input {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and(max-width:600px) {
+  .main-contact-illustration {
+    width: 100%;
+  }
+
+  .contact-wrapper {
+    padding: 1.5em;
+  }
+
+  .contact-form {
+    p {
+      text-align: center;
+    }
+  }
+
+  .green-section-line-contact {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

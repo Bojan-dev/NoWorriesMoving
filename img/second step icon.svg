@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="308.333" height="119.203" viewBox="0 0 308.333 119.203">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0f6bc7"/>
+      <stop offset="1" stop-color="#41ba03"/>
+    </linearGradient>
+  </defs>
+  <g id="second_step_icon" data-name="second step icon" transform="translate(-206 -3362)">
+    <path id="Icon_awesome-box" data-name="Icon awesome-box" d="M118.621,42.978,106.84,7.636A11.144,11.144,0,0,0,96.247,0H63.326V44.7H118.9A10.635,10.635,0,0,0,118.621,42.978ZM55.876,0H22.956A11.144,11.144,0,0,0,12.363,7.636L.582,42.978A10.634,10.634,0,0,0,.3,44.7H55.876ZM0,52.151v55.876A11.178,11.178,0,0,0,11.175,119.2h96.852A11.178,11.178,0,0,0,119.2,108.028V52.151Z" transform="translate(300.565 3362)" opacity="0.2" fill="url(#linear-gradient)"/>
+    <path id="Icon_awesome-box-2" data-name="Icon awesome-box" d="M60.191,21.808,54.213,3.875A5.655,5.655,0,0,0,48.838,0h-16.7V22.682h28.2A5.4,5.4,0,0,0,60.191,21.808ZM28.353,0h-16.7A5.655,5.655,0,0,0,6.273,3.875L.3,21.808a5.4,5.4,0,0,0-.142.874h28.2ZM0,26.463V54.816a5.672,5.672,0,0,0,5.671,5.671H54.816a5.672,5.672,0,0,0,5.671-5.671V26.463Z" transform="translate(453.847 3391.358)" opacity="0.15" fill="url(#linear-gradient)"/>
+    <path id="Icon_awesome-box-3" data-name="Icon awesome-box" d="M60.191,21.808,54.213,3.875A5.655,5.655,0,0,0,48.838,0h-16.7V22.682h28.2A5.4,5.4,0,0,0,60.191,21.808ZM28.353,0h-16.7A5.655,5.655,0,0,0,6.273,3.875L.3,21.808a5.4,5.4,0,0,0-.142.874h28.2ZM0,26.463V54.816a5.672,5.672,0,0,0,5.671,5.671H54.816a5.672,5.672,0,0,0,5.671-5.671V26.463Z" transform="translate(206 3391.358)" opacity="0.1" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

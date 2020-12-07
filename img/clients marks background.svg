@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1125" height="1449.894" viewBox="0 0 1125 1449.894">
+  <g id="clients_marks_background" data-name="clients marks background" transform="translate(0 -1406)">
+    <g id="green_ui_1" data-name="green ui 1" transform="translate(0 1406)">
+      <path id="Union_5" data-name="Union 5" d="M60.684,377.364C5.69,355.976,0,360.255,0,360.255V21.871S5.69,26.15,60.684,4.762,166.883,38.982,199.12,73.2s62.581,64.162,125.161,40.636,170.675,14.971,166.883,76.995c.074.083-.6.161-1.965.235,1.364.071,2.04.147,1.965.231,3.792,62.022-104.3,100.519-166.883,76.993s-92.921,6.417-125.161,40.636c-27.273,28.949-68.112,73.206-113.346,73.2A68.7,68.7,0,0,1,60.684,377.364Z" transform="translate(0 0)" fill="#41ba03"/>
+      <circle id="Ellipse_47" data-name="Ellipse 47" cx="60.5" cy="60.5" r="60.5" transform="translate(552 59)" fill="#41ba03" opacity="0.8"/>
+      <ellipse id="Ellipse_48" data-name="Ellipse 48" cx="29" cy="29.5" rx="29" ry="29.5" transform="translate(733 167)" fill="#41ba03" opacity="0.6"/>
+      <circle id="Ellipse_49" data-name="Ellipse 49" cx="18" cy="18" r="18" transform="translate(851 144)" fill="#41ba03" opacity="0.4"/>
+      <circle id="Ellipse_50" data-name="Ellipse 50" cx="18" cy="18" r="18" transform="translate(955 217)" fill="#41ba03" opacity="0.2"/>
+    </g>
+    <g id="green_ui_1-2" data-name="green ui 1" transform="translate(0 2473.768)">
+      <path id="Union_5-2" data-name="Union 5" d="M60.684,377.364C5.69,355.976,0,360.255,0,360.255V21.871S5.69,26.15,60.684,4.762,166.883,38.982,199.12,73.2s62.581,64.162,125.161,40.636,170.675,14.971,166.883,76.995c.074.083-.6.161-1.965.235,1.364.071,2.04.147,1.965.231,3.792,62.022-104.3,100.519-166.883,76.993s-92.921,6.417-125.161,40.636c-27.273,28.949-68.112,73.206-113.346,73.2A68.7,68.7,0,0,1,60.684,377.364Z" transform="translate(0 0)" fill="#41ba03"/>
+      <circle id="Ellipse_47-2" data-name="Ellipse 47" cx="60.5" cy="60.5" r="60.5" transform="translate(552 59.232)" fill="#41ba03" opacity="0.8"/>
+      <circle id="Ellipse_48-2" data-name="Ellipse 48" cx="29" cy="29" r="29" transform="translate(733 167.232)" fill="#41ba03" opacity="0.6"/>
+      <circle id="Ellipse_49-2" data-name="Ellipse 49" cx="18" cy="18" r="18" transform="translate(851 144.232)" fill="#41ba03" opacity="0.4"/>
+      <circle id="Ellipse_50-2" data-name="Ellipse 50" cx="18" cy="18" r="18" transform="translate(955 217.232)" fill="#41ba03" opacity="0.2"/>
+    </g>
+    <g id="green_ui_1-3" data-name="green ui 1" transform="translate(134.112 1940.738)">
+      <path id="Union_5-3" data-name="Union 5" d="M60.684,4.762C5.69,26.15,0,21.871,0,21.871V360.255s5.69-4.279,60.684,17.109,106.2-34.221,138.436-68.439,62.58-64.162,125.161-40.636,170.675-14.971,166.883-76.995c.074-.083-.6-.161-1.965-.235,1.364-.071,2.04-.147,1.965-.231,3.792-62.022-104.3-100.519-166.883-76.993S231.359,107.419,199.12,73.2C171.847,44.252,131.008-.005,85.774,0A68.7,68.7,0,0,0,60.684,4.762Z" transform="translate(990.888 382.126) rotate(180)" fill="#0f6bc7"/>
+      <circle id="Ellipse_47-3" data-name="Ellipse 47" cx="60.5" cy="60.5" r="60.5" transform="translate(317.889 59.262)" fill="#0f6bc7" opacity="0.8"/>
+      <circle id="Ellipse_48-3" data-name="Ellipse 48" cx="29" cy="29" r="29" transform="translate(199.889 167.262)" fill="#0f6bc7" opacity="0.6"/>
+      <circle id="Ellipse_49-3" data-name="Ellipse 49" cx="18" cy="18" r="18" transform="translate(103.889 144.262)" fill="#0f6bc7" opacity="0.4"/>
+      <circle id="Ellipse_50-3" data-name="Ellipse 50" cx="18" cy="18" r="18" transform="translate(-0.111 217.262)" fill="#0f6bc7" opacity="0.2"/>
+    </g>
+  </g>
+</svg>

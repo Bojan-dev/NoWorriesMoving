@@ -1,0 +1,227 @@
+footer {
+  padding-top: 4em;
+}
+
+.footer-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+
+.footer-column {
+  @include displayFlex(column, flex-start);
+
+  h3 {
+    color: $color-green;
+    text-transform: uppercase;
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  a {
+    color: $color-text;
+    font-size: 1rem;
+    margin-bottom: 1em;
+
+    &:hover,
+    &:active {
+      text-decoration: underline $color-green;
+      text-underline-position: under;
+    }
+  }
+}
+.footer-social-icons {
+  @include displayFlex(row, flex-start);
+
+  .social-icon-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    background: $color-green;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    color: $color-white;
+
+    &:hover,
+    &:active {
+      background: $color-white;
+      color: $color-green;
+      border: 1px solid $color-green;
+      text-decoration: none;
+    }
+  }
+}
+
+.footer-social-icons-responsive {
+  display: none;
+}
+
+.footer-logo {
+  width: 65%;
+  margin-bottom: 2em;
+}
+
+.usa-footer-map {
+  width: 100%;
+}
+
+.footer-all-rights {
+  background: url('/img/footer\ illustration.svg') no-repeat center;
+  background-size: cover;
+  padding-top: 8em;
+  padding-bottom: 4em;
+  margin-top: 3em;
+}
+
+.footer-rights-line {
+  width: 100%;
+  height: 2px;
+  background: $color-white;
+  opacity: 0.5;
+}
+
+.footer-delivery-trucks {
+  @include displayFlex(row, center);
+  width: 20%;
+  margin: 0 auto;
+
+  img {
+    &:first-of-type {
+      opacity: 0.27;
+    }
+    &:last-of-type {
+      opacity: 0.27;
+    }
+  }
+}
+
+.delivery-truck {
+  padding: 0 1.5em;
+}
+
+.footer-final-text {
+  padding-top: 1em;
+  text-align: center;
+  color: $color-white;
+}
+
+@media only screen and(max-width:992px) {
+  .footer-column1 {
+    grid-area: column1;
+  }
+
+  .footer-column2 {
+    grid-area: column2;
+  }
+
+  .footer-column3 {
+    grid-area: column3;
+  }
+
+  .footer-column4 {
+    grid-area: column4;
+  }
+
+  .footer-wrapper {
+    display: grid;
+    justify-items: center;
+    grid-template-areas:
+      'column1 column1 column2 column2 column3 column3'
+      '. . column4 column4 . .';
+    grid-template-columns: minmax(16.6%, auto);
+  }
+
+  .footer-social-icons {
+    display: none;
+  }
+
+  .footer-social-icons-responsive {
+    @include displayFlex(row, flex-start);
+
+    .social-icon-footer-responsive {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 35px;
+      width: 55px;
+      background: $color-green;
+      margin-right: 0.5em;
+      color: $color-white;
+
+      &:hover,
+      &:active {
+        background: $color-white;
+        color: $color-green;
+        border: 1px solid $color-green;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  footer {
+    padding-top: 3em;
+  }
+
+  .footer-wrapper {
+    @include displayFlex(column, center);
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: 45%;
+    margin-bottom: 2em;
+    align-self: center;
+  }
+
+  .footer-column2,
+  .footer-column3 {
+    display: none;
+  }
+
+  .footer-social-icons-responsive {
+    justify-content: center;
+
+    .social-icon-footer-responsive {
+      height: 40px;
+      width: 60px;
+    }
+  }
+
+  .footer-all-rights {
+    padding-bottom: 2em;
+    margin-top: 0;
+  }
+
+  .footer-delivery-trucks {
+    @include displayFlex(row, center);
+    margin: 0 auto;
+
+    img {
+      max-width: 150%;
+
+      &:first-of-type {
+        opacity: 0.27;
+      }
+      &:last-of-type {
+        opacity: 0.27;
+      }
+    }
+  }
+
+  .delivery-truck {
+    padding: 0 1.5em;
+  }
+
+  .footer-final-text {
+    font-size: 0.825em;
+  }
+}

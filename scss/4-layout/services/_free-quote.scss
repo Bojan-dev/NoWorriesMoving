@@ -1,0 +1,132 @@
+.free-quote {
+  background: url('/img/free\ quote\ background.svg') center;
+  background-repeat: no-repeat;
+  padding: 2.5em 0;
+}
+
+.quote-wrapper {
+  margin: auto;
+  width: 40%;
+  background: $color-white;
+  border-radius: 15px;
+  padding: 2.777em;
+  border-top: 15px solid $color-green;
+  box-shadow: -3px 3px 9px 3px rgba(0, 0, 0, 0.15);
+}
+
+.quote-form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.quote-logo {
+  position: absolute;
+  top: 0%;
+  transform: translateX(-50%);
+  left: 50%;
+  opacity: 0.06;
+  width: 75%;
+  z-index: 1;
+}
+
+.quote-part {
+  position: relative;
+  @include displayFlex(row, space-between);
+  margin-bottom: 1.8em;
+  z-index: 2;
+
+  p {
+    font-size: 1.125rem;
+  }
+
+  input {
+    border-bottom: 1px solid #707070;
+    width: 50%;
+    background: none;
+    padding-left: 0.5em;
+
+    &:focus {
+      border-bottom: 1px solid $color-green;
+    }
+
+    &::placeholder {
+      @extend .placeholder;
+    }
+  }
+}
+
+.quote-part-last {
+  p {
+    font-size: 1.125rem;
+    margin-bottom: 1.125em;
+  }
+
+  textarea {
+    width: 100%;
+    border: 1px dashed $color-green;
+    border-radius: 10px;
+    text-align: center;
+
+    &:focus {
+      border: 1px solid $color-green;
+    }
+
+    &::placeholder {
+      padding-top: 1em;
+      @extend .placeholder;
+    }
+  }
+
+  margin-bottom: 2em;
+}
+
+.services-quote-btn {
+  padding: 0.825em 2.75em;
+  background: $color-green;
+  color: $color-white;
+  font-size: 1.222rem;
+  border: none;
+  border-radius: 10px;
+  justify-self: center;
+  letter-spacing: calc(1rem * 0.001 * 20);
+  cursor: pointer;
+  outline: none;
+  align-self: center;
+
+  &:hover,
+  &:active {
+    background: #3ba502;
+    border: none;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .quote-wrapper {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .quote-wrapper {
+    width: 55%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .quote-wrapper {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .quote-wrapper {
+    width: 100%;
+  }
+}
+
+///////////////////////////////
+///////////////////////////////
+/////////////////////////////
+//////////////////////////////
+///////////////////////////////

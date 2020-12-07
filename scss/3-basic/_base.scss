@@ -1,0 +1,16 @@
+html,
+body {
+  overflow: hidden;
+  background: white;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1366px) {
+  .container {
+    width: 85%;
+  }
+}

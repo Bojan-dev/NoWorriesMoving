@@ -1,0 +1,148 @@
+.subscribe {
+  padding: 3.888em 0;
+  background-image: url('/img/subscribe\ pattern.svg');
+}
+
+.subscribe-container {
+  @include displayFlex(row, space-around);
+  align-items: center;
+  width: 100%;
+}
+
+.subscribe-text {
+  position: relative;
+}
+
+.subscribe-text-underline {
+  position: absolute;
+  width: 42.5%;
+  height: 30px;
+  bottom: -40%;
+  left: -1.25%;
+  background: $color-green;
+  clip-path: polygon(0 30%, 100% 30%, 95% 36%, 100% 42%, 0 42%, 5% 36%);
+}
+
+.subscribe-form {
+  @include displayFlex(row, flex-start);
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $color-green;
+  margin-left: 5%;
+  position: relative;
+
+  input,
+  button {
+    border: none;
+    z-index: 3;
+  }
+
+  input {
+    padding: 1em;
+    background: none;
+
+    &::placeholder {
+      @extend .placeholder;
+    }
+  }
+  button {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    align-self: right;
+    font-size: 1.111rem;
+    background: $color-green;
+    color: $color-white;
+    padding: 1em 1.5em;
+    margin-left: 5em;
+    cursor: pointer;
+    @include transitionEase;
+
+    &:hover,
+    &:active {
+      background-color: $color-white;
+      color: $color-green;
+      border-left: 1px solid $color-green;
+    }
+  }
+}
+
+.subscribe-illustration {
+  position: absolute;
+  height: 300%;
+  transform: translateX(-5%);
+  opacity: 0.75;
+  z-index: 1;
+}
+
+@media only screen and(max-width:1500px) {
+  .subscribe-illustration {
+    height: 200%;
+    transform: translateX(-5%);
+  }
+
+  .subscribe-form {
+    margin-left: 2.5%;
+
+    button {
+      margin-left: 2em;
+    }
+  }
+
+  @media only screen and(max-width:992px) {
+    .subscribe-container {
+      @include displayFlex(column, center);
+    }
+
+    .subscribe-text {
+      text-align: center;
+    }
+
+    .subscribe-text-underline {
+      position: relative;
+      margin: 0 auto;
+      width: 30%;
+    }
+
+    .subscribe-form {
+      margin-left: 0;
+      margin-top: 1em;
+
+      button {
+        margin-left: 5em;
+      }
+    }
+
+    .subscribe-illustration {
+      position: absolute;
+      height: 225%;
+      transform: translateX(0%);
+    }
+  }
+}
+
+@media only screen and(max-width:600px) {
+  .subscribe-form {
+    @include displayFlex(column, center);
+    border: none;
+    width: 100%;
+    text-align: center;
+
+    input {
+      border: 1px solid $color-green;
+      width: 100%;
+      padding: 1.5em 0;
+      text-align: center;
+      margin-bottom: 1.5em;
+    }
+    button {
+      width: 60%;
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    .subscribe-illustration {
+      display: none;
+    }
+  }
+}

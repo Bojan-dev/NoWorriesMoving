@@ -1,0 +1,94 @@
+.about-us-mission {
+  background: url('/img/our\ mission\ background.svg');
+  background-position: center;
+  background-size: cover;
+  margin-top: -10em;
+  padding: 20em 0 5em 0;
+  color: $color-white;
+
+  .green-section-line {
+    background: #019ae6;
+  }
+}
+
+.about-us-mission-wrapper {
+  @include displayFlex(row, space-between);
+  align-items: center;
+}
+
+.about-us-mission-description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 42.5%;
+
+  p {
+    z-index: 2;
+  }
+}
+
+.our-mission-opacity-illustration {
+  position: absolute;
+  z-index: 1;
+  width: 60%;
+}
+
+.our-mission-illustration {
+  width: 42.5%;
+}
+
+.about-us-call-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-us-call {
+  margin: 5em 0;
+  text-align: center;
+  font-weight: 300;
+}
+
+.about-us-call-illustration {
+  position: absolute;
+  width: 110%;
+  opacity: 0.75;
+}
+
+@media only screen and (max-width: 992px) {
+  .about-us-mission-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-us-mission-description {
+    width: 100%;
+    margin-bottom: 3em;
+  }
+
+  .our-mission-opacity-illustration {
+    width: 35%;
+  }
+
+  .our-mission-illustration {
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .about-us-mission {
+    margin-top: -15em;
+    padding-top: 25em;
+  }
+
+  .our-mission-opacity-illustration,
+  .our-mission-illustration {
+    width: 100%;
+  }
+
+  .our-mission-opacity-illustration {
+    opacity: 0.55;
+  }
+}

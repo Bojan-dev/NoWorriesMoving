@@ -1,0 +1,56 @@
+// 1 - HELPERS
+
+@import '1-helpers/variables';
+@import '1-helpers/mixins';
+@import '1-helpers/functions';
+
+// 2 - VENDORS
+
+// 3 - BASIC
+
+@import '3-basic/base';
+@import '3-basic/buttons';
+@import '3-basic/links';
+@import '3-basic/reset';
+@import '3-basic/selection-colors';
+@import '3-basic/typography';
+@import '3-basic/global';
+
+//4 - LAYOUT
+
+@import '4-layout/header';
+@import '4-layout/main';
+@import '4-layout/our-offers';
+@import '4-layout/working_process';
+@import '4-layout/numbers';
+@import '4-layout/subscribe';
+@import '4-layout/testemonials';
+@import '4-layout/partner-companies';
+@import '4-layout/footer';
+
+//4 - LAYOUT - SERVICES
+
+@import '4-layout/services/header';
+@import '4-layout/services/advantages';
+@import '4-layout/services/our-services';
+@import '4-layout/services/free-quote';
+
+//4 - LAYOUT - PRICING
+
+@import '4-layout/pricing/header';
+
+//4 - LAYOUT - ABOUT US
+@import '4-layout/about-us/header';
+@import '4-layout/about-us/main-mission';
+
+//4 - LAYOUT - REVIEWS
+@import '4-layout/reviews/header';
+@import '4-layout/reviews/customers-reviews';
+
+//4 - LAYOUT - CONTACT
+@import '4-layout/contact/header';
+
+// 5- MODULS
+@import '5-moduls/green-section-line';
+@import '5-moduls/section_header';
+@import '5-moduls/current-page';

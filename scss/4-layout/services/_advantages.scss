@@ -1,0 +1,118 @@
+.services-advantages {
+  width: 100%;
+  margin-top: 3.333em;
+}
+
+.services-advantages-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2em;
+}
+
+.services-advantage {
+  @include displayFlex(column, flex-start);
+  padding: 1.333em;
+  border: 1px solid $color-green;
+  position: relative;
+}
+
+.services-advantages-title {
+  width: fit-content;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 50%;
+    border-top: 2px solid $color-green;
+  }
+}
+
+.services-advantages-text {
+  margin: 1.75em 0;
+}
+
+.services-advantages-icon {
+  position: absolute;
+  align-self: center;
+  transform: translateY(-50%);
+  top: 50%;
+  max-width: 40%;
+}
+
+.services-advantage1 {
+  .services-advantages-icon {
+    max-width: 65%;
+  }
+}
+
+.services-advantage-button {
+  align-self: flex-end;
+  padding: 0.4em 2.5em;
+  background: $color-green;
+  border-radius: 10px;
+  font-weight: 600;
+
+  &:hover,
+  &:active {
+    background: #3ba502;
+  }
+}
+
+@media only screen and(max-width:992px) {
+  .services-advantage1 {
+    grid-area: services-advantage1;
+  }
+
+  .services-advantage2 {
+    grid-area: services-advantage2;
+  }
+
+  .services-advantage3 {
+    grid-area: services-advantage3;
+  }
+
+  .services-advantages-wrapper {
+    width: 100%;
+    justify-items: center;
+    grid-template-areas:
+      'services-advantage1 services-advantage1 services-advantage2 services-advantage2'
+      '. services-advantage3 services-advantage3 .';
+    grid-template-columns: 25%;
+    grid-gap: 2em;
+  }
+
+  .services-advantage {
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+  }
+
+  .services-advantage-button {
+    align-self: center;
+  }
+
+  .services-advantages-title {
+    &::before {
+      bottom: 4px;
+    }
+  }
+}
+
+@media only screen and(max-width:600px) {
+  .services-advantages-wrapper {
+    @include displayFlex(column, center);
+  }
+
+  .services-advantages-title {
+    width: fit-content;
+    position: relative;
+
+    &::before {
+      transform: translateX(-50%);
+      left: 50%;
+    }
+  }
+}

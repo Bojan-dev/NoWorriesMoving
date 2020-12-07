@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="198.775" height="164.906" viewBox="0 0 198.775 164.906">
+  <defs>
+    <filter id="Path_2946" x="0" y="0" width="198.775" height="164.906" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-opacity="0.251"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="all_in_once_illustration" data-name="all in once illustration" transform="matrix(0.899, -0.438, 0.438, 0.899, -444.82, -845.947)">
+    <path id="Path_2943" data-name="Path 2943" d="M0,1077.407l26.477-6.582v33.228L0,1110.635l9.5-18.974Zm156.269-49.518-26.477,6.582V1067.7l26.477-6.582-9.5-14.253Z" transform="translate(3.391 4.364)" fill="#0f5eac"/>
+    <path id="Path_2944" data-name="Path 2944" d="M3.987,1059.054v33.233l18.031-4.482,81.269-20.2,18.031-4.482v-33.233l-18.031,4.483-81.269,20.2-18.031,4.482Z" transform="translate(18.873 12.121)" fill="#0f6bc7"/>
+    <g transform="matrix(0.9, 0.44, -0.44, 0.9, 28.96, 955.33)" filter="url(#Path_2946)">
+      <path id="Path_2946-2" data-name="Path 2946" d="M160.442,10.4v.01a4.884,4.884,0,0,0-1.345.134L132.62,17.129a4.884,4.884,0,0,0-3.7,4.74v1.1l-7.325,1.822-81.263,20.2L22.3,49.472a4.884,4.884,0,0,0-3.7,4.74v1.9L2.828,60.03a4.884,4.884,0,0,0-2.88,7.449L7.874,79.373-.357,95.816a4.884,4.884,0,0,0,5.542,6.924L31.662,96.16a4.884,4.884,0,0,0,3.71-4.74V89.512L42.687,87.7,123.95,67.5l18.036-4.483a4.884,4.884,0,0,0,3.71-4.74V57.169l15.757-3.911a4.884,4.884,0,0,0,2.89-7.449l-7.926-11.893,8.231-16.443a4.884,4.884,0,0,0-4.206-7.068Zm-.782,5.5-9.5,18.98,9.5,14.249-19.467,4.836v4.922l-18.036,4.483-81.263,20.2L29.868,86.316v5.723L3.391,98.621l9.5-18.971L3.391,65.39l19.467-4.836V54.832l18.036-4.483,81.263-20.2,11.026-2.737V22.489Z" transform="matrix(0.9, -0.44, 0.44, 0.9, 0.72, 67.55)" fill="#fff"/>
+    </g>
+    <text id="REGULAR" transform="translate(82.633 1078.128) rotate(-14)" fill="#fff" font-size="16" font-family="NunitoSans-SemiBold, Nunito Sans" font-weight="600" letter-spacing="0.015em"><tspan x="-38.224" y="0">REGULAR</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,245 @@
+.testemonials {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('/img/testemonials\ background.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 3.888em 0;
+
+  .section-header,
+  .section-short-text {
+    color: $color-white;
+  }
+}
+
+.testemonials-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.testemonial-wrapper-pic {
+  @include displayFlex(column, flex-start);
+  width: 100%;
+  align-items: center;
+}
+
+.testemonial-wrapper-pic1 {
+  align-items: flex-start;
+}
+
+.testemonial-wrapper-pic3 {
+  align-items: flex-end;
+}
+
+.testemonial-wrapper {
+  @include displayFlex(column, flex-start);
+  padding: 1.65em;
+  position: relative;
+  width: 80%;
+  background: $color-white;
+  border-radius: 15px;
+  border-top: 3px solid $color-green;
+
+  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+.customer-indicator {
+  position: absolute;
+  background: $color-green;
+  height: 30px;
+  bottom: -30px;
+  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+.testemonial-top-quote {
+  position: absolute;
+  width: 30px;
+}
+
+.customer-indicator1 {
+  width: 12.5%;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  left: 30%;
+}
+
+.customer-indicator2 {
+  width: 12.5%;
+  clip-path: polygon((0 0, 100% 0, 50% 100%));
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.customer-indicator3 {
+  width: 12.5%;
+  right: 30%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+.stars-mark {
+  @include displayFlex(row, space-between);
+  align-self: flex-end;
+}
+
+.star-mark {
+  display: flex;
+  background: $color-green;
+  width: 22.5px;
+  height: 22.5px;
+  border-radius: 5px;
+  color: $color-white;
+  justify-content: center;
+  margin-right: 0.333em;
+  align-items: center;
+  font-size: 75%;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.testemonial-title {
+  margin: 0.777em 0 0.444em 0;
+}
+
+.testemonial-logo-name {
+  @include displayFlex(row, space-between);
+  margin-top: 2.5em;
+}
+
+.testemonial-logo {
+  width: 75px;
+  height: 47.5px;
+  opacity: 0.18;
+}
+
+.testemonial-name-location {
+  @include displayFlex(column, flex-start);
+  position: relative;
+}
+
+.testemonial-bottom-quote {
+  position: absolute;
+  width: 30px;
+  top: -65%;
+  right: 0;
+}
+
+.customer-name {
+  font-size: 1.111rem;
+}
+
+.testemonial-location-place {
+  @include displayFlex(row, flex-end);
+  align-items: center;
+  color: #777777;
+  margin-top: 0.25em;
+}
+
+.testemonial-place {
+  margin-left: 0.25em;
+  font-size: 0.65rem;
+}
+
+.testemonial-customer-pic {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin-top: 50px;
+}
+
+.testemonial-customer-pic-1 {
+  background: url('/img/customer\ 1\ -\ testemonial.webp') center center
+    no-repeat;
+  background-size: cover;
+}
+
+.testemonial-customer-pic-2 {
+  background: url('/img/customer\ 2\ -\ testemonial.webp') center center
+    no-repeat;
+  background-size: cover;
+}
+
+.testemonial-customer-pic-3 {
+  background: url('/img/customer\ 3\ -\ testemonial.webp') center center
+    no-repeat;
+  background-size: cover;
+}
+
+@media only screen and(max-width:1200px) {
+  .testemonial-wrapper {
+    width: 92.5%;
+  }
+}
+
+@media only screen and(max-width:992px) {
+  .testemonials-container {
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    position: relative;
+  }
+
+  .testemonial-wrapper-1,
+  .testemonial-wrapper-2 {
+    display: none;
+  }
+
+  .testemonial-wrapper-pic1,
+  .testemonial-wrapper-pic3 {
+    position: absolute;
+    align-items: center;
+    bottom: 0;
+  }
+
+  .testemonial-wrapper-pic1 {
+    left: -40%;
+  }
+
+  .testemonial-wrapper-pic3 {
+    left: 40%;
+  }
+
+  .testemonial-wrapper-pic1 .testemonial-customer-pic,
+  .testemonial-wrapper-pic3 .testemonial-customer-pic {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 17.5px;
+    opacity: 0.65;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      opacity: 1;
+    }
+  }
+}
+
+@media only screen and(max-width:600px) {
+  .testemonial-wrapper-pic1 {
+    left: -35%;
+  }
+
+  .testemonial-customer-pic-2 {
+    width: 85px;
+    height: 85px;
+  }
+
+  .testemonial-wrapper-pic3 {
+    left: 35%;
+  }
+
+  .testemonial-wrapper-pic1 .testemonial-customer-pic,
+  .testemonial-wrapper-pic3 .testemonial-customer-pic {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+    opacity: 0.65;
+  }
+
+  .testemonial-logo {
+    width: 57.5px;
+    height: 45px;
+  }
+}

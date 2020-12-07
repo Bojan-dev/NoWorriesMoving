@@ -1,0 +1,153 @@
+.our-offers {
+  background: #f6f9f5;
+  padding: 4em 0;
+}
+
+.offers-grid {
+  display: grid;
+  grid-template-areas:
+    'offer-1 offer-1 offer-2 offer-2 offer-3 offer-3'
+    '. offer-4 offer-4 offer-5 offer-5 .';
+  grid-row-gap: 5.555em;
+}
+
+.offer {
+  position: relative;
+  @include displayFlex(column, center);
+  margin: 0 auto;
+  height: auto;
+  overflow-x: hidden;
+  align-items: center;
+  text-align: center;
+  padding: 0 10%;
+}
+
+.offer-illustration-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $color-white;
+  border: 3px solid $color-green;
+  border-radius: 50%;
+  width: 240px;
+  height: 240px;
+}
+
+.green-offer-line {
+  position: absolute;
+  width: 12.5%;
+  border: 1px solid $color-green;
+  border-radius: 2px;
+  left: -1px;
+  top: 120px;
+}
+
+.green-offer-line-right {
+  @extend .green-offer-line;
+  transform: translateX(705%);
+}
+
+.offer-1 {
+  grid-area: offer-1;
+}
+
+.offer-2 {
+  grid-area: offer-2;
+}
+
+.offer-3 {
+  grid-area: offer-3;
+}
+
+.offer-4 {
+  grid-area: offer-4;
+  margin-right: 0;
+}
+
+.offer-5 {
+  grid-area: offer-5;
+  margin-left: 0;
+}
+
+.offer-title {
+  margin: 0.5em 0;
+}
+
+@media only screen and (max-width: 1500px) {
+  .offer-illustration-holder {
+    width: 200px;
+    height: 200px;
+  }
+
+  .offer-icon {
+    width: 60%;
+  }
+
+  .offer-icon-larger {
+    width: 37.5%;
+  }
+
+  .offer-icon-medium {
+    width: 50%;
+  }
+
+  .green-offer-line {
+    width: 12.5%;
+    top: 100px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .offer-illustration-holder {
+    width: 175px;
+    height: 175px;
+  }
+
+  .offer-icon {
+    width: 60%;
+  }
+
+  .offer-icon-larger {
+    width: 37.5%;
+  }
+
+  .offer-icon-medium {
+    width: 50%;
+  }
+
+  .green-offer-line {
+    width: 12.5%;
+    top: 87.5px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .offers-grid {
+    display: grid;
+    grid-template-areas:
+      'offer-1 offer-1 offer-2 offer-2'
+      'offer-3 offer-3 offer-4 offer-4'
+      '. offer-5 offer-5 .';
+    grid-row-gap: 5.555em;
+  }
+
+  .green-offer-line,
+  .green-offer-line-right {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .offers-grid {
+    grid-template-areas:
+      'offer-1'
+      'offer-2'
+      'offer-3'
+      'offer-4'
+      'offer-5';
+  }
+  .offer-illustration-holder {
+    width: 150px;
+    height: 150px;
+  }
+}
