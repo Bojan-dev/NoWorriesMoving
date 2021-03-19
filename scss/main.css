@@ -328,6 +328,10 @@ h6 {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   overflow-x: hidden;
@@ -762,12 +766,13 @@ nav {
 }
 
 .hero-current-area-container {
-  -webkit-transform: translateX(2vw);
-          transform: translateX(2vw);
+  position: fixed;
+  right: 8.5%;
+  z-index: 5;
+  mix-blend-mode: difference;
 }
 
 .hero-current-area-container .current-area-line {
-  height: 45vh;
   width: 2px;
   background: #ffffff;
   border-radius: 5px;
@@ -786,7 +791,7 @@ nav {
           justify-content: space-between;
 }
 
-.hero-current-area-container .current-area-line .current-area, .hero-current-area-container .current-area-line .active-area, .hero-current-area-container .current-area-line .current-area:hover {
+.hero-current-area-container .current-area-line .current-area, .hero-current-area-container .current-area-line .active-area {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -807,11 +812,18 @@ nav {
   margin-bottom: 2em;
   white-space: nowrap;
   cursor: pointer;
+  position: relative;
+}
+
+.hero-current-area-container .current-area-line .current-area:hover .current-area-title, .hero-current-area-container .current-area-line .active-area:hover .current-area-title {
+  opacity: 1;
+  margin-top: 2.5px;
 }
 
 .hero-current-area-container .current-area-line .current-area-title {
   color: #ffffff;
   opacity: 0;
+  pointer-events: none;
   margin-left: 2em;
 }
 
@@ -819,14 +831,14 @@ nav {
   opacity: 1;
 }
 
-.hero-current-area-container .current-area-line .active-area, .hero-current-area-container .current-area-line .current-area:hover {
+.hero-current-area-container .current-area-line .active-area {
   width: 20px;
   height: 20px;
   margin-left: -9px;
   position: relative;
 }
 
-.hero-current-area-container .current-area-line .active-area ::before, .hero-current-area-container .current-area-line .current-area:hover ::before {
+.hero-current-area-container .current-area-line .active-area ::before {
   content: '';
   position: absolute;
   margin: auto;
@@ -3538,18 +3550,18 @@ footer {
 }
 
 .service-illustration-4 {
-  width: 200%;
+  width: 45%;
 }
 
 @media only screen and (min-width: 2200px) {
   .service-illustration-4 {
-    width: 75%;
+    width: 25%;
   }
 }
 
 @media only screen and (max-width: 1200px) {
   .service-illustration-4 {
-    width: 275%;
+    width: 45%;
   }
 }
 

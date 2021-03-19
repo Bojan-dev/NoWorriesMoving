@@ -65,12 +65,11 @@
     <title>NoWorries Moving</title>
   </head>
   <body>
-
     <!----------------------------
     ---------HEADER----------
     -------------------------------->
 
-    <header>
+    <header sectionName="Home">
       <div class="container">
         <!--NAVIGATION-->
         <div class="header-container">
@@ -83,11 +82,31 @@
           <nav>
             <ul class="navigation-list">
               <li><a href="#" class="list-page current-page">Home</a></li>
-              <li><a href="scss/6-pages/services.html" class="list-page">Services</a></li>
-              <li><a href="scss/6-pages/pricing.html" class="list-page">Pricing</a></li>
-              <li><a href="scss/6-pages/about-us.html" class="list-page">About Us</a></li>
-              <li><a href="scss/6-pages/reviews.html" class="list-page">Reviews</a></li>
-              <li><a href="scss/6-pages/contact.html" class="list-page">Contact</a></li>
+              <li>
+                <a href="scss/6-pages/services.html" class="list-page"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a href="scss/6-pages/pricing.html" class="list-page"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a href="scss/6-pages/about-us.html" class="list-page"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="scss/6-pages/reviews.html" class="list-page"
+                  >Reviews</a
+                >
+              </li>
+              <li>
+                <a href="scss/6-pages/contact.html" class="list-page"
+                  >Contact</a
+                >
+              </li>
             </ul>
           </nav>
           <div class="number-btn-container">
@@ -198,7 +217,9 @@
               <div class="hero-btns">
                 <a href="#" class="primary-btn">Book Now</a>
                 <a href="#" class="services-btn">Our Services</a>
-                <a href="#" class="services-btn quote-btn-responsive">Get a Quote</a>
+                <a href="#" class="services-btn quote-btn-responsive"
+                  >Get a Quote</a
+                >
               </div>
               <div class="hero-slider">
                 <div class="slider-page"></div>
@@ -242,8 +263,8 @@
     <!----------------------------
     ---------MAIN - WHY US?----------
     -------------------------------->
-    
-    <main class="why-us">
+
+    <main class="why-us" sectionName="Why us">
       <div class="container">
         <div class="section-header">
           <h2>Why us?</h2>
@@ -521,7 +542,7 @@
     <!----------------------------
     ---------SECTION - OUR OFFERS----------
     -------------------------------->
-    <section class="our-offers">
+    <section class="our-offers" sectionName="Offers">
       <div class="container">
         <div class="section-header">
           <h2>What we offer</h2>
@@ -619,7 +640,7 @@
     <!----------------------------
     ---------SECTION - PROCESS OF WORK----------
     -------------------------------->
-    <section class="process-of-work">
+    <section class="process-of-work" sectionName="Process">
       <div class="container">
         <div class="section-header">
           <h2>Process of work</h2>
@@ -729,7 +750,7 @@
     ---------SECTION - NUMBERS----------
     -------------------------------->
 
-    <section class="numbers">
+    <section class="numbers" sectionName="Numbers">
       <div class="container">
         <div class="numbers-container">
           <div class="our-numbers">
@@ -779,7 +800,7 @@
     <!----------------------------
     ---------SECTION - SUBSCRIBE----------
     -------------------------------->
-    <section class="subscribe">
+    <section class="subscribe" sectionName="Subscribe">
       <div class="container">
         <div class="subscribe-container">
           <div class="subscribe-text">
@@ -795,8 +816,12 @@
               class="subscribe-illustration"
               alt="Flying mail"
             />
-            <input type="email" placeholder="Enter e-mail address" onfocus="this.placeholder = ''"
-            onblur="this.placeholder = 'Enter e-mail address'"/>
+            <input
+              type="email"
+              placeholder="Enter e-mail address"
+              onfocus="this.placeholder = ''"
+              onblur="this.placeholder = 'Enter e-mail address'"
+            />
             <button type="submit" value="submit">Subscribe</button>
           </form>
         </div>
@@ -806,7 +831,7 @@
     <!----------------------------
     ---------SECTION - TESTEMONIALS----------
     -------------------------------->
-    <section class="testemonials">
+    <section class="testemonials" sectionName="Testemonials">
       <div class="container">
         <div class="section-header">
           <h2>Testemonials</h2>
@@ -909,9 +934,9 @@
             <div
               class="testemonial-customer-pic testemonial-customer-pic-2"
             ></div>
-            </div>
+          </div>
 
-            <!----------------------------
+          <!----------------------------
     ---------THIRD TESTEMONIAL----------
     -------------------------------->
 
@@ -981,7 +1006,7 @@
     <!----------------------------
     ---------FOOTER----------
     -------------------------------->
-    <footer>
+    <footer sectionName="Footer">
       <div class="container">
         <div class="footer-wrapper">
           <div class="footer-column footer-column1">

@@ -320,9 +320,12 @@ nav {
 /////////////////////////////
 
 .hero-current-area-container {
-  transform: translateX(2vw);
+  position: fixed;
+  right: 8.5%;
+  z-index: 5;
+  mix-blend-mode: difference;
+
   .current-area-line {
-    height: 45vh;
     width: 2px;
     background: $color-white;
     border-radius: 5px;
@@ -341,14 +344,19 @@ nav {
       margin-bottom: 2em;
       white-space: nowrap;
       cursor: pointer;
+      position: relative;
 
       &:hover {
-        @extend .active-area;
+        .current-area-title {
+          opacity: 1;
+          margin-top: 2.5px;
+        }
       }
     }
     .current-area-title {
       color: $color-white;
       opacity: 0;
+      pointer-events: none;
       margin-left: 2em;
     }
 
