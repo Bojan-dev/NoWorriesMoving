@@ -435,6 +435,32 @@ nav {
   color: #ffffff;
 }
 
+.header-fixed {
+  position: fixed;
+  background: #ffffff;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  top: 0;
+  left: 0;
+  height: 85px;
+  z-index: 15;
+  padding: 0 7.5%;
+  box-shadow: 0px 7px 4px -2px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0px 7px 4px -2px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 7px 4px -2px rgba(0, 0, 0, 0.16);
+}
+
+.header-fixed .list-page,
+.header-fixed .phone-number,
+.header-fixed .quote-btn {
+  color: #222222;
+}
+
+.header-fixed .quote-btn:hover {
+  background: #41ba03;
+  color: #ffffff;
+}
+
 .hero-area {
   margin-top: 1em;
 }
@@ -1023,6 +1049,9 @@ nav {
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     width: 55px;
+  }
+  .header-fixed .nav-line {
+    background: #222222;
   }
   .nav-line {
     display: initial;

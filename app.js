@@ -4,6 +4,7 @@
 //Creating current areas container - Home page:
 /////////
 
+const header = document.querySelector('header');
 const lineThroughtAreas = document.querySelector('.current-area-line');
 
 lineThroughtAreas.style.height = lineThroughtAreas.clientHeight + 50 + 'px'; //setting right slider bar height
@@ -11,7 +12,7 @@ lineThroughtAreas.style.height = lineThroughtAreas.clientHeight + 50 + 'px'; //s
 const sectionsArray = Array.from(document.querySelectorAll('section'));
 sectionsArray.push(
   document.querySelector('footer'),
-  document.querySelector('header'),
+  header,
   document.querySelector('main')
 );
 
@@ -38,4 +39,16 @@ areaRightSliderBtns.forEach((btn) => {
     btn.firstElementChild.classList.add('active-title');
     clickedArea.scrollIntoView();
   });
+});
+
+//FIXED NAVBAR:
+
+const navigationBar = document.querySelector('.header-container');
+
+document.addEventListener('scroll', () => {
+  if (window.pageYOffset > navigationBar.clientHeight) {
+    navigationBar.classList.add('header-fixed');
+  } else {
+    navigationBar.classList.remove('header-fixed');
+  }
 });
