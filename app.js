@@ -26,29 +26,49 @@ const areaRightSliderBtns = Array.from(
 
 areaRightSliderBtns.forEach((btn) => {
   btn.addEventListener('click', (e) => {
+    e.preventDefault();
     const clickedArea = sectionArrayFilter.find(
       (section) =>
         section.getAttribute('sectionName') === btn.textContent.trim()
     );
-    const oldActiveBtn = areaRightSliderBtns.find((sec) =>
-      sec.classList.contains('active-area')
-    );
-    oldActiveBtn.classList.remove('active-area');
-    oldActiveBtn.firstElementChild.classList.remove('active-title');
-    btn.classList.add('active-area');
-    btn.firstElementChild.classList.add('active-title');
-    clickedArea.scrollIntoView();
+
+    //clickedArea.scrollIntoView();
+    const yScroll =
+      clickedArea.getBoundingClientRect().top + window.pageYOffset;
+    window.scrollTo({ top: yScroll });
   });
 });
 
 //FIXED NAVBAR:
 
-const navigationBar = document.querySelector('.header-container');
+const navigationBar = document.querySelector('.header-container').classList;
 
 document.addEventListener('scroll', () => {
-  if (window.pageYOffset > navigationBar.clientHeight) {
-    navigationBar.classList.add('header-fixed');
+  //Navigation bar changed on certain Y height:
+
+  if (window.pageYOffset > 15) {
+    navigationBar.add('header-container-fixed');
+    lineThroughtAreas.classList.add('current-area-line-y');
   } else {
-    navigationBar.classList.remove('header-fixed');
+    navigationBar.remove('header-container-fixed');
+    lineThroughtAreas.classList.remove('current-area-line-y');
   }
+
+  //CURRENT AREA CHANGING ON SCROLL:
+  const currentArea = sectionArrayFilter.find(
+    (section) =>
+      section.offsetTop < window.pageYOffset + 150 &&
+      section.offsetTop + section.clientHeight > window.pageYOffset + 150
+  );
+  const currentBtn = areaRightSliderBtns.find(
+    (btn) => btn.textContent.trim() === currentArea.getAttribute('sectionName')
+  );
+  areaRightSliderBtns.forEach((btn) => {
+    if (btn != currentBtn) {
+      btn.classList.remove('active-area');
+      btn.firstElementChild.classList.remove('active-title');
+    }
+  });
+  currentBtn.classList.add('active-area');
+  currentBtn.firstElementChild.classList.add('active-title');
 });

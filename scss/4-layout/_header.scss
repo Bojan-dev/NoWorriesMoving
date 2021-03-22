@@ -6,6 +6,7 @@ header {
   background-attachment: fixed;
   background-size: cover;
   padding-bottom: 3em;
+  padding-top: 125px;
 }
 
 .header-container {
@@ -13,6 +14,11 @@ header {
   width: 100%;
   align-items: center;
   height: 125px;
+  z-index: 15;
+  top: 0;
+  left: 0;
+  position: fixed;
+  padding: 0 10%;
 }
 
 .website-logo {
@@ -65,29 +71,19 @@ nav {
 }
 
 //Navigation fixed on scroll:
-.header-fixed {
+
+.header-container-fixed {
   position: fixed;
-  background: $color-white;
-  transition: 0.5s all;
+  background: #0f6bc7;
+  @include transitionEase;
   top: 0;
   left: 0;
-  height: 85px;
+  height: 80px;
   z-index: 15;
-  padding: 0 7.5%;
-  box-shadow: 0px 7px 4px -2px rgba(0, 0, 0, 0.16);
-  -webkit-box-shadow: 0px 7px 4px -2px rgba(0, 0, 0, 0.16);
-  -moz-box-shadow: 0px 7px 4px -2px rgba(0, 0, 0, 0.16);
-  .list-page,
-  .phone-number,
-  .quote-btn {
-    color: $color-text;
-  }
-  .quote-btn {
-    &:hover {
-      background: $color-green;
-      color: $color-white;
-    }
-  }
+  padding: 0 10%;
+  box-shadow: 0px 7px 4px -2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 7px 4px -2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 7px 4px -2px rgba(0, 0, 0, 0.1);
 }
 
 //////////////////////////////
@@ -349,7 +345,6 @@ nav {
   position: fixed;
   right: 8.5%;
   z-index: 5;
-  mix-blend-mode: difference;
 
   .current-area-line {
     width: 2px;
@@ -409,6 +404,28 @@ nav {
         height: 30px;
         border: 2px solid $color-green;
       }
+    }
+  }
+  .current-area-line-y {
+    opacity: 0.75;
+    background: #0f6bc7;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    .current-area {
+      background: #0f6bc7;
+      @include transitionEase;
+    }
+    .active-area {
+      ::before {
+        border: 2px solid $color-green;
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+      }
+    }
+    .current-area-title {
+      text-shadow: 2px 2px $color-text;
     }
   }
 }
