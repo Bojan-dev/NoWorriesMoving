@@ -132,15 +132,30 @@ window.addEventListener('resize', () => {
 //NAVIGATION HAMBAR:
 
 const hamBar = document.querySelector('.nav-bar-ham');
-const navBar = document.querySelector('.header-container');
+const fullPageMenu = document.querySelector('.on-hambar-click');
+const setProperties = function (opacity, width, height) {
+  fullPageMenu.style.opacity = opacity;
+  fullPageMenu.style.width = width + 'vw';
+  fullPageMenu.style.height = height + 'vh';
+};
 
 let hamBarCounter = 0;
 hamBar.addEventListener('click', () => {
-  hamBarCounter % 2 === 0 &&
-    navigationBar.add('header-container-fixed-clicked');
-  hamBarCounter % 2 != 0 &&
-    navigationBar.remove('header-container-fixed-clicked');
+  if (hamBarCounter % 2 === 0) {
+    setProperties(1, 100, 100);
+    document.documentElement.style.overflow = 'hidden';
+    hamBar.classList.add('nav-bar-clicked');
+  }
+  if (hamBarCounter % 2 != 0) {
+    setProperties(0, 0, 0);
+    document.documentElement.style.overflow = 'initial';
+    hamBar.classList.remove('nav-bar-clicked');
+  }
   hamBarCounter++;
 });
 
-console.log(hamBarCounter % 2);
+window.addEventListener('resize', () => {
+  if (window.outerWidth > 1583) setProperties(0, 0, 0);
+  hamBar.classList.remove('nav-bar-clicked');
+  document.documentElement.style.overflow = 'initial';
+});
