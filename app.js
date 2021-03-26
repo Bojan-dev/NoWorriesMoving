@@ -134,6 +134,13 @@ window.addEventListener('resize', () => {
 const hamBar = document.querySelector('.nav-bar-ham');
 const navBar = document.querySelector('.header-container');
 
+let hamBarCounter = 0;
 hamBar.addEventListener('click', () => {
-  navigationBar.add('header-container-fixed-clicked');
+  hamBarCounter % 2 === 0 &&
+    navigationBar.add('header-container-fixed-clicked');
+  hamBarCounter % 2 != 0 &&
+    navigationBar.remove('header-container-fixed-clicked');
+  hamBarCounter++;
 });
+
+console.log(hamBarCounter % 2);
