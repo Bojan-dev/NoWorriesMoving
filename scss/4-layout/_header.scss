@@ -82,7 +82,7 @@ nav {
   @include transitionEase;
   align-items: center;
   top: 0;
-  left: 0;
+  right: 0;
   .navigation-list {
     margin-top: 10%;
     flex-direction: column;

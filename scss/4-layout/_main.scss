@@ -192,6 +192,36 @@
   }
 }
 
+.smaller-screens-slider {
+  margin: 2.5em auto 0 auto;
+  width: 180px;
+  height: 70px;
+  align-items: center;
+  display: none;
+
+  & > div {
+    width: 100%;
+    height: 100%;
+    @include displayFlex(row, space-between);
+  }
+
+  .slider-smaller-btn {
+    height: 100%;
+    width: 45%;
+    background: $color-green;
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    &:hover,
+    &:active {
+      background: #3ba502;
+    }
+  }
+}
+
 @media only screen and (max-width: 1500px) {
   .why-us-container {
     grid-template-columns: 5.5fr 4fr;
@@ -310,11 +340,12 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .experience-illustrator {
-    display: none;
-  }
   .three-ellipses-slider {
     display: none;
+  }
+
+  .smaller-screens-slider {
+    display: block;
   }
 }
 

@@ -7,7 +7,9 @@
 const header = document.querySelector('header');
 const lineThroughtAreas = document.querySelector('.current-area-line');
 
-lineThroughtAreas.style.height = lineThroughtAreas.clientHeight + 50 + 'px'; //setting right slider bar height
+if (lineThroughtAreas)
+  lineThroughtAreas.style.height = lineThroughtAreas.clientHeight + 50 + 'px'; //setting right slider bar height
+
 window.addEventListener('resize', () => {
   if (window.outerWidth > 1502) lineThroughtAreas.style.height = 'fit-content';
 });
@@ -129,6 +131,24 @@ window.addEventListener('resize', () => {
   checkSize();
 });
 
+//Smaller screens slider:
+
+const smallerSliderBtns = Array.from(
+  document.querySelector('.smaller-screens-slider').children[0].children
+);
+
+smallerSliderBtns[1].addEventListener('click', () => {
+  if (clickFollow === -266) return;
+  clickFollow += -133;
+  whyUsArea.style.left = clickFollow + '%';
+});
+
+smallerSliderBtns[0].addEventListener('click', () => {
+  if (clickFollow === 0) return;
+  clickFollow += 133;
+  whyUsArea.style.left = clickFollow + '%';
+});
+
 //NAVIGATION HAMBAR:
 
 const hamBar = document.querySelector('.nav-bar-ham');
@@ -155,7 +175,9 @@ hamBar.addEventListener('click', () => {
 });
 
 window.addEventListener('resize', () => {
-  if (window.outerWidth > 1583) setProperties(0, 0, 0);
-  hamBar.classList.remove('nav-bar-clicked');
-  document.documentElement.style.overflow = 'initial';
+  if (window.outerWidth > 1583) {
+    setProperties(0, 0, 0);
+    hamBar.classList.remove('nav-bar-clicked');
+    document.documentElement.style.overflow = 'initial';
+  }
 });

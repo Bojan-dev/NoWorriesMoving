@@ -460,7 +460,7 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   top: 0;
-  left: 0;
+  right: 0;
 }
 
 .on-hambar-click .navigation-list {
@@ -1703,6 +1703,53 @@ nav {
   background: #c3e1b3;
 }
 
+.smaller-screens-slider {
+  margin: 2.5em auto 0 auto;
+  width: 180px;
+  height: 70px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+
+.smaller-screens-slider > div {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.smaller-screens-slider .slider-smaller-btn {
+  height: 100%;
+  width: 45%;
+  background: #41ba03;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.smaller-screens-slider .slider-smaller-btn:hover, .smaller-screens-slider .slider-smaller-btn:active {
+  background: #3ba502;
+}
+
 @media only screen and (max-width: 1500px) {
   .why-us-container {
     -ms-grid-columns: 5.5fr 4fr;
@@ -1832,11 +1879,11 @@ nav {
 }
 
 @media only screen and (max-width: 600px) {
-  .experience-illustrator {
-    display: none;
-  }
   .three-ellipses-slider {
     display: none;
+  }
+  .smaller-screens-slider {
+    display: block;
   }
 }
 
@@ -4537,6 +4584,7 @@ footer {
 .about-us-header {
   background: url("/img/about-us background.svg") no-repeat center center;
   background-size: cover;
+  margin-top: -2.5%;
 }
 
 .about-us-social-icons {
