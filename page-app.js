@@ -16,21 +16,22 @@ document.addEventListener('scroll', () => {
 
 const hamBar = document.querySelector('.nav-bar-ham');
 const fullPageMenu = document.querySelector('.on-hambar-click');
-const setProperties = function (opacity, width, height) {
+const setProperties = function (opacity, width, height, pointEvents) {
   fullPageMenu.style.opacity = opacity;
   fullPageMenu.style.width = width + 'vw';
   fullPageMenu.style.height = height + 'vh';
+  fullPageMenu.style.pointerEvents = pointEvents;
 };
 
 let hamBarCounter = 0;
 hamBar.addEventListener('click', () => {
   if (hamBarCounter % 2 === 0) {
-    setProperties(1, 100, 100);
+    setProperties(1, 100, 100, 'all');
     document.documentElement.style.overflowY = 'hidden';
     hamBar.classList.add('nav-bar-clicked');
   }
   if (hamBarCounter % 2 != 0) {
-    setProperties(0, 0, 0);
+    setProperties(0, 0, 0, 'none');
     document.documentElement.style.overflowY = 'initial';
     hamBar.classList.remove('nav-bar-clicked');
   }
@@ -39,7 +40,7 @@ hamBar.addEventListener('click', () => {
 
 window.addEventListener('resize', () => {
   if (window.outerWidth > 1583) {
-    setProperties(0, 0, 0);
+    setProperties(0, 0, 0, 'all');
     hamBar.classList.remove('nav-bar-clicked');
     document.documentElement.style.overflow = 'initial';
   }

@@ -436,6 +436,7 @@ nav {
 }
 
 .on-hambar-click {
+  pointer-events: none;
   opacity: 0;
   position: fixed;
   background: #0f6bc7;
