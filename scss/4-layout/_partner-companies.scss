@@ -8,17 +8,14 @@
   justify-items: center;
   width: 100%;
   img {
-    max-width: 90%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
+    max-height: 165px;
   }
 }
 
 @media only screen and(max-width:1200px) {
   .partner-companies-container {
     img {
-      max-height: 85%;
+      max-height: 125px;
     }
   }
 }
@@ -26,11 +23,8 @@
 @media only screen and(max-width:992px) {
   .partner-companies {
     padding: 3.333em 0 0 0;
-  }
-
-  .partner-companies-container {
     img {
-      max-height: 70%;
+      max-height: 90px;
     }
   }
 }
@@ -38,7 +32,7 @@
 @media only screen and (max-width: 600px) {
   .partner-companies {
     img {
-      max-height: 55%;
+      max-height: 65px;
     }
   }
 }

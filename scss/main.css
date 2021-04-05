@@ -1,7 +1,7 @@
 html,
 body {
-  background: white;
   overflow-x: hidden;
+  background: #ffffff;
 }
 
 html {
@@ -340,7 +340,8 @@ header {
   background-attachment: fixed;
   background-size: cover;
   padding-bottom: 3em;
-  padding-top: 125px;
+  padding-top: 8em;
+  height: 100vh;
 }
 
 .header-container {
@@ -980,6 +981,11 @@ nav {
 }
 
 @media only screen and (max-width: 1366px) {
+  header {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
   .header-lines:first-of-type {
     display: none;
   }
@@ -2418,7 +2424,6 @@ nav {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  margin-top: 2.5em;
 }
 
 .numbers-container {
@@ -3053,15 +3058,12 @@ nav {
 }
 
 .partner-companies-container img {
-  max-width: 90%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
+  max-height: 165px;
 }
 
 @media only screen and (max-width: 1200px) {
   .partner-companies-container img {
-    max-height: 85%;
+    max-height: 125px;
   }
 }
 
@@ -3069,14 +3071,14 @@ nav {
   .partner-companies {
     padding: 3.333em 0 0 0;
   }
-  .partner-companies-container img {
-    max-height: 70%;
+  .partner-companies img {
+    max-height: 90px;
   }
 }
 
 @media only screen and (max-width: 600px) {
   .partner-companies img {
-    max-height: 55%;
+    max-height: 65px;
   }
 }
 

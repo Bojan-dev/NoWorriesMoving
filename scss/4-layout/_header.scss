@@ -6,7 +6,8 @@ header {
   background-attachment: fixed;
   background-size: cover;
   padding-bottom: 3em;
-  padding-top: 125px;
+  padding-top: 8em;
+  height: 100vh;
 }
 
 .header-container {
@@ -505,6 +506,10 @@ nav {
 }
 
 @media only screen and (max-width: 1366px) {
+  header {
+    height: fit-content;
+  }
+
   .header-lines {
     &:first-of-type {
       display: none;
