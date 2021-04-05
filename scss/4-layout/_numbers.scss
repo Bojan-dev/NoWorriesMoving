@@ -25,11 +25,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   background: $color-white;
   box-shadow: 3px -3px 4px 3px rgba(0, 0, 0, 0.04);
+
+  img {
+    max-height: 55%;
+  }
 }
 
 .number-title {
@@ -43,31 +47,15 @@
   }
 
   .number-icon-container {
-    width: 200px;
-    height: 200px;
-  }
-
-  .numbers-icon {
-    width: 60%;
-  }
-
-  .numbers-icon-moves {
-    width: 65%;
-  }
-
-  .numbers-icon-medal {
-    width: 50%;
-  }
-
-  .numbers-icon-save {
-    width: 47.5%;
+    width: 175px;
+    height: 175px;
   }
 }
 
 @media only screen and (max-width: 1200px) {
   .number-icon-container {
-    width: 160px;
-    height: 160px;
+    width: 140px;
+    height: 140px;
   }
 
   .number-title {
@@ -77,8 +65,8 @@
 
 @media only screen and (max-width: 992px) {
   .number-icon-container {
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
   }
 
   .numbers-container {
@@ -86,26 +74,6 @@
     @include displayFlex(row, space-between);
     padding: 5em 0;
     margin-left: -5%;
-  }
-
-  .numbers-icon {
-    width: 70%;
-  }
-
-  .numbers-icon-moves {
-    width: 75%;
-  }
-
-  .numbers-icon-medal {
-    width: 60%;
-  }
-
-  .numbers-icon-save {
-    width: 55%;
-  }
-
-  .number-title {
-    font-size: 1.25em;
   }
 }
 

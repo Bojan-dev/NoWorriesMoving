@@ -8,11 +8,10 @@ const header = document.querySelector('header');
 const lineThroughtAreas = document.querySelector('.current-area-line');
 
 if (lineThroughtAreas)
-  lineThroughtAreas.style.height = lineThroughtAreas.clientHeight + 50 + 'px'; //setting right slider bar height
-
-window.addEventListener('resize', () => {
-  if (window.outerWidth > 1502) lineThroughtAreas.style.height = 'fit-content';
-});
+  lineThroughtAreas.style.height =
+    Number.parseFloat(getComputedStyle(lineThroughtAreas).height, 10) +
+    50 +
+    'px'; //setting right slider bar height
 
 const sectionsArray = Array.from(document.querySelectorAll('section'));
 sectionsArray.push(
@@ -39,31 +38,18 @@ areaRightSliderBtns.forEach((btn) => {
 
     //clickedArea.scrollIntoView();
     const yScroll =
-      clickedArea.getBoundingClientRect().top + window.pageYOffset - 50;
+      clickedArea.getBoundingClientRect().top + window.pageYOffset - 100;
     window.scrollTo({ top: yScroll });
   });
 });
 
-//FIXED NAVBAR:
-
-const navigationBar = document.querySelector('.header-container').classList;
+//CURRENT AREA CHANGING ON SCROLL:
 
 document.addEventListener('scroll', () => {
-  //Navigation bar changed on certain Y height:
-
-  if (window.pageYOffset > 15) {
-    navigationBar.add('header-container-fixed');
-    lineThroughtAreas.classList.add('current-area-line-y');
-  } else {
-    navigationBar.remove('header-container-fixed');
-    lineThroughtAreas.classList.remove('current-area-line-y');
-  }
-
-  //CURRENT AREA CHANGING ON SCROLL:
   const currentArea = sectionArrayFilter.find(
     (section) =>
-      section.offsetTop < window.pageYOffset + 150 &&
-      section.offsetTop + section.clientHeight > window.pageYOffset + 150
+      section.offsetTop < window.pageYOffset + 250 &&
+      section.offsetTop + section.clientHeight > window.pageYOffset + 250
   );
   const currentBtn = areaRightSliderBtns.find(
     (btn) => btn.textContent.trim() === currentArea.getAttribute('sectionName')
@@ -147,37 +133,4 @@ smallerSliderBtns[0].addEventListener('click', () => {
   if (clickFollow === 0) return;
   clickFollow += 133;
   whyUsArea.style.left = clickFollow + '%';
-});
-
-//NAVIGATION HAMBAR:
-
-const hamBar = document.querySelector('.nav-bar-ham');
-const fullPageMenu = document.querySelector('.on-hambar-click');
-const setProperties = function (opacity, width, height) {
-  fullPageMenu.style.opacity = opacity;
-  fullPageMenu.style.width = width + 'vw';
-  fullPageMenu.style.height = height + 'vh';
-};
-
-let hamBarCounter = 0;
-hamBar.addEventListener('click', () => {
-  if (hamBarCounter % 2 === 0) {
-    setProperties(1, 100, 100);
-    document.documentElement.style.overflow = 'hidden';
-    hamBar.classList.add('nav-bar-clicked');
-  }
-  if (hamBarCounter % 2 != 0) {
-    setProperties(0, 0, 0);
-    document.documentElement.style.overflow = 'initial';
-    hamBar.classList.remove('nav-bar-clicked');
-  }
-  hamBarCounter++;
-});
-
-window.addEventListener('resize', () => {
-  if (window.outerWidth > 1583) {
-    setProperties(0, 0, 0);
-    hamBar.classList.remove('nav-bar-clicked');
-    document.documentElement.style.overflow = 'initial';
-  }
 });
