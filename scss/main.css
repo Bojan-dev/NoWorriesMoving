@@ -1,7 +1,11 @@
 html,
 body {
-  overflow: hidden;
   background: white;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -326,17 +330,6 @@ h6 {
     font-size: 0.825rem;
     font-weight: 300;
   }
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-html,
-body {
-  overflow-x: hidden;
-  overflow-y: auto;
-  background: white;
 }
 
 header {
@@ -1097,10 +1090,9 @@ nav {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-top: 0;
+    padding: 0;
   }
   .nav-bar-ham {
-    display: initial;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1117,15 +1109,13 @@ nav {
     margin-left: 2em;
     cursor: pointer;
   }
+  /*
   .nav-bar-ham:hover .nav-line {
-    background-color: #41ba03;
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+    background-color: $color-green;
+    @include transitionEase;
     width: 55px;
   }
-  .header-fixed .nav-line {
-    background: #222222;
-  }
+*/
   .nav-line {
     display: initial;
     width: 40px;
@@ -1150,20 +1140,21 @@ nav {
     width: 50px;
     height: 50px;
   }
+  .nav-bar-clicked .nav-line {
+    margin-bottom: 0;
+  }
   .nav-bar-clicked .nav-line:nth-of-type(2) {
     display: none;
   }
   .nav-bar-clicked .nav-line:first-of-type {
     width: 50px;
-    position: absolute;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    margin-top: 8.5px;
+    -webkit-transform: rotate(45deg) translateY(2.5px);
+            transform: rotate(45deg) translateY(2.5px);
   }
   .nav-bar-clicked .nav-line:last-of-type {
     width: 50px;
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg) translateY(-2.5px);
+            transform: rotate(-45deg) translateY(-2.5px);
   }
   .hero-area {
     margin-top: 7.5em;

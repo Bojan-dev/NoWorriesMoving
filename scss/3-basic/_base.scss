@@ -1,7 +1,11 @@
 html,
 body {
-  overflow: hidden;
   background: white;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .container {

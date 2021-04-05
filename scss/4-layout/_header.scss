@@ -625,28 +625,22 @@ nav {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    padding-top: 0;
+    padding: 0;
   }
 
   .nav-bar-ham {
-    display: initial;
     @include displayFlex(column, center);
     order: 3;
     margin-left: 2em;
     cursor: pointer;
   }
-
+  /*
   .nav-bar-ham:hover .nav-line {
     background-color: $color-green;
     @include transitionEase;
     width: 55px;
   }
-
-  .header-fixed {
-    .nav-line {
-      background: $color-text;
-    }
-  }
+*/
 
   .nav-line {
     display: initial;
@@ -672,19 +666,19 @@ nav {
   .nav-bar-clicked {
     width: 50px;
     height: 50px;
+
     .nav-line {
+      margin-bottom: 0;
       &:nth-of-type(2) {
         display: none;
       }
       &:first-of-type {
         width: 50px;
-        position: absolute;
-        transform: rotate(45deg);
-        margin-top: 8.5px;
+        transform: rotate(45deg) translateY(2.5px);
       }
       &:last-of-type {
         width: 50px;
-        transform: rotate(-45deg);
+        transform: rotate(-45deg) translateY(-2.5px);
       }
     }
   }
