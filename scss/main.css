@@ -332,6 +332,54 @@ h6 {
   }
 }
 
+.go-up-btn {
+  display: none;
+  width: 50px;
+  height: 50px;
+  background: #41ba03;
+  position: fixed;
+  bottom: 5%;
+  right: 7.5%;
+  z-index: 15;
+  -webkit-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.go-up-btn:hover {
+  background: #ffffff;
+}
+
+.go-up-btn:hover svg {
+  background: red;
+}
+
+.slider-indicator {
+  background: green;
+  height: 80vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 1366px) {
+  .go-up-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .slider-indicator {
+    display: none;
+  }
+}
+
 header {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.75))), url("/img/hero picture.webp");
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("/img/hero picture.webp");
@@ -1402,6 +1450,7 @@ nav {
 }
 
 .why-us {
+  position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1635,6 +1684,7 @@ nav {
   width: 90%;
   bottom: 3em;
   z-index: 1;
+  pointer-events: none;
 }
 
 .support-illustration {
@@ -1894,6 +1944,7 @@ nav {
 .our-offers {
   background: #f6f9f5;
   padding: 4em 0;
+  position: relative;
 }
 
 .offers-grid {
@@ -2062,6 +2113,7 @@ nav {
 
 .process-of-work {
   padding: 4em 0;
+  position: relative;
 }
 
 .working-process {
@@ -2421,6 +2473,7 @@ nav {
 }
 
 .numbers {
+  position: relative;
   background: url("/img/rising numbers.svg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -2543,6 +2596,7 @@ nav {
 }
 
 .subscribe {
+  position: relative;
   padding: 3.888em 0;
   background-image: url("/img/subscribe pattern.svg");
 }
@@ -2732,6 +2786,7 @@ nav {
 }
 
 .testemonials {
+  position: relative;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("/img/testemonials background.webp");
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/img/testemonials background.webp");
   background-size: cover;
@@ -3084,6 +3139,8 @@ nav {
 }
 
 footer {
+  overflow: hidden;
+  position: relative;
   padding-top: 4em;
 }
 

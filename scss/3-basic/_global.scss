@@ -1,0 +1,40 @@
+.go-up-btn {
+  display: none;
+  width: 50px;
+  height: 50px;
+  background: $color-green;
+  position: fixed;
+  bottom: 5%;
+  right: 7.5%;
+  z-index: 15;
+  -webkit-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  &:hover {
+    background: $color-white;
+
+    svg {
+      background: red;
+    }
+  }
+}
+
+.slider-indicator {
+  background: green;
+  height: 80vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 1366px) {
+  .go-up-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slider-indicator {
+    display: none;
+  }
+}
