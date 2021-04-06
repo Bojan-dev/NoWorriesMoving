@@ -4,14 +4,17 @@
 //Creating current areas container - Home page:
 /////////
 
-const header = document.querySelector('header');
 const lineThroughtAreas = document.querySelector('.current-area-line');
 
-if (lineThroughtAreas)
-  lineThroughtAreas.style.height =
-    Number.parseFloat(getComputedStyle(lineThroughtAreas).height, 10) +
-    50 +
-    'px'; //setting right slider bar height
+document.addEventListener('scroll', () => {
+  //Navigation bar changed on certain Y height:
+
+  if (window.pageYOffset > 15) {
+    lineThroughtAreas.classList.add('current-area-line-y');
+  } else {
+    lineThroughtAreas.classList.remove('current-area-line-y');
+  }
+});
 
 const sectionsArray = Array.from(document.querySelectorAll('section'));
 sectionsArray.push(
@@ -71,29 +74,6 @@ const sideBarChange = new IntersectionObserver(btnClasses, {
 checkCurrentArea.forEach(function (section) {
   sideBarChange.observe(section);
 });
-
-/*
-
-document.addEventListener('scroll', () => {
-  const currentArea = sectionArrayFilter.find(
-    (section) =>
-      section.offsetTop < window.pageYOffset + 250 &&
-      section.offsetTop + section.clientHeight > window.pageYOffset + 250
-  );
-  const currentBtn = areaRightSliderBtns.find(
-    (btn) => btn.textContent.trim() === currentArea.getAttribute('sectionName')
-  );
-  areaRightSliderBtns.forEach((btn) => {
-    if (btn != currentBtn) {
-      btn.classList.remove('active-area');
-      btn.firstElementChild.classList.remove('active-title');
-    }
-  });
-  currentBtn.classList.add('active-area');
-  currentBtn.firstElementChild.classList.add('active-title');
-});
-
-*/
 
 //WHY US? Slider:
 
@@ -158,3 +138,5 @@ smallerSliderBtns[0].addEventListener('click', () => {
   clickFollow += 133;
   whyUsArea.style.left = clickFollow + '%';
 });
+
+//Slider on touch:

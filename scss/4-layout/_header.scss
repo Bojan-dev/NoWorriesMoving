@@ -640,13 +640,6 @@ nav {
     margin-left: 2em;
     cursor: pointer;
   }
-  /*
-  .nav-bar-ham:hover .nav-line {
-    background-color: $color-green;
-    @include transitionEase;
-    width: 55px;
-  }
-*/
 
   .nav-line {
     display: initial;
@@ -812,12 +805,6 @@ nav {
 
   .nav-bar-ham {
     margin-left: 1em;
-  }
-
-  .nav-bar-ham:hover .nav-line {
-    background-color: $color-green;
-    @include transitionEase;
-    width: 45px;
   }
 
   .nav-line {

@@ -2,16 +2,30 @@
 
 const navigationBar = document.querySelector('.header-container').classList;
 
+const header = document.querySelector('header');
+const goUpBtn = document.querySelector('.go-up-btn');
+
+goUpBtn.style.display = 'none';
+
 document.addEventListener('scroll', () => {
   //Navigation bar changed on certain Y height:
 
   if (window.pageYOffset > 15) {
     navigationBar.add('header-container-fixed');
-    lineThroughtAreas.classList.add('current-area-line-y');
   } else {
     navigationBar.remove('header-container-fixed');
-    lineThroughtAreas.classList.remove('current-area-line-y');
   }
+
+  if (window.pageYOffset > header.clientHeight && window.innerWidth < 1367) {
+    goUpBtn.style.display = 'flex';
+  } else {
+    goUpBtn.style.display = 'none';
+  }
+});
+
+goUpBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  scrollTo({ top: 0 });
 });
 
 const hamBar = document.querySelector('.nav-bar-ham');

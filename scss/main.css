@@ -346,12 +346,9 @@ h6 {
   cursor: pointer;
 }
 
-.go-up-btn:hover {
-  background: #ffffff;
-}
-
-.go-up-btn:hover svg {
-  background: red;
+.go-up-btn:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .slider-indicator {
@@ -1164,13 +1161,6 @@ nav {
     margin-left: 2em;
     cursor: pointer;
   }
-  /*
-  .nav-bar-ham:hover .nav-line {
-    background-color: $color-green;
-    @include transitionEase;
-    width: 55px;
-  }
-*/
   .nav-line {
     display: initial;
     width: 40px;
@@ -1313,12 +1303,6 @@ nav {
   }
   .nav-bar-ham {
     margin-left: 1em;
-  }
-  .nav-bar-ham:hover .nav-line {
-    background-color: #41ba03;
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-    width: 45px;
   }
   .nav-line {
     width: 32px;
@@ -2235,6 +2219,47 @@ nav {
   background-repeat: no-repeat;
 }
 
+@-webkit-keyframes svgIcons {
+  from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0.5;
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0.5;
+  }
+}
+
+@keyframes svgIcons {
+  from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0.5;
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0.5;
+  }
+}
+
+.work-step-icon {
+  -webkit-animation: svgIcons 7s infinite;
+          animation: svgIcons 7s infinite;
+}
+
 .work-step-number {
   position: absolute;
   display: -webkit-box;
@@ -3042,6 +3067,9 @@ nav {
     display: flex;
     justify-items: center;
     position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .testemonial-wrapper-1,
   .testemonial-wrapper-2 {
@@ -3236,7 +3264,10 @@ footer {
 }
 
 .usa-footer-map {
-  width: 100%;
+  width: 90%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .footer-all-rights {
