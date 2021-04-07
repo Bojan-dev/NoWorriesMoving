@@ -135,6 +135,10 @@
   @include displayFlex(column, center);
   width: 40%;
   margin-left: 7.5%;
+
+  h4 {
+    margin: 0 0 0.5em 0;
+  }
 }
 
 .small-green-line {
@@ -220,15 +224,16 @@
   .work-step-icon {
     position: absolute;
     top: 110%;
-    width: 20%;
   }
 
   .work-step-icon-right {
-    right: 25%;
+    left: 50%;
+    transform: translateX(-50);
   }
 
   .work-step-icon-left {
-    left: 25%;
+    right: 50%;
+    transform: translateX(-50);
   }
 
   .work-step-icon-large {
@@ -249,13 +254,18 @@
 
 @media only screen and (max-width: 600px) {
   .working-process {
-    @include displayFlex(column, center);
+    align-items: center;
     width: 100%;
   }
 
   .work-step {
-    @include displayFlex(column, center);
-    margin-bottom: 12em;
+    margin-bottom: 10em;
+  }
+
+  .work-step-reverse {
+    & > * {
+      transform: translateX(5%);
+    }
   }
 
   .work-img-text {
@@ -297,18 +307,19 @@
     }
   }
 
-  .work-step-icon {
-    top: 105%;
-    width: 40%;
-    transform: translateX(-50%);
-    left: 50%;
-  }
-
   .work-step-icon-large {
-    width: 25%;
+    width: 15%;
   }
 
   .work-img-container-1 {
     margin-top: -2.5em;
+  }
+
+  .work-step-icon-right {
+    left: 45%;
+  }
+
+  .work-step-icon-left {
+    right: 40%;
   }
 }

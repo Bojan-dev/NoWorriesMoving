@@ -2305,6 +2305,10 @@ nav {
   margin-left: 7.5%;
 }
 
+.work-step-description h4 {
+  margin: 0 0 0.5em 0;
+}
+
 .small-green-line {
   height: 1px;
   width: 25px;
@@ -2379,13 +2383,16 @@ nav {
   .work-step-icon {
     position: absolute;
     top: 110%;
-    width: 20%;
   }
   .work-step-icon-right {
-    right: 25%;
+    left: 50%;
+    -webkit-transform: translateX(-50);
+            transform: translateX(-50);
   }
   .work-step-icon-left {
-    left: 25%;
+    right: 50%;
+    -webkit-transform: translateX(-50);
+            transform: translateX(-50);
   }
   .work-step-icon-large {
     width: 12.5%;
@@ -2412,30 +2419,17 @@ nav {
 
 @media only screen and (max-width: 600px) {
   .working-process {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
   }
   .work-step {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-bottom: 12em;
+    margin-bottom: 10em;
+  }
+  .work-step-reverse > * {
+    -webkit-transform: translateX(5%);
+            transform: translateX(5%);
   }
   .work-img-text {
     display: -webkit-box;
@@ -2482,18 +2476,17 @@ nav {
         -ms-grid-row-align: center;
         align-self: center;
   }
-  .work-step-icon {
-    top: 105%;
-    width: 40%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    left: 50%;
-  }
   .work-step-icon-large {
-    width: 25%;
+    width: 15%;
   }
   .work-img-container-1 {
     margin-top: -2.5em;
+  }
+  .work-step-icon-right {
+    left: 45%;
+  }
+  .work-step-icon-left {
+    right: 40%;
   }
 }
 

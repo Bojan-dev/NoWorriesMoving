@@ -148,16 +148,18 @@ const allTestemonials = Array.from(
   document.querySelectorAll('.testemonial-wrapper-pic')
 );
 
-testemonialPics.addEventListener('click', function (e) {
-  if (e.target.classList.contains('testemonial-customer-pic')) {
-    allTestemonials.forEach((test) => (test.style.display = 'none'));
-    Array.from(testemonialPics.children).forEach((pic) =>
-      pic.classList.add('testemonial-customer-pic-unactive')
-    );
-    e.target.classList.remove('testemonial-customer-pic-unactive');
-    document.querySelector(
-      `.testemonial-wrapper-pic${e.target.dataset.pic}`
-    ).style.display = 'initial';
-  }
-  return;
-});
+if (window.innerWidth <= 992) {
+  testemonialPics.addEventListener('click', function (e) {
+    if (e.target.classList.contains('testemonial-customer-pic')) {
+      allTestemonials.forEach((test) => (test.style.display = 'none'));
+      Array.from(testemonialPics.children).forEach((pic) =>
+        pic.classList.add('testemonial-customer-pic-unactive')
+      );
+      e.target.classList.remove('testemonial-customer-pic-unactive');
+      document.querySelector(
+        `.testemonial-wrapper-pic${e.target.dataset.pic}`
+      ).style.display = 'initial';
+    }
+    return;
+  });
+}
