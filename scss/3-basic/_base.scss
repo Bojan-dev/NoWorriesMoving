@@ -1,10 +1,10 @@
 html,
 body {
-  overflow-x: hidden;
   background: $color-white;
 }
 
 html {
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -17,4 +17,7 @@ html {
   .container {
     width: 85%;
   }
+}
+
+@media only screen and (max-width: 992px) {
 }

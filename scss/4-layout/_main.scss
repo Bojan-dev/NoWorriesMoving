@@ -2,6 +2,7 @@
   position: relative;
   width: fit-content;
   padding: 4em 0;
+  overflow-x: hidden;
 }
 
 .why-use-containers-slider {
@@ -36,6 +37,7 @@
 }
 
 .why-us-container-left {
+  position: relative;
   @include displayFlex(column, flex-start);
   width: 100%;
 }
@@ -48,6 +50,7 @@
 
 .title-plus-icon {
   @include displayFlex(row, flex-start);
+
   align-items: center;
 }
 
@@ -149,10 +152,12 @@
 
 .experience-illustrator {
   position: absolute;
-  width: 90%;
-  bottom: 3em;
+  bottom: 50px;
   z-index: 1;
+  width: 90%;
   pointer-events: none;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .support-illustration {
@@ -250,10 +255,6 @@
       margin-top: 5%;
     }
   }
-
-  .experience-illustrator {
-    bottom: 5em;
-  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -288,10 +289,6 @@
     margin-left: -25%;
   }
 
-  .experience-illustrator {
-    display: none;
-  }
-
   .why-us-left-right-slider {
     display: none;
   }
@@ -321,14 +318,12 @@
   }
 
   .title-description-separator {
-    width: 110%;
+    width: 90%;
     margin-left: -2em;
   }
 
   .experience-illustrator {
-    position: relative;
-    width: 100%;
-    margin-bottom: -6em;
+    bottom: 10%;
   }
 
   .support-illustration {

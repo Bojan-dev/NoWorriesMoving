@@ -41,7 +41,7 @@ lineThroughtAreas.addEventListener('click', (e) => {
       (sec) => sec.getAttribute('sectionName') === e.target.textContent.trim()
     );
     window.scrollTo({
-      top: clickedArea.getBoundingClientRect().top + window.pageYOffset - 150,
+      top: clickedArea.getBoundingClientRect().top + window.pageYOffset - 75,
     });
   }
 });
@@ -108,15 +108,15 @@ const ellipseClick = function (followVal) {
 
 const checkSize = function () {
   allEllipsesContainers.forEach((cont) => {
-    if (window.outerWidth > 1108) {
+    if (window.innerWidth > 992) {
       cont.children[0].addEventListener('click', () => ellipseClick(0));
       cont.children[1].addEventListener('click', () => ellipseClick(-100));
       cont.children[2].addEventListener('click', () => ellipseClick(-200));
-    } else if (window.outerWidth < 1108) {
-      cont.children[0].addEventListener('click', () => ellipseClick(0));
-      cont.children[1].addEventListener('click', () => ellipseClick(-133.5));
-      cont.children[2].addEventListener('click', () => ellipseClick(-267));
+      return;
     }
+    cont.children[0].addEventListener('click', () => ellipseClick(0));
+    cont.children[1].addEventListener('click', () => ellipseClick(-133.5));
+    cont.children[2].addEventListener('click', () => ellipseClick(-267));
   });
 };
 checkSize();
@@ -127,7 +127,7 @@ const smallerSliderBtns = Array.from(
   document.querySelector('.smaller-screens-slider').children[0].children
 );
 
-smallerSliderBtns[1].addEventListener('click', () => {
+smallerSliderBtns[1].addEventListener('click', (e) => {
   if (clickFollow === -266) return;
   clickFollow += -133;
   whyUsArea.style.left = clickFollow + '%';
@@ -163,3 +163,5 @@ if (window.innerWidth <= 992) {
     return;
   });
 }
+
+//1092 - 993

@@ -1,10 +1,10 @@
 html,
 body {
-  overflow-x: hidden;
   background: #ffffff;
 }
 
 html {
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -1439,6 +1439,7 @@ nav {
   width: -moz-fit-content;
   width: fit-content;
   padding: 4em 0;
+  overflow-x: hidden;
 }
 
 .why-use-containers-slider {
@@ -1481,6 +1482,7 @@ nav {
 }
 
 .why-us-container-left {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1665,10 +1667,13 @@ nav {
 
 .experience-illustrator {
   position: absolute;
-  width: 90%;
-  bottom: 3em;
+  bottom: 50px;
   z-index: 1;
+  width: 90%;
   pointer-events: none;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .support-illustration {
@@ -1813,9 +1818,6 @@ nav {
     width: 100%;
     margin-top: 5%;
   }
-  .experience-illustrator {
-    bottom: 5em;
-  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -1856,9 +1858,6 @@ nav {
     padding: 2em;
     margin-left: -25%;
   }
-  .experience-illustrator {
-    display: none;
-  }
   .why-us-left-right-slider {
     display: none;
   }
@@ -1882,13 +1881,11 @@ nav {
     margin-right: 1em;
   }
   .title-description-separator {
-    width: 110%;
+    width: 90%;
     margin-left: -2em;
   }
   .experience-illustrator {
-    position: relative;
-    width: 100%;
-    margin-bottom: -6em;
+    bottom: 10%;
   }
   .support-illustration {
     width: 95%;
@@ -1952,7 +1949,6 @@ nav {
           justify-content: center;
   margin: 0 auto;
   height: auto;
-  overflow-x: hidden;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -3148,7 +3144,6 @@ nav {
 }
 
 footer {
-  overflow: hidden;
   position: relative;
   padding-top: 4em;
 }
