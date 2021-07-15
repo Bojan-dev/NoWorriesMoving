@@ -18,7 +18,7 @@
 }
 
 .reviews-hero {
-  background: url('/img/reviews\ background.svg') no-repeat center center;
+  background: url('../img/reviews\ background.svg') no-repeat center center;
   background-size: cover;
   padding: 12.5em 0;
   @include displayFlex(column, flex-start);
@@ -41,7 +41,7 @@
 
 @media only screen and(max-width:992px) {
   .reviews-hero {
-    background: url('/img/reviews\ background\ responsive.svg') no-repeat;
+    background: url('../img/reviews\ background\ responsive.svg') no-repeat;
     background-size: contain;
     background-position: center;
     @include displayFlex(column, center);

@@ -1,6 +1,6 @@
 .numbers {
   position: relative;
-  background: url('/img/rising\ numbers.svg');
+  background: url('../img/rising\ numbers.svg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -79,7 +79,7 @@
 
 @media only screen and (max-width: 600px) {
   .numbers {
-    background: url('/img/numbers\ responsive.svg');
+    background: url('../img/numbers\ responsive.svg');
     background-size: cover;
     background-position: center;
     margin-top: 2em;

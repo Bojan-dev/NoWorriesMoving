@@ -8,15 +8,7 @@
   justify-items: center;
   width: 100%;
   img {
-    max-height: 165px;
-  }
-}
-
-@media only screen and(max-width:1200px) {
-  .partner-companies-container {
-    img {
-      max-height: 125px;
-    }
+    max-height: 80%;
   }
 }
 
@@ -24,15 +16,16 @@
   .partner-companies {
     padding: 3.333em 0 0 0;
     img {
-      max-height: 90px;
+      max-height: 60%;
     }
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and(max-width:600px) {
   .partner-companies {
+    padding: 3.333em 0 0 0;
     img {
-      max-height: 65px;
+      max-height: 45%;
     }
   }
 }

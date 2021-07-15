@@ -1,11 +1,11 @@
 html,
 body {
   background: #ffffff;
-}
-
-html {
+  width: 100vw;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  overflow-y: scroll;
+  scroll-padding: 100px 0 0 0;
 }
 
 .container {
@@ -378,8 +378,8 @@ h6 {
 }
 
 header {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.75))), url("/img/hero picture.webp");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("/img/hero picture.webp");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.75))), url("../img/hero picture.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../img/hero picture.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
@@ -955,6 +955,8 @@ nav {
   width: 30px;
   height: 30px;
   border: 2px solid #41ba03;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
 }
 
 .hero-current-area-container .current-area-line-y {
@@ -978,14 +980,20 @@ nav {
           box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
-.hero-current-area-container .current-area-line-y .active-area ::before {
-  border: 2px solid #41ba03;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
-}
-
 .hero-current-area-container .current-area-line-y .current-area-title {
   text-shadow: 2px 2px #222222;
+}
+
+@-moz-document url-prefix() {
+  .hero-current-area-container .current-area p, .hero-current-area-container .current-area-line .active-area p {
+    margin-right: -4.5em;
+  }
+  .hero-current-area-container .current-area-line .current-area:nth-of-type(5) p, .hero-current-area-container .current-area-line .active-area:nth-of-type(5) p {
+    margin-right: -5.5em;
+  }
+  .hero-current-area-container .current-area-line .current-area:nth-of-type(6) p, .hero-current-area-container .current-area-line .active-area:nth-of-type(6) p {
+    margin-right: -7em;
+  }
 }
 
 @media only screen and (min-width: 2200px) {
@@ -1916,9 +1924,16 @@ nav {
   }
 }
 
-@media only screen and (max-width: 310px) {
+@media only screen and (max-width: 400px) {
   .supportive-company {
     height: 45px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .why-us-container {
+    width: 70%;
+    margin-left: -28.5%;
   }
 }
 
@@ -2192,25 +2207,25 @@ nav {
 }
 
 .work-img-container-1:before {
-  background: url("/img/quick call.webp");
+  background: url("../img/quick call.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .work-img-container-2::before {
-  background: url("/img/happy boxes.webp");
+  background: url("../img/happy boxes.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .work-img-container-3::before {
-  background: url("/img/moving day.webp");
+  background: url("../img/moving day.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .work-img-container-4::before {
-  background: url("/img/money back.webp");
+  background: url("../img/money back.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -2488,7 +2503,7 @@ nav {
 
 .numbers {
   position: relative;
-  background: url("/img/rising numbers.svg");
+  background: url("../img/rising numbers.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -2593,7 +2608,7 @@ nav {
 
 @media only screen and (max-width: 600px) {
   .numbers {
-    background: url("/img/numbers responsive.svg");
+    background: url("../img/numbers responsive.svg");
     background-size: cover;
     background-position: center;
     margin-top: 2em;
@@ -2612,7 +2627,7 @@ nav {
 .subscribe {
   position: relative;
   padding: 3.888em 0;
-  background-image: url("/img/subscribe pattern.svg");
+  background-image: url("../img/subscribe pattern.svg");
 }
 
 .subscribe-container {
@@ -2801,8 +2816,8 @@ nav {
 
 .testemonials {
   position: relative;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("/img/testemonials background.webp");
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/img/testemonials background.webp");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../img/testemonials background.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/testemonials background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -2967,8 +2982,10 @@ nav {
 }
 
 .testemonial-logo {
-  width: 75px;
-  height: 47.5px;
+  width: 100px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   opacity: 0.18;
 }
 
@@ -3044,17 +3061,17 @@ nav {
 }
 
 .testemonial-customer-pic-1 {
-  background: url("/img/customer 1 - testemonial.webp") center;
+  background: url("../img/customer 1 - testemonial.png") center;
   background-size: cover;
 }
 
 .testemonial-customer-pic-2 {
-  background: url("/img/customer 2 - testemonial.webp") center;
+  background: url("../img/customer 2 - testemonial.png") center;
   background-size: cover;
 }
 
 .testemonial-customer-pic-3 {
-  background: url("/img/customer 3 - testemonial.webp") center;
+  background: url("../img/customer 3 - testemonial.png") center;
   background-size: cover;
 }
 
@@ -3119,13 +3136,7 @@ nav {
 }
 
 .partner-companies-container img {
-  max-height: 165px;
-}
-
-@media only screen and (max-width: 1200px) {
-  .partner-companies-container img {
-    max-height: 125px;
-  }
+  max-height: 80%;
 }
 
 @media only screen and (max-width: 992px) {
@@ -3133,19 +3144,22 @@ nav {
     padding: 3.333em 0 0 0;
   }
   .partner-companies img {
-    max-height: 90px;
+    max-height: 60%;
   }
 }
 
 @media only screen and (max-width: 600px) {
+  .partner-companies {
+    padding: 3.333em 0 0 0;
+  }
   .partner-companies img {
-    max-height: 65px;
+    max-height: 45%;
   }
 }
 
 footer {
   position: relative;
-  padding-top: 4em;
+  padding-top: 2em;
 }
 
 .footer-wrapper {
@@ -3235,8 +3249,8 @@ footer {
 }
 
 .footer-logo {
-  width: 65%;
-  margin-bottom: 2em;
+  width: 45%;
+  margin-bottom: 1.5em;
 }
 
 .usa-footer-map {
@@ -3247,7 +3261,7 @@ footer {
 }
 
 .footer-all-rights {
-  background: url("/img/footer illustration.svg") no-repeat center;
+  background: url("../img/footer illustration.svg") no-repeat center;
   background-size: cover;
   padding-top: 8em;
   padding-bottom: 2em;
@@ -3368,7 +3382,7 @@ footer {
 
 @media only screen and (max-width: 600px) {
   footer {
-    padding-top: 3em;
+    padding-top: 0;
   }
   .footer-wrapper {
     display: -webkit-box;
@@ -3438,10 +3452,13 @@ footer {
   .footer-final-text {
     font-size: 0.825em;
   }
+  .usa-footer-map {
+    width: 75%;
+  }
 }
 
 .services-header {
-  background: url("/img/services background.svg") no-repeat center center fixed;
+  background: url("../img/services background.svg") no-repeat center center fixed;
   background-size: cover;
   min-height: 110vh;
 }
@@ -3721,27 +3738,21 @@ footer {
 }
 
 .services-service-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 2em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
+.services-service-wrapper img {
+  justify-self: flex-end;
+}
+
 .services-service-wrapper-reverse {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  direction: rtl;
 }
 
 .services-service {
@@ -3749,62 +3760,43 @@ footer {
 }
 
 .service-illustration {
-  width: 40%;
-  margin-left: 15%;
-}
-
-.service-illustration-3 {
-  width: 50%;
-  margin-left: 12.5%;
-}
-
-.service-illustration-2,
-.service-illustration-4 {
-  margin-left: 0;
-  margin-right: 15%;
-}
-
-.service-illustration-4 {
-  width: 45%;
-}
-
-@media only screen and (min-width: 2200px) {
-  .service-illustration-4 {
-    width: 25%;
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  .service-illustration-4 {
-    width: 45%;
-  }
+  width: 80%;
 }
 
 @media only screen and (max-width: 992px) {
   .services-service-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
     margin-top: 0;
   }
-  .services-service-wrapper h2 {
-    text-align: center;
+  .service-illustration {
+    margin-top: 3em;
   }
   .service-illustration {
-    margin: 3em 0 0 0;
+    width: 60%;
   }
+}
+
+@media only screen and (max-width: 600px) {
   .service-illustration {
-    width: 75%;
+    width: 90%;
   }
 }
 
 .free-quote {
-  background: url("/img/free quote background.svg") center;
+  background: url("../img/free quote background.svg") center;
   background-repeat: no-repeat;
   padding: 2.5em 0;
 }
@@ -3956,7 +3948,7 @@ footer {
 }
 
 .pricing-header {
-  background: url("/img/pricing background.webp") no-repeat center center fixed;
+  background: url("../img/pricing background.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -3973,7 +3965,7 @@ footer {
           box-shadow: 0px 3px 9px 5px rgba(0, 0, 0, 0.27);
 }
 
-.pricing-calculator-form {
+.calculator-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3987,14 +3979,19 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 
 .zip-code {
   width: 35%;
   padding: 1.5em 0;
   margin: 1em 0 0 0;
-  border: 2px solid #41ba03;
+  border: 2px solid #a4da89;
   text-align: center;
+}
+
+.zip-code:focus {
+  border: 2px solid #41ba03;
 }
 
 .calculator-miles {
@@ -4125,8 +4122,78 @@ footer {
   margin-bottom: 0.44em;
 }
 
-.pricing-calculator-form .green-section-line {
+.calculator-form .green-section-line {
   margin-bottom: 2.5em;
+}
+
+.two-steps-calc {
+  position: relative;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin: 2em 0 4em 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.two-steps-calc .line-through {
+  position: absolute;
+  width: 95%;
+  height: 3px;
+  border-radius: 10px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, #41ba03), color-stop(50%, #dddede));
+  background: linear-gradient(to right, #41ba03 20%, #dddede 50%);
+  margin-left: 2.5%;
+  z-index: 1;
+}
+
+.calc-steps {
+  width: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  padding: 1em 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  background-color: #41ba03;
+  z-index: 5;
+}
+
+.calc-steps div {
+  width: 40px;
+  height: 40px;
+  background: white;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #41ba03;
+  margin-right: 1em;
+}
+
+.calc-steps:last-of-type {
+  background: #dddede;
+  color: #41ba03;
+  color: white;
+}
+
+.calc-steps:last-of-type div {
+  color: #dddede;
 }
 
 .once-installments {
@@ -4368,6 +4435,16 @@ footer {
   background: #3ba502;
 }
 
+.next-calc-form {
+  position: relative;
+  width: 35%;
+}
+
+.next-calc-form i {
+  position: absolute;
+  right: 10%;
+}
+
 .lockdown-input {
   width: 100%;
   border: 2px solid #41ba03;
@@ -4530,6 +4607,9 @@ footer {
   .pricing-lockdown-offer {
     margin: 2.5em 0 1.5em 0;
   }
+  .next-calc-form {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 750px) {
@@ -4617,7 +4697,7 @@ footer {
 }
 
 .about-us-header {
-  background: url("/img/about-us background.svg") no-repeat center center;
+  background: url("../img/about-us background.svg") no-repeat center center;
   background-size: cover;
   margin-top: -2.5%;
 }
@@ -4742,7 +4822,7 @@ footer {
 
 @media only screen and (max-width: 992px) {
   .pricing-hero-text-about-us {
-    margin: 2em 0;
+    margin: 6em 0;
     padding-bottom: 22.5em;
   }
   .about-us-header-wrapper {
@@ -4814,10 +4894,9 @@ footer {
 }
 
 .about-us-mission {
-  background: url("/img/our mission background.svg");
+  background: url("../img/our mission background.svg");
   background-position: center;
   background-size: cover;
-  margin-top: -10em;
   padding: 20em 0 5em 0;
   color: #ffffff;
 }
@@ -4949,7 +5028,7 @@ footer {
 }
 
 .reviews-hero {
-  background: url("/img/reviews background.svg") no-repeat center center;
+  background: url("../img/reviews background.svg") no-repeat center center;
   background-size: cover;
   padding: 12.5em 0;
   display: -webkit-box;
@@ -4980,7 +5059,7 @@ footer {
 
 @media only screen and (max-width: 992px) {
   .reviews-hero {
-    background: url("/img/reviews background responsive.svg") no-repeat;
+    background: url("../img/reviews background responsive.svg") no-repeat;
     background-size: contain;
     background-position: center;
     display: -webkit-box;
@@ -5030,7 +5109,7 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 2.77em;
-  background: url("/img/clients marks background.svg");
+  background: url("../img/clients marks background.svg");
   background-size: cover;
   background-position: center 150px;
 }
@@ -5184,7 +5263,7 @@ footer {
 .customer-review-pic {
   width: 50px;
   height: 50px;
-  background: url("/img/review 1 photo.webp");
+  background: url("../img/review 1 photo.jpg");
   background-position: center;
   background-size: cover;
   margin-right: 0.5em;
@@ -5322,7 +5401,7 @@ footer {
 }
 
 .customer-review-pic-2 {
-  background: url("/img/review 2 photo.webp");
+  background: url("../img/review 2 photo.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -5578,17 +5657,19 @@ footer {
 }
 
 .contact-container {
-  background: url("/img/contact background.svg");
+  background: url("../img/contact background.svg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
   padding-top: 175px;
-  padding-bottom: 14em;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .contact-wrapper {
-  background: url("/img/touch background.svg");
+  background: url("../img/touch background.svg");
   background-size: cover;
   background-position: center;
   padding: 2.77em;
@@ -5614,23 +5695,28 @@ footer {
 }
 
 .get-in-touch-form {
-  margin: 1.38em 0;
+  margin: 1.5em 0;
+}
+
+.get-in-touch-form input:focus,
+.get-in-touch-form textarea:focus {
+  border: 1px solid #41ba03;
+}
+
+.get-in-touch-form p {
+  margin: 0.5em 0 1em 0;
 }
 
 .input-name-mail {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  gap: 5%;
+}
+
+.input-name-mail div {
+  width: 100%;
 }
 
 .get-in-touch-input {
@@ -5639,6 +5725,8 @@ footer {
   border-radius: 10px;
   text-align: center;
   margin-bottom: 1.38em;
+  padding: 1em;
+  width: 100%;
 }
 
 .get-in-touch-input::-webkit-input-placeholder {
@@ -5661,13 +5749,9 @@ footer {
   border: 1px solid #adadad;
 }
 
-.input-name-mail .get-in-touch-input {
-  padding: 1em;
-  width: 47.5%;
-}
-
 .get-in-touch-textarea {
   width: 100%;
+  padding: 0.75em;
 }
 
 .get-in-touch-btn {
@@ -5700,13 +5784,36 @@ footer {
           transform: translate(-50%, -50%);
 }
 
-@media only screen and (max-width: 992px) {
-  .contact-container {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    padding-bottom: 0;
-  }
+.contact-error-message {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  color: #ffffff;
+  background: #ba1c17;
+  padding: 0.25em;
+  border-radius: 10px;
+  margin-bottom: 1.5em;
+  display: none;
+  color: #dfdfdf;
+}
+
+.contact-error-message p {
+  margin: 0;
+}
+
+.contact-error-message::before {
+  content: '';
+  position: absolute;
+  border-left: 7.5px solid transparent;
+  border-right: 7.5px solid transparent;
+  border-bottom: 12.5px solid #ba1c17;
+  top: 0;
+  -webkit-transform: translate(10px, -95%);
+          transform: translate(10px, -95%);
+}
+
+@media only screen and (max-width: 1200px) {
   .contact-wrapper {
     background: #ffffff;
     padding: 2em;
@@ -5724,17 +5831,11 @@ footer {
         -ms-flex-align: center;
             align-items: center;
   }
+}
+
+@media only screen and (max-width: 992px) {
   .contact-illustrations {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-top: 2.5em;
+    text-align: center;
   }
   .main-contact-illustration {
     width: 75%;
@@ -5781,6 +5882,12 @@ footer {
   height: 2px;
   background: #41ba03;
   margin-bottom: 3.333em;
+}
+
+@media only screen and (max-width: 992px) {
+  .green-section-line {
+    margin-bottom: 2em;
+  }
 }
 
 .section-header {

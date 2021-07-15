@@ -1,6 +1,6 @@
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url('/img/hero\ picture.webp');
+    url('../img/hero\ picture.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
@@ -433,6 +433,7 @@ nav {
         width: 30px;
         height: 30px;
         border: 2px solid $color-green;
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
       }
     }
   }
@@ -451,14 +452,24 @@ nav {
       @include transitionEase;
       box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
     }
-    .active-area {
-      ::before {
-        border: 2px solid $color-green;
-        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
-      }
-    }
     .current-area-title {
       text-shadow: 2px 2px $color-text;
+    }
+  }
+
+  //Active title for mozzila
+  @-moz-document url-prefix() {
+    .current-area p {
+      margin-right: -4.5em;
+    }
+
+    .current-area-line .current-area {
+      &:nth-of-type(5) p {
+        margin-right: -5.5em;
+      }
+      &:nth-of-type(6) p {
+        margin-right: -7em;
+      }
     }
   }
 }

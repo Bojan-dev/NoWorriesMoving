@@ -9,7 +9,7 @@
 .customers-marks-wrapper {
   @include displayFlex(column, center);
   margin-bottom: 2.77em;
-  background: url('/img/clients\ marks\ background.svg');
+  background: url('../img/clients\ marks\ background.svg');
   background-size: cover;
   background-position: center 150px;
 }
@@ -117,7 +117,7 @@
 .customer-review-pic {
   width: 50px;
   height: 50px;
-  background: url('/img/review\ 1\ photo.webp');
+  background: url('../img/review\ 1\ photo.jpg');
   background-position: center;
   background-size: cover;
   margin-right: 0.5em;
@@ -199,7 +199,7 @@
 }
 
 .customer-review-pic-2 {
-  background: url('/img/review\ 2\ photo.webp');
+  background: url('../img/review\ 2\ photo.jpg');
   background-position: center;
   background-size: cover;
 }

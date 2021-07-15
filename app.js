@@ -163,5 +163,3 @@ if (window.innerWidth <= 992) {
     return;
   });
 }
-
-//1092 - 993

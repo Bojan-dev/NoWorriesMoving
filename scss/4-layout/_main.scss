@@ -346,8 +346,15 @@
   }
 }
 
-@media only screen and(max-width:310px) {
+@media only screen and (max-width: 400px) {
   .supportive-company {
     height: 45px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .why-us-container {
+    width: 70%;
+    margin-left: -28.5%;
   }
 }

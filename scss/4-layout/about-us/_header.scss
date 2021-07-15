@@ -1,5 +1,5 @@
 .about-us-header {
-  background: url('/img/about-us\ background.svg') no-repeat center center;
+  background: url('../img/about-us\ background.svg') no-repeat center center;
   background-size: cover;
   margin-top: -2.5%;
 }
@@ -91,7 +91,7 @@
 
 @media only screen and (max-width: 992px) {
   .pricing-hero-text-about-us {
-    margin: 2em 0;
+    margin: 6em 0;
     padding-bottom: 22.5em;
   }
 

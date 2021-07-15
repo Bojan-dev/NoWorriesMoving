@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale = 1.0, 
+    maximum-scale=1.0, user-scalable=no"
+    />
 
     <!----------------------------
     ---------A LITTLE SEO----------
@@ -22,24 +26,24 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/favicon/apple-touch-icon.png"
+      href="../../favicon/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/favicon/favicon-32x32.png"
+      href="../../favicon/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="/favicon/favicon-16x16.png"
+      href="../../favicon/favicon-16x16.png"
     />
-    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <link rel="manifest" href="../../favicon/site.webmanifest" />
     <link
       rel="mask-icon"
-      href="/favicon/safari-pinned-tab.svg"
+      href="../../favicon/safari-pinned-tab.svg"
       color="#5bbad5"
     />
     <meta name="msapplication-TileColor" content="#b91d47" />
@@ -64,6 +68,7 @@
     <link rel="stylesheet" href="../main.css" />
     <title>NoWorries Moving</title>
     <script defer src="../../page-app.js"></script>
+    <script defer src="../../pricing-form.js"></script>
   </head>
   <body>
     <!----------------------------
@@ -97,7 +102,8 @@
         <div class="header-container">
           <a href="/index.html"
             ><img
-              src="/img/logo.webp"
+              src="../../img/logo.webp"
+              onerror="if (this.src != '../../img/logo.webp') this.src = '../../img/logo.png';"
               class="website-logo"
               alt="NoWorries Moving logo"
           /></a>
@@ -146,7 +152,18 @@
             </p>
             <div class="green-section-line"></div>
           </div>
-          <div class="pricing-calculator-form">
+          <form action="submit" class="first-calculator-form calculator-form">
+            <div class="two-steps-calc">
+              <div class="line-through"></div>
+              <div class="calc-steps calc-steps-1">
+                <div>1</div>
+                Fill the form
+              </div>
+              <div class="calc-steps calc-steps-2">
+                <div>2</div>
+                Approximately price
+              </div>
+            </div>
             <p class="zip-code-title">ZIP code of pickup destination:</p>
             <h6 class="zip-code-title-responsive">
               ZIP code of pickup destination:
@@ -157,7 +174,11 @@
               onblur="this.placeholder = 'Enter your ZIP code'"
               placeholder="Enter your ZIP code"
               class="zip-code"
+              data-error="0"
             />
+            <div class="contact-error-message pricing-error-zip">
+              <p>ZIP code should be 5 digits long.</p>
+            </div>
             <div class="calculator-miles">
               <h6 class="approximately-miles">Choose approximately miles:</h6>
               <div class="miles-field miles-field1">&#60; 50 Miles</div>
@@ -192,8 +213,17 @@
               onblur="this.placeholder = 'Enter nearby ZIP code'"
               placeholder="Enter nearby ZIP code"
               class="zip-code zip-code2"
+              data-error="1"
             />
+            <div class="contact-error-message pricing-error-zip">
+              <p>ZIP code should be 5 digits long.</p>
+            </div>
+            <button class="next-calc-form lockdown-offer">
+              Next Step <i class="fas fa-arrow-right"></i>
+            </button>
+          </form>
 
+          <form action="submit" class="second-calculator-form calculator-form">
             <h6 class="approximately-price">Approximately Price:</h6>
             <div class="green-section-line"></div>
 
@@ -202,7 +232,7 @@
                 <p class="paying-title">All in once:</p>
                 <div class="in-once-btn">00$</div>
                 <img
-                  src="/img/all in once illustration.svg"
+                  src="../../img/all in once illustration.svg"
                   class="in-once-illustration"
                   alt="Regular offer"
                 />
@@ -211,7 +241,7 @@
                 <p class="paying-title">Via installments:</p>
                 <div class="via-installments-btn">00$ x 6</div>
                 <img
-                  src="/img/via installments illustration.svg"
+                  src="../../img/via installments illustration.svg"
                   class="via-installments-illustration"
                   alt="Regular offer"
                 />
@@ -271,22 +301,20 @@
               Offer expire in next:
               <span class="offer-expire-timer">56:29</span> minutes.
             </p>
-            <ul class="pricing-offer-final">
-              <li>
-                <span
-                  >You'll also have an option to pay through installments</span
-                >
-              </li>
-              <li>
-                <span
-                  >You can lockdown this price for the next six months!</span
-                >
-              </li>
-              <li>
-                <span>We won’t call you until you first reach out to us.</span>
-              </li>
-            </ul>
-          </div>
+          </form>
+          <ul class="pricing-offer-final">
+            <li>
+              <span
+                >You'll also have an option to pay through installments</span
+              >
+            </li>
+            <li>
+              <span>You can lockdown this price for the next six months!</span>
+            </li>
+            <li>
+              <span>We won’t call you until you first reach out to us.</span>
+            </li>
+          </ul>
         </div>
       </div>
     </main>
@@ -297,12 +325,9 @@
     <section class="partner-companies">
       <div class="container">
         <div class="partner-companies-container">
-          <img src="/img/bbb partner company.webp" alt="BBB partner logo" />
-          <img src="/img/fmcsa partner company.webp" alt="FMCSA partner logo" />
-          <img
-            src="/img/promover partner company.webp"
-            alt="PROMOVER partner logo"
-          />
+          <img src="../../img/green bbb.png" alt="BBB partner logo" />
+          <img src="../../img/green fmcsa.png" alt="FMCSA partner logo" />
+          <img src="../../img/green promover.png" alt="PROMOVER partner logo" />
         </div>
       </div>
     </section>
@@ -314,55 +339,84 @@
         <div class="footer-wrapper">
           <div class="footer-column footer-column1">
             <img
-              src="/img/logo.webp"
+              src="../../img/logo.png"
               class="footer-logo"
               alt="NoWorriesMoving logo"
             />
-            <p>60611 Chicago, Illinois</p>
+            <p>100 Forest Place #P37,</p>
+            <p>Oak Park, IL 60301</p>
             <p>888-999-3130</p>
             <p>mgak@noworriesmoving.us</p>
             <div class="footer-social-icons">
-              <a href="#" class="social-icon-footer"
+              <a
+                href="https://www.facebook.com/noworriesmoving.us"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon-footer"
                 ><i class="fab fa-facebook-f"></i
               ></a>
-              <a href="#" class="social-icon-footer"
+              <a
+                href="https://www.instagram.com/noworriesmoving/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon-footer"
                 ><i class="fab fa-instagram"></i
               ></a>
-              <a href="#" class="social-icon-footer"
+              <a
+                href="https://www.linkedin.com/company/noworriesmoving/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon-footer"
                 ><i class="fab fa-linkedin-in"></i
               ></a>
             </div>
 
             <div class="footer-social-icons-responsive">
-              <a href="#" class="social-icon-footer-responsive"
+              <a
+                href="https://www.facebook.com/noworriesmoving.us"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon-footer-responsive"
                 ><i class="fab fa-facebook-f"></i
               ></a>
-              <a href="#" class="social-icon-footer-responsive"
+              <a
+                href="https://www.instagram.com/noworriesmoving/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon-footer-responsive"
                 ><i class="fab fa-instagram"></i
               ></a>
-              <a href="#" class="social-icon-footer-responsive"
+              <a
+                href="https://www.linkedin.com/company/noworriesmoving/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon-footer-responsive"
                 ><i class="fab fa-linkedin-in"></i
               ></a>
             </div>
           </div>
           <div class="footer-column footer-column2">
             <h3>Services</h3>
-            <a href="#">Local Moves</a>
-            <a href="#">Long Distance Move</a>
-            <a href="#">Commercial Move</a>
-            <a href="#">Moving Boxes and Supplies</a>
+            <a href="services.html#service-local-move">Local Moves</a>
+            <a href="services.html#service-long-distance-move"
+              >Long Distance Move</a
+            >
+            <a href="services.html#service-commercial-move">Commercial Move</a>
+            <a href="services.html#service-moving-boxes"
+              >Moving Boxes and Supplies</a
+            >
           </div>
           <div class="footer-column footer-column3">
             <h3>Go to</h3>
             <a href="pricing.html">Pricing</a>
-            <a href="reviews.html">Reviews</a>
             <a href="about-us.html">About Us</a>
+            <a href="reviews.html">Reviews</a>
             <a href="contact.html">Contact</a>
           </div>
           <div class="footer-column footer-column4">
             <h3>No.1 in Chicagoland!</h3>
             <img
-              src="/img/usa green map.svg"
+              src="../../img/usa green map.png"
               class="usa-footer-map"
               alt="USA map with our location"
             />
@@ -373,16 +427,16 @@
         <div class="container">
           <div class="footer-delivery-trucks">
             <img
-              src="/img/footer-deliveri-truck-icon.svg"
+              src="../../img/footer-deliveri-truck-icon.svg"
               alt="Delivery truck icon"
             />
             <img
-              src="/img/footer-deliveri-truck-icon.svg"
+              src="../../img/footer-deliveri-truck-icon.svg"
               class="delivery-truck"
               alt="Delivery truck icon"
             />
             <img
-              src="/img/footer-deliveri-truck-icon.svg"
+              src="../../img/footer-deliveri-truck-icon.svg"
               alt="Delivery truck icon"
             />
           </div>

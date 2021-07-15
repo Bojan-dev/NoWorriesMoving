@@ -3,13 +3,17 @@
 }
 
 .services-service-wrapper {
-  @include displayFlex(row, space-between);
-  margin-top: 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
+
+  img {
+    justify-self: flex-end;
+  }
 }
 
 .services-service-wrapper-reverse {
-  flex-direction: row-reverse;
+  direction: rtl;
 }
 
 .services-service {
@@ -17,54 +21,28 @@
 }
 
 .service-illustration {
-  width: 40%;
-  margin-left: 15%;
-}
-
-.service-illustration-3 {
-  width: 50%;
-  margin-left: 12.5%;
-}
-
-.service-illustration-2,
-.service-illustration-4 {
-  margin-left: 0;
-  margin-right: 15%;
-}
-
-.service-illustration-4 {
-  width: 45%;
-}
-
-@media only screen and(min-width:2200px) {
-  .service-illustration-4 {
-    width: 25%;
-  }
-}
-
-@media only screen and(max-width:1200px) {
-  .service-illustration-4 {
-    width: 45%;
-  }
+  width: 80%;
 }
 
 @media only screen and(max-width:992px) {
   .services-service-wrapper {
-    flex-direction: column;
+    @include displayFlex(column, center);
     align-items: center;
     text-align: center;
     margin-top: 0;
-
-    h2 {
-      text-align: center;
-    }
   }
 
   .service-illustration {
-    margin: 3em 0 0 0;
+    margin-top: 3em;
   }
 
   .service-illustration {
-    width: 75%;
+    width: 60%;
+  }
+}
+
+@media only screen and(max-width:600px) {
+  .service-illustration {
+    width: 90%;
   }
 }

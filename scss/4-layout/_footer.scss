@@ -1,6 +1,6 @@
 footer {
   position: relative;
-  padding-top: 4em;
+  padding-top: 2em;
 }
 
 .footer-wrapper {
@@ -64,8 +64,8 @@ footer {
 }
 
 .footer-logo {
-  width: 65%;
-  margin-bottom: 2em;
+  width: 45%;
+  margin-bottom: 1.5em;
 }
 
 .usa-footer-map {
@@ -74,7 +74,7 @@ footer {
 }
 
 .footer-all-rights {
-  background: url('/img/footer\ illustration.svg') no-repeat center;
+  background: url('../img/footer\ illustration.svg') no-repeat center;
   background-size: cover;
   padding-top: 8em;
   padding-bottom: 2em;
@@ -169,7 +169,7 @@ footer {
 
 @media only screen and (max-width: 600px) {
   footer {
-    padding-top: 3em;
+    padding-top: 0;
   }
 
   .footer-wrapper {
@@ -225,5 +225,9 @@ footer {
 
   .footer-final-text {
     font-size: 0.825em;
+  }
+
+  .usa-footer-map {
+    width: 75%;
   }
 }

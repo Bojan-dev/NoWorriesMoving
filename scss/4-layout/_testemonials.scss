@@ -1,7 +1,7 @@
 .testemonials {
   position: relative;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('/img/testemonials\ background.webp');
+    url('../img/testemonials\ background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -109,8 +109,8 @@
 }
 
 .testemonial-logo {
-  width: 75px;
-  height: 47.5px;
+  width: 100px;
+  height: fit-content;
   opacity: 0.18;
 }
 
@@ -155,17 +155,17 @@
 }
 
 .testemonial-customer-pic-1 {
-  background: url('/img/customer\ 1\ -\ testemonial.webp') center;
+  background: url('../img/customer\ 1\ -\ testemonial.png') center;
   background-size: cover;
 }
 
 .testemonial-customer-pic-2 {
-  background: url('/img/customer\ 2\ -\ testemonial.webp') center;
+  background: url('../img/customer\ 2\ -\ testemonial.png') center;
   background-size: cover;
 }
 
 .testemonial-customer-pic-3 {
-  background: url('/img/customer\ 3\ -\ testemonial.webp') center;
+  background: url('../img/customer\ 3\ -\ testemonial.png') center;
   background-size: cover;
 }
 

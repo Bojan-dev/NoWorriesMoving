@@ -1,15 +1,15 @@
 .contact-container {
-  background: url('/img/contact\ background.svg');
+  background: url('../img/contact\ background.svg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
   padding-top: 175px;
-  padding-bottom: 14em;
+  height: fit-content;
 }
 
 .contact-wrapper {
-  background: url('/img/touch\ background.svg');
+  background: url('../img/touch\ background.svg');
   background-size: cover;
   background-position: center;
   padding: 2.77em;
@@ -32,12 +32,28 @@
 }
 
 .get-in-touch-form {
-  margin: 1.38em 0;
+  margin: 1.5em 0;
+
+  input,
+  textarea {
+    &:focus {
+      border: 1px solid $color-green;
+    }
+  }
+
+  p {
+    margin: 0.5em 0 1em 0;
+  }
 }
 
 .input-name-mail {
-  @include displayFlex(row, space-between);
-  align-items: center;
+  width: 100%;
+  display: flex;
+  gap: 5%;
+
+  div {
+    width: 100%;
+  }
 }
 
 .get-in-touch-input {
@@ -46,6 +62,8 @@
   border-radius: 10px;
   text-align: center;
   margin-bottom: 1.38em;
+  padding: 1em;
+  width: 100%;
 
   &::placeholder {
     @extend .placeholder;
@@ -58,15 +76,9 @@
   }
 }
 
-.input-name-mail {
-  .get-in-touch-input {
-    padding: 1em;
-    width: 47.5%;
-  }
-}
-
 .get-in-touch-textarea {
   width: 100%;
+  padding: 0.75em;
 }
 
 .get-in-touch-btn {
@@ -99,24 +111,44 @@
   transform: translate(-50%, -50%);
 }
 
-@media only screen and(max-width:992px) {
-  .contact-container {
-    height: fit-content;
-    padding-bottom: 0;
+.contact-error-message {
+  align-items: center;
+  position: relative;
+  color: $color-white;
+  background: #ba1c17;
+  padding: 0.25em;
+  border-radius: 10px;
+  margin-bottom: 1.5em;
+  display: none;
+  color: rgb(223, 223, 223);
+
+  p {
+    margin: 0;
   }
 
+  &::before {
+    content: '';
+    position: absolute;
+    border-left: 7.5px solid transparent;
+    border-right: 7.5px solid transparent;
+    border-bottom: 12.5px solid #ba1c17;
+    top: 0;
+    transform: translate(10px, -95%);
+  }
+}
+
+@media only screen and(max-width:1200px) {
   .contact-wrapper {
     background: $color-white;
     padding: 2em;
     @include displayFlex(column, center);
     align-items: center;
   }
+}
 
+@media only screen and(max-width:992px) {
   .contact-illustrations {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2.5em;
+    text-align: center;
   }
 
   .main-contact-illustration {

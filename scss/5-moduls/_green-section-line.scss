@@ -4,3 +4,9 @@
   background: $color-green;
   margin-bottom: 3.333em;
 }
+
+@media only screen and(max-width:992px) {
+  .green-section-line {
+    margin-bottom: 2em;
+  }
+}

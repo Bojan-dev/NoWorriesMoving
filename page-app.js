@@ -24,7 +24,6 @@ document.addEventListener('scroll', () => {
 });
 
 goUpBtn.addEventListener('click', (e) => {
-  e.preventDefault();
   scrollTo({ top: 0 });
 });
 
