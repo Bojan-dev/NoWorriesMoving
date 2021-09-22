@@ -3129,8 +3129,8 @@ nav {
 .partner-companies-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   width: 100%;
 }
@@ -5757,7 +5757,7 @@ footer {
 .get-in-touch-btn {
   background: #41ba03;
   font-size: 1em;
-  padding: 0.777em 0;
+  padding: 1.25em 0;
   border-radius: 10px;
   cursor: pointer;
   width: 100%;

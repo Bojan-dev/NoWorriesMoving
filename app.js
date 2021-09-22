@@ -163,3 +163,5 @@ if (window.innerWidth <= 992) {
     return;
   });
 }
+
+console.log(window.dataLayer);
