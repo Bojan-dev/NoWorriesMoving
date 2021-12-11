@@ -1,35 +1,35 @@
 .why-us {
-  position: relative;
-  width: fit-content;
+  width: 100vw;
   padding: 4em 0;
-  overflow-x: hidden;
+  @include displayFlex(column, center);
+  align-items: center;
 }
 
 .why-use-containers-slider {
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
-  width: 300%;
-  transition: 0.75s all ease-in-out;
+  @include displayFlex(row, center);
+  width: 300vw;
   left: 0;
+  transition: ease-in-out 0.75s;
 }
 
 .blue-rect-through {
   position: absolute;
+  left: 0;
   width: inherit;
   height: 25%;
   background: #0f6bc7;
   align-self: center;
+  transform: translateX(-10vw);
 }
 
 .why-us-container {
   position: relative;
   display: grid;
-  grid-template-columns: 4fr 3fr;
-  width: 90%;
-  height: auto;
-  margin-left: 0;
+  grid-template-columns: 5fr 3fr;
+  width: 70vw;
+  margin-right: auto;
+  transform: translateX(5vw);
   background: $color-white;
   border-radius: 15px;
   padding: 2.777em;
@@ -50,7 +50,6 @@
 
 .title-plus-icon {
   @include displayFlex(row, flex-start);
-
   align-items: center;
 }
 
@@ -257,6 +256,12 @@
   }
 }
 
+@media only screen and (max-width: 1366px) {
+  .why-us-container {
+    transform: translateX(7.5vw);
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .why-us-container {
     grid-template-columns: 7fr 3.5fr;
@@ -275,18 +280,10 @@
 }
 
 @media only screen and (max-width: 992px) {
-  .why-use-containers-slider {
-    display: grid;
-    width: 400%;
-  }
-
   .why-us-container {
-    grid-template-columns: 4fr 3fr;
-    width: 80%;
     position: relative;
     @include displayFlex(row, flex-start);
     padding: 2em;
-    margin-left: -25%;
   }
 
   .why-us-left-right-slider {

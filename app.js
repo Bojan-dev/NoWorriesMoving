@@ -92,8 +92,11 @@ const whyUsSlider = function (arrow, val1, val2) {
   });
 };
 
-whyUsSlider(rightArrows, -200, -100);
-whyUsSlider(leftArrows, 0, 100);
+const moveMeasure =
+  window.innerWidth > 992 && window.innerWidth < 1366 ? 117.66 : 125;
+
+whyUsSlider(rightArrows, -(moveMeasure * 2), -moveMeasure);
+whyUsSlider(leftArrows, 0, moveMeasure);
 
 //Slide on ellipses clicks:
 
@@ -110,16 +113,18 @@ const checkSize = function () {
   allEllipsesContainers.forEach((cont) => {
     if (window.innerWidth > 992) {
       cont.children[0].addEventListener('click', () => ellipseClick(0));
-      cont.children[1].addEventListener('click', () => ellipseClick(-100));
-      cont.children[2].addEventListener('click', () => ellipseClick(-200));
+      cont.children[1].addEventListener('click', () => ellipseClick(-125));
+      cont.children[2].addEventListener('click', () => ellipseClick(-250));
       return;
     }
     cont.children[0].addEventListener('click', () => ellipseClick(0));
-    cont.children[1].addEventListener('click', () => ellipseClick(-133.5));
-    cont.children[2].addEventListener('click', () => ellipseClick(-267));
+    cont.children[1].addEventListener('click', () => ellipseClick(-117.625));
+    cont.children[2].addEventListener('click', () => ellipseClick(-235.25));
   });
 };
 checkSize();
+
+//992 -1336
 
 //Smaller screens slider:
 
@@ -128,14 +133,14 @@ const smallerSliderBtns = Array.from(
 );
 
 smallerSliderBtns[1].addEventListener('click', (e) => {
-  if (clickFollow === -266) return;
-  clickFollow += -133;
+  if (clickFollow === -235.25) return;
+  clickFollow += -117.625;
   whyUsArea.style.left = clickFollow + '%';
 });
 
 smallerSliderBtns[0].addEventListener('click', () => {
   if (clickFollow === 0) return;
-  clickFollow += 133;
+  clickFollow += 117.625;
   whyUsArea.style.left = clickFollow + '%';
 });
 
@@ -164,4 +169,10 @@ if (window.innerWidth <= 992) {
   });
 }
 
-console.log(window.dataLayer);
+///
+//Reload on browser size change:
+///
+
+window.addEventListener('resize', function () {
+  window.location.reload();
+});
