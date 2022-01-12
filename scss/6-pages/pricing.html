@@ -149,71 +149,66 @@
             </p>
             <div class="green-section-line"></div>
           </div>
-          <form action="submit" class="first-calculator-form calculator-form">
-            <div class="two-steps-calc">
-              <div class="line-through"></div>
-              <div class="calc-steps calc-steps-1">
-                <div>1</div>
-                Fill the form
-              </div>
-              <div class="calc-steps calc-steps-2">
-                <div>2</div>
-                Approximately price
-              </div>
+          <div class="two-steps-calc">
+            <div class="line-through"></div>
+            <div class="calc-steps calc-steps-1">
+              <div>1</div>
+              Fill the form
             </div>
+            <div class="calc-steps calc-steps-2">
+              <div>2</div>
+              Approximately price
+            </div>
+          </div>
+          <form action="submit" class="first-calculator-form calculator-form">
             <p class="zip-code-title">ZIP code of pickup destination:</p>
             <h6 class="zip-code-title-responsive">
               ZIP code of pickup destination:
             </h6>
             <input
-              type="text"
+              type="number"
               onfocus="this.placeholder = ''"
               onblur="this.placeholder = 'Enter your ZIP code'"
               placeholder="Enter your ZIP code"
               class="zip-code"
               data-error="0"
             />
-            <div class="contact-error-message pricing-error-zip">
-              <p>ZIP code should be 5 digits long.</p>
+            <div class="contact-error-message pricing-error-zip hidden">
+              <p>ZIP code should be exactly 5 digits long.</p>
             </div>
             <div class="calculator-miles">
               <h6 class="approximately-miles">Choose approximately miles:</h6>
-              <div class="miles-field miles-field1">&#60; 50 Miles</div>
-              <div class="miles-field miles-field2">50-150 Miles</div>
-              <div class="miles-field miles-field3">>150 Miles</div>
+              <div class="miles-field miles-field1">&#60;50 Miles</div>
+              <div class="miles-field miles-field2">51-149 Miles</div>
+              <div class="miles-field miles-field3">>150+ Miles</div>
+            </div>
+            <div class="contact-error-message miles-error-message hidden">
+              <p>Please select a miles for your move.</p>
             </div>
             <div class="house-apartment-bedroom">
               <div class="house-apartment">
                 <h6 class="pricing-moving-a">Are you moving from:</h6>
-                <div class="house">house <i class="fas fa-home fa-md"></i></div>
+                <div class="house living-object">
+                  house <i class="fas fa-home fa-md living-object"></i>
+                </div>
                 <p class="house-apartment-or">OR</p>
-                <div class="apartment">
-                  apartment <i class="fas fa-building"></i>
+                <div class="apartment living-object">
+                  apartment <i class="fas fa-building living-object"></i>
                 </div>
               </div>
-              <div class="bedrooms-number">
-                <h6 class="with-bedrooms">With:</h6>
-                <div class="bedroom-number">1 bedroom</div>
-                <div class="bedroom-number">2 bedroom</div>
-                <div class="bedroom-number">3 bedroom</div>
+              <div class="contact-error-message house-error-message hidden">
+                <p>Please select a miles for your move.</p>
               </div>
-            </div>
-            <p class="zip-code-title">
-              ZIP code of destination or nearby place:
-            </p>
-            <h6 class="zip-code-title-responsive">
-              ZIP code of destination or nearby place:
-            </h6>
-            <input
-              type="text"
-              onfocus="this.placeholder = ''"
-              onblur="this.placeholder = 'Enter nearby ZIP code'"
-              placeholder="Enter nearby ZIP code"
-              class="zip-code zip-code2"
-              data-error="1"
-            />
-            <div class="contact-error-message pricing-error-zip">
-              <p>ZIP code should be 5 digits long.</p>
+              <div class="bedrooms-number hidden">
+                <h6 class="with-bedrooms">With:</h6>
+                <div class="bedroom-number studio-apartment">Studio</div>
+                <div class="bedroom-number">1 bedroom</div>
+                <div class="bedroom-number">2 bedrooms</div>
+                <div class="bedroom-number house-3bedrooms">3+ bedrooms</div>
+              </div>
+              <div class="contact-error-message bedroom-error-message hidden">
+                <p>Please select a miles for your move.</p>
+              </div>
             </div>
             <button class="next-calc-form lockdown-offer">
               Next Step <i class="fas fa-arrow-right"></i>
@@ -227,7 +222,7 @@
             <div class="once-installments">
               <div class="once-installments-offer">
                 <p class="paying-title">All in once:</p>
-                <div class="in-once-btn">00$</div>
+                <div class="in-once-btn"><p id="all-in-once">00$</p></div>
                 <img
                   src="../../img/all in once illustration.svg"
                   class="in-once-illustration"
@@ -236,7 +231,9 @@
               </div>
               <div class="once-installments-offer">
                 <p class="paying-title">Via installments:</p>
-                <div class="via-installments-btn">00$ x 6</div>
+                <div class="via-installments-btn">
+                  <p id="via-installments">00$ x 6</p>
+                </div>
                 <img
                   src="../../img/via installments illustration.svg"
                   class="via-installments-illustration"
@@ -262,10 +259,7 @@
             <div class="green-section-line green-section-line-pricing"></div>
 
             <div
-              class="
-                pricing-special-offer-price
-                pricing-special-offer-price-responsive
-              "
+              class="pricing-special-offer-price pricing-special-offer-price-responsive"
             >
               <div class="special-offer-price-hole"></div>
               <h3>00 $</h3>

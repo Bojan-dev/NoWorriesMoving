@@ -112,6 +112,8 @@
 }
 
 .contact-error-message {
+  margin: 0 auto;
+  width: fit-content;
   align-items: center;
   position: relative;
   color: $color-white;
@@ -119,7 +121,6 @@
   padding: 0.25em;
   border-radius: 10px;
   margin-bottom: 1.5em;
-  display: none;
   color: rgb(223, 223, 223);
 
   p {
@@ -133,7 +134,8 @@
     border-right: 7.5px solid transparent;
     border-bottom: 12.5px solid #ba1c17;
     top: 0;
-    transform: translate(10px, -95%);
+    left: 50%;
+    transform: translate(-50%, -90%);
   }
 }
 

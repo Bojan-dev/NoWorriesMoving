@@ -21,7 +21,8 @@ const checkName = function (name) {
   return false;
 };
 
-const mailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const mailRegExp =
+  /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 const checkMail = function (mail) {
   if (mailRegExp.test(mail)) {
@@ -36,6 +37,7 @@ const showError = function (errNum, field) {
 };
 
 form.addEventListener('submit', function (e) {
+  e.preventDefault();
   const nameField = this.querySelector('input');
   const emailField = this.querySelectorAll('input')[1];
   const textAreaField = this.querySelector('textarea');

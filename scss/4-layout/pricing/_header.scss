@@ -22,10 +22,14 @@
   width: 100%;
 }
 
+.second-calculator-form {
+  display: none;
+}
+
 .zip-code {
   width: 35%;
   padding: 1.5em 0;
-  margin: 1em 0 0 0;
+  margin: 1em 0 1em 0;
   border: 2px solid #a4da89;
   text-align: center;
 
@@ -41,7 +45,8 @@
 .calculator-miles {
   @include displayFlex(row, flex-start);
   width: 100%;
-  margin: 3.5em 0;
+  margin-top: 3.5em;
+  margin-bottom: 1em;
 }
 
 .miles-field {
@@ -72,10 +77,14 @@
   clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
+.house-apartment-bedroom {
+  margin-top: 3.5em;
+}
+
 .house-apartment {
   @include displayFlex(row, center);
   align-items: center;
-  margin-bottom: 3.5em;
+  margin-bottom: 1em;
 }
 
 .house,
@@ -108,8 +117,10 @@
 }
 
 .bedrooms-number {
-  @include displayFlex(row, center);
-  margin-bottom: 3.5em;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 3.5em;
+  margin-bottom: 1em;
 }
 
 .bedroom-number {
@@ -124,11 +135,6 @@
   &:active {
     background: #3ba502;
   }
-}
-
-.zip-code2 {
-  width: 30%;
-  margin-bottom: 3.5em;
 }
 
 .approximately-price {
@@ -154,7 +160,7 @@
     width: 95%;
     height: 3px;
     border-radius: 10px;
-    background: linear-gradient(to right, $color-green 20%, #dddede 50%);
+    background: linear-gradient(to right, $color-green 50%, #dddede 50%);
     margin-left: 2.5%;
     z-index: 1;
   }
@@ -225,6 +231,10 @@
   &:hover,
   &:active {
     background: #3ba502;
+  }
+
+  p {
+    font-size: 1em;
   }
 }
 
@@ -369,6 +379,7 @@
 .next-calc-form {
   position: relative;
   width: 35%;
+  margin-top: 3em;
 
   i {
     position: absolute;
@@ -449,15 +460,20 @@
 
   .calculator-miles,
   .house-apartment,
-  .bedrooms-number,
   .once-installments-offer,
   .once-installments {
     @include displayFlex(column, center);
     align-items: center;
   }
 
+  .bedrooms-number {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .calculator-miles {
-    margin: 3em 0;
+    margin-top: 3em;
   }
 
   .miles-field,
@@ -470,12 +486,15 @@
     }
   }
 
-  .house-apartment-bedroom {
-    width: 100%;
+  .in-once-btn,
+  .via-installments-btn {
+    p {
+      font-size: 0.825em;
+    }
   }
 
-  .house-apartment {
-    margin-bottom: 3em;
+  .house-apartment-bedroom {
+    width: 100%;
   }
 
   .pricing-moving-a,
@@ -499,8 +518,9 @@
   }
 
   .bedroom-number {
-    &:nth-of-type(2) {
-      margin: 1em 0;
+    margin-bottom: 1em;
+    &:last-of-type {
+      margin-bottom: 0;
     }
   }
 

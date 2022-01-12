@@ -360,6 +360,10 @@ h6 {
   z-index: -1;
 }
 
+.hidden {
+  display: none;
+}
+
 @media only screen and (max-width: 1366px) {
   .go-up-btn {
     display: -webkit-box;
@@ -3997,10 +4001,14 @@ footer {
   width: 100%;
 }
 
+.second-calculator-form {
+  display: none;
+}
+
 .zip-code {
   width: 35%;
   padding: 1.5em 0;
-  margin: 1em 0 0 0;
+  margin: 1em 0 1em 0;
   border: 2px solid #a4da89;
   text-align: center;
 }
@@ -4021,7 +4029,8 @@ footer {
       -ms-flex-pack: start;
           justify-content: flex-start;
   width: 100%;
-  margin: 3.5em 0;
+  margin-top: 3.5em;
+  margin-bottom: 1em;
 }
 
 .miles-field {
@@ -4054,6 +4063,10 @@ footer {
           clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
+.house-apartment-bedroom {
+  margin-top: 3.5em;
+}
+
 .house-apartment {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4068,7 +4081,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 3.5em;
+  margin-bottom: 1em;
 }
 
 .house,
@@ -4102,9 +4115,6 @@ footer {
 }
 
 .bedrooms-number {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -4112,7 +4122,8 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 3.5em;
+  margin-top: 3.5em;
+  margin-bottom: 1em;
 }
 
 .bedroom-number {
@@ -4126,11 +4137,6 @@ footer {
 
 .bedroom-number:hover, .bedroom-number:active {
   background: #3ba502;
-}
-
-.zip-code2 {
-  width: 30%;
-  margin-bottom: 3.5em;
 }
 
 .approximately-price {
@@ -4159,8 +4165,8 @@ footer {
   width: 95%;
   height: 3px;
   border-radius: 10px;
-  background: -webkit-gradient(linear, left top, right top, color-stop(20%, #41ba03), color-stop(50%, #dddede));
-  background: linear-gradient(to right, #41ba03 20%, #dddede 50%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #41ba03), color-stop(50%, #dddede));
+  background: linear-gradient(to right, #41ba03 50%, #dddede 50%);
   margin-left: 2.5%;
   z-index: 1;
 }
@@ -4264,6 +4270,11 @@ footer {
 .via-installments-btn:hover,
 .via-installments-btn:active {
   background: #3ba502;
+}
+
+.in-once-btn p,
+.via-installments-btn p {
+  font-size: 1em;
 }
 
 .in-once-btn {
@@ -4453,6 +4464,7 @@ footer {
 .next-calc-form {
   position: relative;
   width: 35%;
+  margin-top: 3em;
 }
 
 .next-calc-form i {
@@ -4535,7 +4547,6 @@ footer {
   }
   .calculator-miles,
   .house-apartment,
-  .bedrooms-number,
   .once-installments-offer,
   .once-installments {
     display: -webkit-box;
@@ -4552,8 +4563,20 @@ footer {
         -ms-flex-align: center;
             align-items: center;
   }
+  .bedrooms-number {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .calculator-miles {
-    margin: 3em 0;
+    margin-top: 3em;
   }
   .miles-field,
   .in-once-btn,
@@ -4566,11 +4589,12 @@ footer {
   .via-installments-btn:nth-child(3) {
     margin: 1em 0;
   }
+  .in-once-btn p,
+  .via-installments-btn p {
+    font-size: 0.825em;
+  }
   .house-apartment-bedroom {
     width: 100%;
-  }
-  .house-apartment {
-    margin-bottom: 3em;
   }
   .pricing-moving-a,
   .with-bedrooms,
@@ -4588,8 +4612,11 @@ footer {
   .house-apartment-or {
     margin: 1em 0;
   }
-  .bedroom-number:nth-of-type(2) {
-    margin: 1em 0;
+  .bedroom-number {
+    margin-bottom: 1em;
+  }
+  .bedroom-number:last-of-type {
+    margin-bottom: 0;
   }
   .in-once-btn,
   .via-installments-btn {
@@ -5800,6 +5827,10 @@ footer {
 }
 
 .contact-error-message {
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -5809,7 +5840,6 @@ footer {
   padding: 0.25em;
   border-radius: 10px;
   margin-bottom: 1.5em;
-  display: none;
   color: #dfdfdf;
 }
 
@@ -5824,8 +5854,9 @@ footer {
   border-right: 7.5px solid transparent;
   border-bottom: 12.5px solid #ba1c17;
   top: 0;
-  -webkit-transform: translate(10px, -95%);
-          transform: translate(10px, -95%);
+  left: 50%;
+  -webkit-transform: translate(-50%, -90%);
+          transform: translate(-50%, -90%);
 }
 
 @media only screen and (max-width: 1200px) {
