@@ -24,6 +24,12 @@
 
 .second-calculator-form {
   display: none;
+
+  h6 {
+    font-weight: 300;
+    margin-top: 3em;
+    margin-bottom: 0;
+  }
 }
 
 .zip-code {
@@ -286,7 +292,7 @@
 
 .special-offer-line {
   background: $color-green;
-  height: 2px;
+  height: 1.5px;
   width: 2.777em;
   margin-bottom: 0.222em;
 }
@@ -322,7 +328,6 @@
   width: 60%;
   color: $color-white;
   padding: 1.6em 0;
-  cursor: pointer;
 
   h3 {
     font-weight: 300;
@@ -341,19 +346,15 @@
       left: 10%;
     }
   }
+}
 
-  &:hover {
-    background: #0b539a;
-  }
-
-  &:hover .special-offer-price-hole {
-    background: #0b539a;
-  }
+#chosen-final-price {
+  font-size: 1.25em;
 }
 
 .pricing-lockdown-offer {
   @include displayFlex(column, center);
-  margin: 2.5em 0 1.5em 0;
+  margin-top: 2.5em;
   width: 40%;
 }
 
@@ -369,6 +370,7 @@
   padding: 1em 0;
   width: 100%;
   letter-spacing: calc(1rem * 0.001 * 15);
+  margin-top: 2.5em;
 
   &:hover,
   &:active {
@@ -387,11 +389,22 @@
   }
 }
 
+label {
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 1em;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
 .lockdown-input {
   width: 100%;
   border: 2px solid $color-green;
   padding: 2em 0;
   text-align: center;
+  margin-bottom: 1em;
 
   &::placeholder {
     @extend .placeholder;

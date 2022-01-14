@@ -68,6 +68,20 @@
     <script defer src="../../pricing-form.js"></script>
   </head>
   <body>
+    <div class="overlay hidden">
+      <div></div>
+    </div>
+    <div class="modal-window hidden">
+      <div class="modal-successful-icon-container">
+        <img src="../../img/successful lockdown.svg" alt="" />
+      </div>
+      <h4>Successfully completed offer lockdown!</h4>
+      <div class="green-section-line"></div>
+      <p>
+        We received your informations, you can expect us to contact you soon
+      </p>
+      <div class="close-modal">Close the Window</div>
+    </div>
     <!----------------------------
     ---------HEADER----------
     -------------------------------->
@@ -203,7 +217,7 @@
                 <h6 class="with-bedrooms">With:</h6>
                 <div class="bedroom-number studio-apartment">Studio</div>
                 <div class="bedroom-number">1 bedroom</div>
-                <div class="bedroom-number">2 bedrooms</div>
+                <div class="bedroom-number bedroom-number2">2 bedrooms</div>
                 <div class="bedroom-number house-3bedrooms">3+ bedrooms</div>
               </div>
               <div class="contact-error-message bedroom-error-message hidden">
@@ -216,7 +230,7 @@
           </form>
 
           <form action="submit" class="second-calculator-form calculator-form">
-            <h6 class="approximately-price">Approximately Price:</h6>
+            <!-- <h6 class="approximately-price">Choose Payment method:</h6>
             <div class="green-section-line"></div>
 
             <div class="once-installments">
@@ -241,7 +255,7 @@
                 />
               </div>
             </div>
-            <p class="house-apartment-or house-apartment-or2">OR</p>
+            <p class="house-apartment-or house-apartment-or2">OR</p> -->
 
             <div class="pricing-special-offer">
               <div class="pricing-special-offer-icon">
@@ -249,7 +263,7 @@
                 <div class="special-offer-line special-offer-line2"></div>
                 <div class="special-offer-line special-offer-line3"></div>
               </div>
-              <h3 class="pricing-special-offer-title">Special offer</h3>
+              <h3 class="pricing-special-offer-title">Your price</h3>
               <div class="pricing-special-offer-icon">
                 <div class="special-offer-line"></div>
                 <div class="special-offer-line special-offer-line-2"></div>
@@ -258,43 +272,73 @@
             </div>
             <div class="green-section-line green-section-line-pricing"></div>
 
-            <div
+            <!-- <div
               class="pricing-special-offer-price pricing-special-offer-price-responsive"
             >
               <div class="special-offer-price-hole"></div>
               <h3>00 $</h3>
               <h3>00 $</h3>
               <div class="special-offer-price-hole"></div>
-            </div>
+            </div> -->
 
-            <h3 class="special-offer-margin special-offer-margin-responsive">
+            <!-- <h3 class="special-offer-margin special-offer-margin-responsive">
               OR
-            </h3>
+            </h3> -->
 
             <div class="pricing-special-offer-price">
               <div class="special-offer-price-hole"></div>
-              <h3>00 $</h3>
-              <h3 class="special-offer-margin">OR</h3>
-              <h3>00 $ x6</h3>
+              <p id="chosen-final-price">Price</p>
               <div class="special-offer-price-hole"></div>
             </div>
+
+            <h6>Fill the form and lockdown your offer</h6>
+
             <div class="pricing-lockdown-offer">
+              <label for="lockdown-input-name">Your name:</label>
               <input
                 class="lockdown-input"
+                id="lockdown-input-name"
+                type="tel"
+                onfocus="this.placeholder = ''"
+                onblur="this.placeholder = 'Name here'"
+                placeholder="Name here"
+              />
+              <div class="contact-error-message name-error-message hidden">
+                <p>Name should be at least 2 characters long.</p>
+              </div>
+              <label for="lockdown-input-email">Your email address:</label>
+              <input
+                class="lockdown-input"
+                id="lockdown-input-email"
                 type="text"
                 onfocus="this.placeholder = ''"
-                onblur="this.placeholder = 'Enter your name'"
-                placeholder="Enter your name"
+                onblur="this.placeholder = 'Email address here'"
+                placeholder="Email address here"
               />
+              <div class="contact-error-message email-error-message hidden">
+                <p>Please provide a proper email address.</p>
+              </div>
+              <label for="lockdown-input-phone">Your phone number:</label>
+              <input
+                class="lockdown-input"
+                id="lockdown-input-phone"
+                type="text"
+                onfocus="this.placeholder = ''"
+                onblur="this.placeholder = 'Your phone number here'"
+                placeholder="Your phone number here"
+              />
+              <div class="contact-error-message phone-error-message hidden">
+                <p>Please provide a proper phone number.</p>
+              </div>
               <button class="lockdown-offer">
                 <span class="lockdown-offer-hole"></span> Lockdown Offer
                 <span class="lockdown-offer-hole"></span>
               </button>
             </div>
-            <p>
+            <!-- <p>
               Offer expire in next:
               <span class="offer-expire-timer">56:29</span> minutes.
-            </p>
+            </p> -->
           </form>
           <ul class="pricing-offer-final">
             <li>
