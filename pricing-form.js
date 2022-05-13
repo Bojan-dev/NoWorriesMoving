@@ -1,3 +1,14 @@
+import {
+  toggleModal,
+  sendInfo,
+  nameRegex,
+  phoneRegex,
+  emailRegex,
+  numRegExp,
+  showError,
+  inputOnFocus,
+} from './helper-functions.js';
+
 let activeForm = 1;
 let milesHrs;
 let bedroomHrs;
@@ -18,7 +29,6 @@ const allBedrooms = Array.from(bedroomFields.children).filter(
 
 const [zip1] = document.querySelectorAll('.zip-code');
 const zipErrorField = document.querySelector('.pricing-error-zip');
-const numRegExp = /^\d+$/;
 
 //Error fields:
 const milesErrorField = document.querySelector('.miles-error-message');
@@ -27,7 +37,6 @@ const bedroomErrorField = document.querySelector('.bedroom-error-message');
 
 //UI:
 const lineThrough = document.querySelector('.line-through');
-const firstStepUI = document.querySelector('.calc-steps-1');
 const secondStepUI = document.querySelector('.calc-steps-2');
 
 //Second form - Calculator:
@@ -46,13 +55,6 @@ const phoneInput = document.getElementById('lockdown-input-phone');
 const nameInputError = document.querySelector('.name-error-message');
 const emailInputError = document.querySelector('.email-error-message');
 const phoneInputError = document.querySelector('.phone-error-message');
-
-//Second form input validation:
-const nameRegex = /^[a-zA-Z\s]*$/;
-const phoneRegex =
-  /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/;
-// prettier-ignore
-const emailRegex =/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 //Successful form:
 const overlay = document.querySelector('.overlay');
@@ -127,11 +129,6 @@ const controlFormFields = function (type, e) {
   }
 };
 
-const controlModal = function (toggle) {
-  overlay.classList.toggle('hidden');
-  modal.classList.toggle('hidden');
-};
-
 // const controlPriceFields = function (e) {
 //   let btn = e.target;
 
@@ -152,11 +149,6 @@ const controlModal = function (toggle) {
 
 //   finalPrice.textContent = btn.querySelector('p').textContent;
 // };
-
-const inputOnFocus = function (errorField) {
-  errorField.classList.add('hidden');
-  this.style.borderColor = '#a4da89';
-};
 
 zip1.addEventListener('focus', inputOnFocus.bind(zip1, zipErrorField));
 
@@ -184,12 +176,6 @@ const changeStepUI = function (direction) {
     secondStepUI.style.background = '#dddede';
     secondStepUI.querySelector('div').style.color = '#dddede';
   }
-};
-
-const showError = function (erorrField, scrollToField, field = false) {
-  erorrField.classList.remove('hidden');
-  field ? (field.style.borderColor = '#ba1c17') : '';
-  scrollToField.scrollIntoView({ behavior: 'smooth' });
 };
 
 //On first form submit:
@@ -248,10 +234,10 @@ firstForm.addEventListener('submit', function (e) {
 
   finalPrice.textContent = `$${allInOncePrice}`;
 
-  secondFormState.price = allInOncePrice;
+  secondFormState.price = `${allInOncePrice}$`;
 
   //URL CHANGE:
-  activeForm++;
+  activeForm = 2;
 
   history.pushState({ id: activeForm }, '', `${location.href}#form2`);
 
@@ -278,30 +264,11 @@ phoneInput.addEventListener(
 
 //Send values to database:
 
-const sendInfo = async function (userData) {
-  try {
-    const response = await fetch(
-      'https://move-calculations-default-rtdb.firebaseio.com/moves.json',
-      {
-        method: 'POST',
-        body: JSON.stringify({
-          name: userData.name,
-          email: userData.phoneNumber,
-          phone: userData.phoneNumber,
-          price: userData.price,
-        }),
-      }
-    );
-  } catch (error) {}
-};
-
 //On second form submit:
 secondForm.addEventListener('submit', function (e) {
   e.preventDefault();
 
   let controlErrors = 0;
-
-  //prettier-ignore
 
   if (!phoneRegex.test(phoneInput.value)) {
     controlErrors++;
@@ -325,30 +292,40 @@ secondForm.addEventListener('submit', function (e) {
 
   secondFormState.name = nameInput.value.trim();
   secondFormState.phoneNumber = phoneInput.value;
-  secondFormState.emailAddress = emailInput.value;
+  secondFormState.emailAddress = emailInput.value.toLowerCase();
 
-  sendInfo(secondFormState);
-
-  controlModal('show');
+  sendInfo(
+    'https://move-calculations-default-rtdb.firebaseio.com/moves.json',
+    { ...secondFormState, info: { ...firstFormState } },
+    { modal, overlay },
+    {
+      text: 'We received your informations, you can expect us to contact you soon',
+      header: 'Successfully completed offer lockdown!',
+    }
+  );
 });
 
-closeModal.addEventListener('click', () => {
+[overlay, closeModal].forEach((btn) => {
+  btn.addEventListener('click', () => {
+    activeForm = 1;
+    toggleModal(modal, overlay);
+    modal.classList.remove('failed');
+    nameInput.value = '';
+    emailInput.value = '';
+    phoneInput.value = '';
+    location.href = location.origin;
+  });
+});
+
+window.addEventListener('hashchange', function (e) {
+  if (activeForm === 1) return;
   activeForm = 1;
-  controlModal('close');
-  document.location.reload();
-});
-
-window.addEventListener('hashchange', function () {
-  activeForm--;
   changeStepUI('backward');
   zip1.value = firstFormState.zipCode;
 });
 
 window.addEventListener('load', function () {
+  zip1.value = '';
   activeForm = 1;
-  history.pushState(
-    { id: activeForm },
-    '',
-    `${location.origin}/scss/6-pages/pricing.html`
-  );
+  history.pushState({ id: activeForm }, '', `${location.origin}/pricing.html`);
 });

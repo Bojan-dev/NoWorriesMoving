@@ -1,0 +1,186 @@
+.quote-quote-form {
+  position: relative;
+  z-index: 1;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url('/img/quote-form-bkg.jpg');
+  background-size: cover;
+  padding: 0 10% 3.125em 10%;
+  @include displayFlex(column, flex-end);
+  align-items: flex-start;
+
+  .arrow-container {
+    position: absolute;
+    left: 0;
+    background-color: $color-green;
+    color: $color-white;
+    padding: 1em;
+    animation: arrowAnim 3s linear infinite;
+    transform: translate(-50%);
+    top: 50%;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+    line-height: 1;
+  }
+
+  @-moz-document url-prefix() {
+    h1 {
+      font-size: 2rem;
+      line-height: 0;
+    }
+
+    button {
+      font-size: 1.1rem;
+    }
+  }
+
+  form {
+    @include displayFlex(column, center);
+    align-items: center;
+    button {
+      align-self: center;
+      margin: 2em 0 0 0;
+      border: none;
+      font-weight: 500;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+  }
+}
+
+.quote-forms-container {
+  margin-top: 3em;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+
+  div > div {
+    background-color: $color-white;
+  }
+
+  & > div:nth-child(2) {
+    transform: translateY(800%);
+    width: 3.125em;
+    height: 3px;
+    background-color: $color-white;
+  }
+
+  h6 {
+    text-transform: capitalize;
+    color: $color-white;
+    margin-bottom: 1em;
+  }
+}
+
+.quote-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding: 1.5625em;
+  gap: 1em;
+
+  input,
+  select {
+    width: 100%;
+    outline: none;
+    margin-top: 0.85em;
+    margin-bottom: 0;
+    text-align: start;
+    position: relative;
+  }
+
+  input[type='date']::-webkit-calendar-picker-indicator,
+  select {
+    cursor: pointer;
+  }
+
+  select * {
+    border-radius: 50%;
+  }
+
+  @-moz-document url-prefix() {
+    input[type='date'] {
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes arrowAnim {
+  0% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media only screen and(max-width:1919px) {
+  .quote-quote-form {
+    padding: 0 7.5% 2em 7.5%;
+
+    h1 {
+      font-size: 2rem;
+      line-height: 0;
+    }
+  }
+
+  .quote-form {
+    gap: 0.5em;
+    padding: 0.75em;
+  }
+
+  @-moz-document url-prefix() {
+    .quote-quote-form {
+      h1 {
+        font-size: 1.75rem;
+      }
+    }
+  }
+}
+
+@media only screen and(max-width:1600px) {
+  .quote-quote-form {
+    .arrow-container {
+      i {
+        font-size: 1.75em;
+      }
+    }
+  }
+}
+
+@media only screen and(min-height:1081px) {
+  .quote-quote-form {
+    justify-content: center;
+
+    .arrow-container {
+      top: 42.5%;
+    }
+  }
+}
+
+@media only screen and(max-height:799px) {
+  .quote-quote-form {
+    form {
+      button {
+        margin-top: 1.5em;
+        font-size: 1.1rem;
+      }
+    }
+
+    h1 {
+      font-size: 1.625rem;
+    }
+  }
+
+  .quote-forms-container {
+    margin-top: 2em;
+    h6 {
+      margin-bottom: 0.25em;
+    }
+  }
+}

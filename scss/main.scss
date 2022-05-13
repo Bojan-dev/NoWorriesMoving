@@ -50,6 +50,14 @@
 //4 - LAYOUT - CONTACT
 @import '4-layout/contact/header';
 
+//4 - LAYOUT - QUOTE
+@import '4-layout/quote/header';
+@import '4-layout/quote//layout';
+@import '4-layout/quote/left_bar';
+@import '4-layout/quote/company_offers';
+@import '4-layout/quote//quote_form';
+@import '4-layout/quote//badges';
+
 // 5- MODULS
 @import '5-moduls/green-section-line';
 @import '5-moduls/section_header';

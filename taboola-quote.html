@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XGYSJT7GHW"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-XGYSJT7GHW');
+    </script>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale = 1.0, 
+  maximum-scale=1.0, user-scalable=no"
+    />
+
+    <!----------------------------
+    ---------A LITTLE SEO----------
+    -------------------------------->
+    <meta
+      name="description"
+      content="Get your free quote, and book your move today. Feel free to contact us for more information or fill the form and we will back to you!"
+    />
+    <meta
+      name="keywords"
+      content="local moving companies, moving during covid 19, long distance moving, office movers, local movers near me"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/05c5b83680.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!----------------------------
+    ---------FAV ICON----------
+    -------------------------------->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <meta name="msapplication-TileColor" content="#41ba03" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="stylesheet" href="scss/main.css" />
+
+    <script type="module" defer src="quote.js"></script>
+
+    <title>No Worries Moving</title>
+  </head>
+  <body>
+    <div class="overlay hidden">
+      <div></div>
+    </div>
+    <div class="modal-window hidden">
+      <div class="modal-successful-icon-container">
+        <img src="img/successful lockdown.svg" alt="Sending info succeeded" />
+        <img src="img/failed lockdown.svg" alt="Sending info failed" />
+      </div>
+      <h4></h4>
+      <div class="green-section-line"></div>
+      <p></p>
+      <div class="close-modal">Close the Window</div>
+    </div>
+    <div class="container">
+      <div class="quote-grid">
+        <aside class="company-numbers">
+          <div class="big-num-div">
+            <p class="big-num">15</p>
+            <p>years of experience</p>
+          </div>
+          <div class="big-num-div">
+            <img src="img/4.8 stars img.svg" alt="5 stars" />
+            <p class="big-num">4.8</p>
+            <p>stars google rating</p>
+          </div>
+          <div class="error-handling error-hidden">
+            <h6>Please, fix the following errors:</h6>
+            <ul></ul>
+          </div>
+        </aside>
+        <header class="quote-header grid-column-span-6">
+          <a href="index.html"
+            ><img
+              src="img/logo.webp"
+              onerror="if (this.src != 'img/logo.webp') this.src = 'img/logo.png';"
+              class="quote-quote-logo"
+              alt="NoWorries Moving logo"
+          /></a>
+          <div>
+            <i class="fa-solid fa-phone fa-xl"></i>
+            <h5>844-955-6683</h5>
+          </div>
+        </header>
+        <div class="company-offers grid-column-span-6">
+          <h5>
+            Trusted and respected, highly rated and awarded, talked about and
+            hired! What we offer is:
+          </h5>
+          <div>
+            <div class="company-adventage">
+              <h6>-QUALITY</h6>
+              <div class="separation-line"></div>
+              <p>
+                Our crew is trained and re-trained to provide protective care of
+                your belongings while efficiently performing relocation to your
+                new home.
+              </p>
+            </div>
+            <div class="company-adventage">
+              <h6>-TRANSPARENCY</h6>
+              <div class="separation-line"></div>
+              <p>
+                'All-in-One' hourly rate pricing system gives you full control
+                of your final bill.
+              </p>
+            </div>
+            <div class="company-adventage">
+              <h6>-COMMUNICATIOn</h6>
+              <div class="separation-line"></div>
+              <p>
+                Your assigned personal moving assistant will always be available
+                for all your questions and concerns.
+              </p>
+            </div>
+          </div>
+        </div>
+        <main class="quote-quote-form grid-column-span-6">
+          <div class="arrow-container">
+            <i class="fa-solid fa-arrow-right fa-3x"></i>
+          </div>
+          <h1>Request a FREE Moving Quote Today:</h1>
+          <form action="#" from="TABOOLA">
+            <div class="quote-forms-container">
+              <div>
+                <h6>Moving Details:</h6>
+                <div class="quote-form">
+                  <div>
+                    <label for="move_date">Move Date:</label>
+                    <input
+                      type="date"
+                      id="move_date"
+                      onfocus="this.placeholder = ''"
+                      onblur="this.placeholder = 'mm/dd/yyyy'"
+                      class="get-in-touch-input"
+                    />
+                  </div>
+                  <div>
+                    <label for="move_size">Move Size:</label>
+                    <select id="move_size" class="get-in-touch-input">
+                      <option selected disabled value="---">---</option>
+                      <option value="studio">Studio</option>
+                      <option value="1bedroom">1 Bedroom</option>
+                      <option value="2bedrooms">2 Bedrooms</option>
+                      <option value="3+bedrooms">3+ Bedrooms</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="from_zip">From Zip:</label>
+                    <input
+                      maxlength="5"
+                      id="from_zip"
+                      onfocus="this.placeholder = ''"
+                      onblur="this.placeholder = 'Zip code'"
+                      placeholder="Zip code"
+                      class="get-in-touch-input"
+                      data-zip="from"
+                    />
+                  </div>
+                  <div>
+                    <label for="to_zip">To Zip:</label>
+                    <input
+                      maxlength="5"
+                      id="to_zip"
+                      onfocus="this.placeholder = ''"
+                      onblur="this.placeholder = 'Zip code'"
+                      placeholder="Zip code"
+                      class="get-in-touch-input"
+                      data-zip="to"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div></div>
+              <div>
+                <h6>Personal Info:</h6>
+                <div class="quote-form">
+                  <div>
+                    <label for="full_name">Full Name:</label>
+                    <input
+                      maxlength="5"
+                      id="full_name"
+                      onfocus="this.placeholder = ''"
+                      onblur="this.placeholder = 'Full name'"
+                      placeholder="Full name"
+                      class="get-in-touch-input"
+                    />
+                  </div>
+                  <div>
+                    <label for="phone_number">Phone Number:</label>
+                    <input
+                      id="phone_number"
+                      onfocus="this.placeholder = ''"
+                      onblur="this.placeholder = 'Phone number'"
+                      placeholder="Phone number"
+                      class="get-in-touch-input"
+                    />
+                  </div>
+                  <div>
+                    <label for="email_address">Email Address:</label>
+                    <input
+                      id="email_address"
+                      onfocus="this.placeholder = ''"
+                      onblur="this.placeholder = 'Email Address'"
+                      placeholder="Email Address"
+                      class="get-in-touch-input"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="primary-btn">GET FREE QUOTE!</button>
+          </form>
+        </main>
+      </div>
+    </div>
+    <div class="quote-badges">
+      <img
+        src="img/licenced badge.svg"
+        alt="No Worries Moving is licenced company"
+      />
+      <img
+        src="img/allinone badge.svg"
+        alt="We offer all in only hourly rate"
+      />
+      <img
+        src="img/satisfaction badge.svg"
+        alt="We offer all in only hourly rate"
+      />
+      <img
+        src="img/top rated badge.svg"
+        alt="We offer all in only hourly rate"
+      />
+    </div>
+  </body>
+</html>

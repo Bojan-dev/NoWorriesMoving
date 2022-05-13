@@ -1,0 +1,73 @@
+.company-offers {
+  z-index: 2;
+  padding-left: 3.125em;
+  transform: translateY(15%);
+  & > div {
+    @include displayFlex(row, center);
+    justify-content: space-between;
+    gap: 1em;
+  }
+  h5 {
+    font-family: 'Nunito Sans';
+    margin-bottom: 1.5em;
+  }
+
+  @-moz-document url-prefix() {
+    p {
+      font-size: 16px;
+    }
+
+    h5 {
+      font-size: 1.25em;
+    }
+
+    h6 {
+      font-size: 1rem;
+    }
+  }
+}
+
+.company-adventage {
+  background-color: $color-green;
+  padding: 1.25em;
+  color: $color-white;
+
+  .separation-line {
+    width: 1.5625em;
+    height: 1px;
+    background-color: $color-white;
+    margin: 0.35em 0 0.65em 0;
+  }
+}
+
+@media only screen and(max-width:1919px) {
+  .company-offers {
+    p {
+      font-size: 0.8rem;
+    }
+
+    h5 {
+      font-size: 1.15rem;
+    }
+  }
+
+  .company-adventage {
+    padding: 1em;
+
+    .separation-line {
+      width: 1em;
+    }
+  }
+}
+
+@media only screen and(max-height:700px) {
+  .company-offers {
+    div {
+      display: none;
+    }
+
+    h5 {
+      margin-top: 1em;
+    }
+  }
+}

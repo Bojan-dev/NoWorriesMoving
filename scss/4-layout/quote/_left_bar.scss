@@ -1,0 +1,72 @@
+.company-numbers {
+  position: relative;
+  color: $color-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #004195;
+}
+
+.big-num-div:first-of-type {
+  margin-top: 5vh;
+}
+
+.big-num-div {
+  @include displayFlex(column, center);
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 7.5vh;
+}
+
+.big-num {
+  font-size: 6rem;
+  line-height: 1;
+  font-weight: 600;
+  opacity: 0.5;
+}
+
+@media only screen and(max-width:1919px) {
+  .big-num-div {
+    .big-num {
+      font-size: 5rem;
+    }
+    img {
+      width: 60%;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+}
+
+.error-handling {
+  position: absolute;
+  bottom: 5vh;
+  background-color: #ba1c17;
+  width: 90%;
+  padding: 0.75em;
+  transition: 0.75s all;
+
+  h6 {
+    text-transform: initial;
+    font-size: 1.1rem;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      margin: 0.5em 0;
+    }
+  }
+}
+
+@keyframes errorDiv {
+}
+
+.error-hidden {
+  bottom: 0;
+  transform: translateY(100%);
+  opacity: 0;
+}

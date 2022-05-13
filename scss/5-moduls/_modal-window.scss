@@ -29,6 +29,10 @@
     img {
       width: 50%;
       height: 50%;
+
+      &:last-of-type {
+        display: none;
+      }
     }
   }
 
@@ -58,5 +62,38 @@
         outline: 3px solid $color-green;
       }
     }
+  }
+}
+
+.modal-window.failed {
+  border-color: #ba1c17;
+
+  .modal-successful-icon-container {
+    background: #ba1c17;
+
+    img {
+      &:first-of-type {
+        display: none;
+      }
+      &:last-of-type {
+        display: block;
+      }
+    }
+  }
+
+  div {
+    &:last-of-type {
+      background: #ba1c17;
+
+      &:hover {
+        background: $color-white;
+        color: #ba1c17;
+        outline-color: #ba1c17;
+      }
+    }
+  }
+
+  .green-section-line {
+    background: #ba1c17;
   }
 }

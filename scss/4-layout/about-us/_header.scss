@@ -1,7 +1,6 @@
 .about-us-header {
   background: url('../img/about-us\ background.svg') no-repeat center center;
   background-size: cover;
-  margin-top: -2.5%;
 }
 
 .about-us-social-icons {
@@ -14,6 +13,7 @@
 }
 
 .about-us-header-wrapper {
+  margin-top: 10vh;
   @include displayFlex(row, space-between);
   align-items: center;
 

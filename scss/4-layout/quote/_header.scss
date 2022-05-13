@@ -1,0 +1,48 @@
+.quote-header {
+  all: initial;
+  margin-top: 1.5625em;
+  @include displayFlex(row, center);
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+  font-family: 'Nunito Sans', sans-serif;
+  padding-left: 3.125em;
+
+  div {
+    @include displayFlex(row, center);
+    align-items: center;
+    color: $color-green;
+
+    i {
+      margin-right: 0.625em;
+    }
+  }
+
+  @-moz-document url-prefix() {
+    .quote-quote-logo {
+      width: 6em;
+    }
+
+    h5 {
+      font-size: 1.15rem;
+    }
+  }
+}
+
+.quote-quote-logo {
+  width: 6.5em;
+}
+
+@media only screen and(max-width:1919px) {
+  .quote-header {
+    margin-top: 1em;
+
+    h5 {
+      font-size: 1rem;
+    }
+
+    .quote-quote-logo {
+      width: 5em;
+    }
+  }
+}

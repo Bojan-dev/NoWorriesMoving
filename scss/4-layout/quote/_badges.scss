@@ -1,0 +1,18 @@
+.quote-badges {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  right: 1.5em;
+  @include displayFlex(column, center);
+  align-items: center;
+
+  img {
+    margin: 1.5em 0;
+  }
+}
+
+@media only screen and(max-width:1919px) {
+  .quote-badges {
+    display: none;
+  }
+}
