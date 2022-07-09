@@ -1,20 +1,40 @@
 'use strict';
 
 /////////
-//Creating current areas container - Home page:
+//Sections line change on scroll:
 /////////
+
+const heroLayout = document.querySelector('.hero-layout-container');
 
 const lineThroughtAreas = document.querySelector('.current-area-line');
 
-document.addEventListener('scroll', () => {
-  //Navigation bar changed on certain Y height:
-
-  if (window.pageYOffset > 15) {
+const changeLine = ([entry]) => {
+  if (!entry.isIntersecting) {
     lineThroughtAreas.classList.add('current-area-line-y');
-  } else {
+  }
+
+  if (entry.isIntersecting) {
     lineThroughtAreas.classList.remove('current-area-line-y');
   }
-});
+};
+
+const lineObserveConfig = {
+  root: null,
+  threshold: 0.85,
+};
+
+const lineObserver = new IntersectionObserver(changeLine, lineObserveConfig);
+
+lineObserver.observe(heroLayout);
+
+///
+//Line height:
+///
+lineThroughtAreas.style.height = lineThroughtAreas.clientHeight + 50 + 'px';
+
+///
+//Intersection Observer for sections
+///
 
 const sectionsArray = Array.from(document.querySelectorAll('section'));
 sectionsArray.push(
@@ -50,6 +70,7 @@ lineThroughtAreas.addEventListener('click', (e) => {
 
 const checkCurrentArea = sectionArrayFilter.slice(4, 7);
 checkCurrentArea.pop();
+
 checkCurrentArea.unshift(...document.querySelectorAll('.slider-indicator'));
 
 const btnClasses = function (entries) {
@@ -68,7 +89,7 @@ const btnClasses = function (entries) {
 
 const sideBarChange = new IntersectionObserver(btnClasses, {
   root: null,
-  threshold: 0.95,
+  threshold: 0.9,
 });
 
 checkCurrentArea.forEach(function (section) {
@@ -92,8 +113,7 @@ const whyUsSlider = function (arrow, val1, val2) {
   });
 };
 
-const moveMeasure =
-  window.innerWidth > 992 && window.innerWidth < 1366 ? 117.66 : 125;
+const moveMeasure = window.innerWidth < 1920 ? 111 : 125;
 
 whyUsSlider(rightArrows, -(moveMeasure * 2), -moveMeasure);
 whyUsSlider(leftArrows, 0, moveMeasure);
@@ -111,15 +131,15 @@ const ellipseClick = function (followVal) {
 
 const checkSize = function () {
   allEllipsesContainers.forEach((cont) => {
-    if (window.innerWidth > 992) {
+    if (window.innerWidth >= 1920) {
       cont.children[0].addEventListener('click', () => ellipseClick(0));
       cont.children[1].addEventListener('click', () => ellipseClick(-125));
       cont.children[2].addEventListener('click', () => ellipseClick(-250));
       return;
     }
     cont.children[0].addEventListener('click', () => ellipseClick(0));
-    cont.children[1].addEventListener('click', () => ellipseClick(-117.625));
-    cont.children[2].addEventListener('click', () => ellipseClick(-235.25));
+    cont.children[1].addEventListener('click', () => ellipseClick(-111));
+    cont.children[2].addEventListener('click', () => ellipseClick(-222));
   });
 };
 checkSize();
@@ -133,14 +153,14 @@ const smallerSliderBtns = Array.from(
 );
 
 smallerSliderBtns[1].addEventListener('click', (e) => {
-  if (clickFollow === -235.25) return;
-  clickFollow += -117.625;
+  if (clickFollow === -222) return;
+  clickFollow += -111;
   whyUsArea.style.left = clickFollow + '%';
 });
 
 smallerSliderBtns[0].addEventListener('click', () => {
   if (clickFollow === 0) return;
-  clickFollow += 117.625;
+  clickFollow += 111;
   whyUsArea.style.left = clickFollow + '%';
 });
 
@@ -168,11 +188,3 @@ if (window.innerWidth <= 992) {
     return;
   });
 }
-
-///
-//Reload on browser size change:
-///
-
-window.addEventListener('resize', function () {
-  window.location.reload();
-});

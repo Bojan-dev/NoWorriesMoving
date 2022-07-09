@@ -1,13 +1,12 @@
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url('../img/hero\ picture.jpg');
+    url('../../img/hero\ picture.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
-  padding-bottom: 3em;
+  padding-bottom: 5em;
   padding-top: 8em;
-  height: 100vh;
 }
 
 .header-container {
@@ -379,62 +378,57 @@ nav {
     width: 2px;
     background: $color-white;
     border-radius: 5px;
-
-    .one-area-container {
-      @include displayFlex(row, space-between);
-    }
+    transform: translateX(-1em);
 
     .current-area {
-      @include displayFlex(row, right);
+      @include displayFlex(row, flex-start);
       align-items: center;
-      margin-left: -4.5px;
-      width: 10px;
-      height: 10px;
-      background: $color-white;
+      background-color: white;
+      width: 13px;
+      height: 13px;
       margin-bottom: 2em;
-      white-space: nowrap;
+      transform: translateX(-50%);
+      color: white;
       cursor: pointer;
-      position: relative;
+      white-space: nowrap;
+
+      p {
+        margin-left: 1.5em;
+        opacity: 0;
+        cursor: initial;
+      }
 
       &:hover {
-        .current-area-title {
+        p {
           opacity: 1;
-          margin-top: 2.5px;
         }
       }
     }
-    .current-area-title {
-      color: $color-white;
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    .active-title {
-      opacity: 1;
-    }
 
     .active-area {
-      @extend .current-area;
-      width: 20px;
-      height: 20px;
-      margin-left: -9px;
-      position: relative;
-
-      ::before {
+      width: 18px;
+      height: 18px;
+      transform: translateX(-9px);
+      &::before {
         content: '';
         position: absolute;
         margin: auto;
         top: 0;
-        bottom: 0;
         transform: translateX(-50%);
+        bottom: 0;
         left: 50%;
-        width: 30px;
-        height: 30px;
+        width: 24px;
+        height: 24px;
         border: 2px solid $color-green;
         box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
       }
+
+      p {
+        opacity: 1;
+      }
     }
   }
+
   .current-area-line-y {
     opacity: 0.65;
     background: #0f6bc7;
@@ -974,7 +968,7 @@ nav {
 
     &.header-right-line-text {
       right: -10px;
-      bottom: 235px;
+      bottom: 192px;
     }
   }
 }

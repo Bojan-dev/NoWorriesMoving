@@ -378,15 +378,14 @@ h6 {
 }
 
 header {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.75))), url("../img/hero picture.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../img/hero picture.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.75))), url("../../img/hero picture.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../../img/hero picture.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
-  padding-bottom: 3em;
+  padding-bottom: 5em;
   padding-top: 8em;
-  height: 100vh;
 }
 
 .header-container {
@@ -880,9 +879,11 @@ nav {
   width: 2px;
   background: #ffffff;
   border-radius: 5px;
+  -webkit-transform: translateX(-1em);
+          transform: translateX(-1em);
 }
 
-.hero-current-area-container .current-area-line .one-area-container {
+.hero-current-area-container .current-area-line .current-area {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -890,71 +891,58 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.hero-current-area-container .current-area-line .current-area, .hero-current-area-container .current-area-line .active-area {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: -4.5px;
-  width: 10px;
-  height: 10px;
-  background: #ffffff;
+  background-color: white;
+  width: 13px;
+  height: 13px;
   margin-bottom: 2em;
-  white-space: nowrap;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: white;
   cursor: pointer;
-  position: relative;
+  white-space: nowrap;
 }
 
-.hero-current-area-container .current-area-line .current-area:hover .current-area-title, .hero-current-area-container .current-area-line .active-area:hover .current-area-title {
-  opacity: 1;
-  margin-top: 2.5px;
-}
-
-.hero-current-area-container .current-area-line .current-area-title {
-  color: #ffffff;
+.hero-current-area-container .current-area-line .current-area p {
+  margin-left: 1.5em;
   opacity: 0;
-  pointer-events: none;
+  cursor: initial;
 }
 
-.hero-current-area-container .current-area-line .active-title {
+.hero-current-area-container .current-area-line .current-area:hover p {
   opacity: 1;
 }
 
 .hero-current-area-container .current-area-line .active-area {
-  width: 20px;
-  height: 20px;
-  margin-left: -9px;
-  position: relative;
+  width: 18px;
+  height: 18px;
+  -webkit-transform: translateX(-9px);
+          transform: translateX(-9px);
 }
 
-.hero-current-area-container .current-area-line .active-area ::before {
+.hero-current-area-container .current-area-line .active-area::before {
   content: '';
   position: absolute;
   margin: auto;
   top: 0;
-  bottom: 0;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  bottom: 0;
   left: 50%;
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   border: 2px solid #41ba03;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+}
+
+.hero-current-area-container .current-area-line .active-area p {
+  opacity: 1;
 }
 
 .hero-current-area-container .current-area-line-y {
@@ -970,7 +958,7 @@ nav {
           box-shadow: none;
 }
 
-.hero-current-area-container .current-area-line-y .current-area, .hero-current-area-container .current-area-line-y .current-area-line .active-area, .hero-current-area-container .current-area-line .current-area-line-y .active-area {
+.hero-current-area-container .current-area-line-y .current-area {
   background: #0f6bc7;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -983,13 +971,13 @@ nav {
 }
 
 @-moz-document url-prefix() {
-  .hero-current-area-container .current-area p, .hero-current-area-container .current-area-line .active-area p {
+  .hero-current-area-container .current-area p {
     margin-right: -4.5em;
   }
-  .hero-current-area-container .current-area-line .current-area:nth-of-type(5) p, .hero-current-area-container .current-area-line .active-area:nth-of-type(5) p {
+  .hero-current-area-container .current-area-line .current-area:nth-of-type(5) p {
     margin-right: -5.5em;
   }
-  .hero-current-area-container .current-area-line .current-area:nth-of-type(6) p, .hero-current-area-container .current-area-line .active-area:nth-of-type(6) p {
+  .hero-current-area-container .current-area-line .current-area:nth-of-type(6) p {
     margin-right: -7em;
   }
 }
@@ -1434,7 +1422,7 @@ nav {
   }
   .header-line-text.header-right-line-text {
     right: -10px;
-    bottom: 235px;
+    bottom: 192px;
   }
 }
 
@@ -1454,6 +1442,7 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .why-use-containers-slider {
@@ -2220,25 +2209,25 @@ nav {
 }
 
 .work-img-container-1:before {
-  background: url("../img/quick call.jpg");
+  background: url("../../img/quick call.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .work-img-container-2::before {
-  background: url("../img/happy boxes.jpg");
+  background: url("../../img/happy boxes.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .work-img-container-3::before {
-  background: url("../img/moving day.jpg");
+  background: url("../../img/moving day.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .work-img-container-4::before {
-  background: url("../img/money back.jpg");
+  background: url("../../img/money back.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -2829,8 +2818,8 @@ nav {
 
 .testemonials {
   position: relative;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../img/testemonials background.jpg");
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/testemonials background.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../../img//testemonials background.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../img//testemonials background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -3274,7 +3263,7 @@ footer {
 }
 
 .footer-all-rights {
-  background: url("/img/footer illustration.svg") no-repeat center;
+  background: url("../../img/footer illustration.svg") no-repeat center;
   background-size: cover;
   padding-top: 8em;
   padding-bottom: 2em;
@@ -3963,6 +3952,7 @@ footer {
 .pricing-header {
   background: url("../img/pricing background.jpg") no-repeat center center fixed;
   background-size: cover;
+  min-height: 100vh;
 }
 
 .pricing-hero-text {
@@ -4763,6 +4753,7 @@ label:first-of-type {
 .about-us-header {
   background: url("../img/about-us background.svg") no-repeat center center;
   background-size: cover;
+  min-height: 100vh;
 }
 
 .about-us-social-icons {
